@@ -6,9 +6,52 @@
     <title>Ekam by Seri — Handcrafted Heritage Decor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ivory: "#efe7d4",
+              linen: "#e8dfc9",
+              beige: "#e0d2b6",
+              terra: "#b85a32",
+              terradeep: "#8e3f1e",
+              earth: "#6b2a10",
+              mud: "#3d2716",
+              terracotta: "#c2673a",
+              claybrown: "#743014",
+              olive: "#525e35",
+              olivedeep: "#2f3a1f",
+              sage: "#6f8160",
+              navy: "#182d3d",
+              navydeep: "#0e1d2a",
+              gold: "#b89844",
+              goldaged: "#8e7228",
+              brass: "#c8a84b",
+              grey: "#7a6f60",
+              char: "#241a10",
+              ink: "#1a120a",
+            },
+            fontFamily: {
+              display: ["Rufina", "serif"],
+              serif: ['"Cormorant Garamond"', "serif"],
+              sans: ["Manrope", "sans-serif"],
+            },
+            letterSpacing: {
+              brand: "0.18em",
+              wide2: "0.22em",
+              wide3: "0.38em",
+            },
+            transitionTimingFunction: { lux: "cubic-bezier(0.16,1,0.3,1)" },
+            maxWidth: { content: "1280px" },
+          },
+        },
+      };
+    </script>
     <style>
       *,
       *::before,
@@ -2472,7 +2515,9 @@
         height: 2px;
         background-color: var(--char);
         border-radius: 2px;
-        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+        transition:
+          transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+          opacity 0.3s ease;
       }
 
       /* Mobile menu overlay */
@@ -2489,7 +2534,9 @@
         opacity: 0;
         pointer-events: none;
         transform: translateY(-100%);
-        transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        transition:
+          opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .mobile-menu-overlay.open {
         opacity: 1;
@@ -2522,19 +2569,31 @@
         text-decoration: none;
         opacity: 0;
         transform: translateY(20px);
-        transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        transition:
+          opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         display: block;
       }
       .mobile-menu-overlay.open .mobile-nav-links a {
         opacity: 0.85;
         transform: translateY(0);
       }
-      .mobile-menu-overlay.open .mobile-nav-links li:nth-child(1) a { transition-delay: 0.1s; }
-      .mobile-menu-overlay.open .mobile-nav-links li:nth-child(2) a { transition-delay: 0.2s; }
-      .mobile-menu-overlay.open .mobile-nav-links li:nth-child(3) a { transition-delay: 0.3s; }
-      .mobile-menu-overlay.open .mobile-nav-links li:nth-child(4) a { transition-delay: 0.4s; }
-      .mobile-menu-overlay.open .mobile-nav-links li:nth-child(5) a { transition-delay: 0.5s; }
-      
+      .mobile-menu-overlay.open .mobile-nav-links li:nth-child(1) a {
+        transition-delay: 0.1s;
+      }
+      .mobile-menu-overlay.open .mobile-nav-links li:nth-child(2) a {
+        transition-delay: 0.2s;
+      }
+      .mobile-menu-overlay.open .mobile-nav-links li:nth-child(3) a {
+        transition-delay: 0.3s;
+      }
+      .mobile-menu-overlay.open .mobile-nav-links li:nth-child(4) a {
+        transition-delay: 0.4s;
+      }
+      .mobile-menu-overlay.open .mobile-nav-links li:nth-child(5) a {
+        transition-delay: 0.5s;
+      }
+
       .mobile-nav-links a:hover {
         opacity: 1;
         color: var(--terra);
@@ -2552,7 +2611,10 @@
         text-decoration: none;
         opacity: 0;
         transform: translateY(20px);
-        transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.6s, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.6s, background 0.3s;
+        transition:
+          opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.6s,
+          transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.6s,
+          background 0.3s;
       }
       .mobile-menu-overlay.open .mobile-menu-cta {
         opacity: 1;
@@ -2626,7 +2688,10 @@
         .hero-heading {
           font-size: clamp(3.2rem, 6.5vw, 5.5rem);
         }
-        .craft-section, .philosophy, .gallery-section, .heritage-section {
+        .craft-section,
+        .philosophy,
+        .gallery-section,
+        .heritage-section {
           padding-left: 50px;
           padding-right: 50px;
         }
@@ -2769,14 +2834,15 @@
         body::before {
           opacity: 0.04;
         }
-        
+
         /* Mobile navigation toggle & layout */
         nav {
           min-width: calc(100% - 32px);
           max-width: calc(100% - 32px);
           padding: 10px 20px;
         }
-        .nav-links, .nav-cta {
+        .nav-links,
+        .nav-cta {
           display: none;
         }
         .nav-toggle {
@@ -2786,7 +2852,10 @@
           font-size: 1.25rem;
         }
 
-        .craft-section, .philosophy, .gallery-section, .heritage-section {
+        .craft-section,
+        .philosophy,
+        .gallery-section,
+        .heritage-section {
           padding: 100px 24px;
         }
 
@@ -2891,7 +2960,9 @@
           line-height: 1.8;
           margin-bottom: 40px;
         }
-        .heritage-deco-arch, .heritage-deco-contour-l, .heritage-deco-blob-r {
+        .heritage-deco-arch,
+        .heritage-deco-contour-l,
+        .heritage-deco-blob-r {
           opacity: 0.02;
         }
 
@@ -2934,7 +3005,8 @@
           width: 100%;
           gap: 16px;
         }
-        .btn-primary, .btn-secondary {
+        .btn-primary,
+        .btn-secondary {
           width: 100%;
           justify-content: center;
           text-align: center;
@@ -2946,7 +3018,7 @@
         .hero-stat {
           padding: 0 12px;
         }
-        
+
         .craft-step-visual {
           display: none;
         }
@@ -2957,7 +3029,7 @@
         .craft-dot {
           left: -23px;
         }
-        
+
         .contact-form {
           padding: 24px 16px;
         }
@@ -3686,7 +3758,9 @@
             Diya Plates, Pooja Thalis, and Idol Holders in round and square
             forms, each bearing the sacred geometry of Kutch mirror artistry.
           </p>
-          <a href="#contact" class="col-link">Enquire Now</a>
+          <a href="collections/pooja-chowki.html" class="col-link"
+            >View Collection</a
+          >
         </div>
       </div>
 
@@ -3784,7 +3858,9 @@
             peacock, lotus, and saree, catching and scattering light across your
             walls.
           </p>
-          <a href="#contact" class="col-link">Enquire Now</a>
+          <a href="collections/mirror-frame.html" class="col-link"
+            >View Collection</a
+          >
         </div>
       </div>
 
@@ -3854,7 +3930,9 @@
             handcrafted in the ancient clay-working traditions of Kutch,
             carrying the warmth of the soil in every curve and impression.
           </p>
-          <a href="#contact" class="col-link">Enquire Now</a>
+          <a href="collections/terracotta.html" class="col-link"
+            >View Collection</a
+          >
         </div>
       </div>
 
@@ -3967,7 +4045,9 @@
             handcrafted keepsake that transforms the everyday into an act of
             beauty and intentional living.
           </p>
-          <a href="#contact" class="col-link">Enquire Now</a>
+          <a href="collections/utility-keepsake.html" class="col-link"
+            >View Collection</a
+          >
         </div>
       </div>
 
@@ -4030,7 +4110,9 @@
             that frame your world in the intricate language of Kutch artisanship
             and mud-mirror craftsmanship.
           </p>
-          <a href="#contact" class="col-link">Enquire Now</a>
+          <a href="collections/wall-decor.html" class="col-link"
+            >View Collection</a
+          >
         </div>
       </div>
 
@@ -4089,7 +4171,9 @@
             sacred tradition. Their warm metallic tones bring a meditative
             quality of sound and beauty into every space.
           </p>
-          <a href="#contact" class="col-link">Enquire Now</a>
+          <a href="collections/copper-bells.html" class="col-link"
+            >View Collection</a
+          >
         </div>
       </div>
     </section>
@@ -5172,7 +5256,7 @@
       </div>
       <div class="footer-bottom">
         <p class="footer-craft">"Crafted with heritage."</p>
-        <p class="footer-copy">© 2025 Ekam by Seri. All rights reserved.</p>
+        <p class="footer-copy">© 2026 Ekam by Seri. All rights reserved.</p>
       </div>
     </footer>
 
@@ -5199,7 +5283,9 @@
       // ── Mobile Navigation Drawer Toggle ──
       const navToggle = document.getElementById("navToggle");
       const mobileMenu = document.getElementById("mobileMenu");
-      const mobileNavLinks = document.querySelectorAll(".mobile-nav-links a, .mobile-menu-cta");
+      const mobileNavLinks = document.querySelectorAll(
+        ".mobile-nav-links a, .mobile-menu-cta",
+      );
 
       if (navToggle && mobileMenu) {
         navToggle.addEventListener("click", () => {
@@ -5222,14 +5308,14 @@
       if (form) {
         form.addEventListener("submit", (e) => {
           e.preventDefault();
-          
+
           const nameInput = document.getElementById("name");
           const nameVal = nameInput ? nameInput.value.trim() : "";
-          
+
           form.style.transition = "opacity 0.4s ease, transform 0.4s ease";
           form.style.opacity = "0";
           form.style.transform = "scale(0.95)";
-          
+
           setTimeout(() => {
             form.innerHTML = `
               <div class="form-success-message">
@@ -5275,7 +5361,7 @@
           el.style.transform = `translateY(${offset}px)`;
         });
       });
-      
+
       // ── 3D tilt on contact cards (Touch Safe) ──
       document.querySelectorAll(".contact-person").forEach((card) => {
         card.addEventListener("mousemove", (e) => {
@@ -5292,7 +5378,7 @@
             "transform 1.2s cubic-bezier(0.16, 1, 0.3, 1)";
         });
       });
-      
+
       // ── 3D tilt on contact form (Touch Safe) ──
       const contactForm = document.querySelector(".contact-form");
       if (contactForm) {
@@ -5310,7 +5396,7 @@
             "transform 1.2s cubic-bezier(0.16, 1, 0.3, 1)";
         });
       }
-      
+
       const craftProgress = document.getElementById("craftProgress");
       if (craftProgress) {
         const craftObserver = new IntersectionObserver(

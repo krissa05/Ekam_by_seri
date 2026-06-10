@@ -1,0 +1,286 @@
+/* ============================================================
+   EKAM BY SERI — shared custom layer
+   Tailwind handles colour/spacing/type via the config in the
+   <head> snippet. This file only holds what utilities can't:
+   the brand keyframes, the film-grain overlay, scroll reveals,
+   the bespoke shapes, and the paste-your-own-image slot pattern.
+   ============================================================ */
+
+:root {
+  --ivory: #efe7d4;
+  --linen: #e8dfc9;
+  --beige: #e0d2b6;
+  --terra: #b85a32;
+  --terracotta: #c2673a;
+  --terra-deep: #8e3f1e;
+  --claybrown: #743014;
+  --earth: #6b2a10;
+  --mud: #3d2716;
+  --olive: #525e35;
+  --olive-deep: #2f3a1f;
+  --sage: #6f8160;
+  --navy: #182d3d;
+  --navy-deep: #0e1d2a;
+  --gold: #b89844;
+  --gold-aged: #8e7228;
+  --brass: #c8a84b;
+  --grey: #7a6f60;
+  --char: #241a10;
+  --ink: #1a120a;
+  --ease-lux: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ivory);
+  color: var(--char);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* ── Film-grain overlay (matches homepage) ───────────────── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9997;
+  pointer-events: none;
+  opacity: 0.06;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 280px 280px;
+}
+
+/* ── Logo lockup ─────────────────────────────────────────── */
+.logo-ekam {
+  font-family: "Rufina", serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.logo-byseri {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 0.55em;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 2px;
+}
+
+/* ============================================================
+   IMAGE SLOTS  —  HOW TO ADD YOUR PHOTOS
+   Every photo on the site uses this pattern. Find the
+   src="PASTE_IMAGE_URL" in any page and replace it with your
+   own image link. Until you do, an on-brand gradient shows in
+   its place, so the page never looks broken.
+   ============================================================ */
+.img-slot {
+  position: relative;
+  overflow: hidden;
+  background: var(--ph, linear-gradient(145deg, #c2673a, #743014));
+}
+.img-slot img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition:
+    transform 0.9s var(--ease-lux),
+    opacity 0.6s ease;
+}
+/* onerror adds this class → broken/placeholder src hides, gradient shows */
+.img-slot img.img-missing {
+  opacity: 0;
+}
+.img-slot.zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* ── Scroll reveal ───────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition:
+    opacity 1.4s var(--ease-lux),
+    transform 1.4s var(--ease-lux);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+.reveal-d1 {
+  transition-delay: 0.15s;
+}
+.reveal-d2 {
+  transition-delay: 0.3s;
+}
+.reveal-d3 {
+  transition-delay: 0.45s;
+}
+.reveal-d4 {
+  transition-delay: 0.6s;
+}
+
+/* ── Keyframes carried from the homepage ─────────────────── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes galleryScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes floatBadge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 1.6s var(--ease-lux) forwards;
+}
+.animate-fade-in {
+  animation: fadeIn 1.4s ease forwards;
+}
+
+/* ── Marquee ticker (reused on collection/product pages) ──── */
+.ticker-track {
+  display: flex;
+  white-space: nowrap;
+  animation: ticker 60s linear infinite;
+}
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* ── Auto-scroll gallery rail ────────────────────────────── */
+.gallery-auto-track {
+  display: flex;
+  width: max-content;
+  animation: galleryScroll 40s linear infinite;
+}
+.gallery-auto-track:hover {
+  animation-play-state: paused;
+}
+
+/* ── Bespoke shapes (the organic radii from the homepage) ── */
+.shape-arch {
+  border-radius: 999px 999px 24px 24px;
+}
+.shape-arch-inv {
+  border-radius: 24px 24px 999px 999px;
+}
+.shape-blob {
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+.shape-pill-asym {
+  border-radius: 999px 40px 999px 40px;
+}
+.shape-pebble {
+  border-radius: 240px;
+}
+
+/* ── Section bleed helper (soft gradient transitions) ────── */
+.bleed-top {
+  position: relative;
+}
+
+/* ── Animated underline link ─────────────────────────────── */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--terra);
+  transition: width 0.4s var(--ease-lux);
+}
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* ── Arrow link (text + → that slides on hover) ──────────── */
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: gap 0.3s ease;
+}
+.link-arrow::after {
+  content: "→";
+  font-size: 1rem;
+}
+.link-arrow:hover {
+  gap: 20px;
+}
+
+/* ── Visible keyboard focus (accessibility floor) ────────── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ── Respect reduced motion ──────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

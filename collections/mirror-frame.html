@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mirror & Frame Collection — Ekam by Seri</title>
+    <meta
+      name="description"
+      content="Mosaic frames, mirror vases and bespoke name plates, each a constellation of hand-placed mirror fragments inspired by the peacock, the lotus and the saree, scattering light across your walls."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ivory: "#efe7d4",
+              linen: "#e8dfc9",
+              beige: "#e0d2b6",
+              terra: "#b85a32",
+              terradeep: "#8e3f1e",
+              earth: "#6b2a10",
+              mud: "#3d2716",
+              terracotta: "#c2673a",
+              claybrown: "#743014",
+              olive: "#525e35",
+              olivedeep: "#2f3a1f",
+              sage: "#6f8160",
+              navy: "#182d3d",
+              navydeep: "#0e1d2a",
+              gold: "#b89844",
+              goldaged: "#8e7228",
+              brass: "#c8a84b",
+              grey: "#7a6f60",
+              char: "#241a10",
+              ink: "#1a120a",
+            },
+            fontFamily: {
+              display: ["Rufina", "serif"],
+              serif: ['"Cormorant Garamond"', "serif"],
+              sans: ["Manrope", "sans-serif"],
+            },
+            letterSpacing: {
+              brand: "0.18em",
+              wide2: "0.22em",
+              wide3: "0.38em",
+            },
+            transitionTimingFunction: { lux: "cubic-bezier(0.16,1,0.3,1)" },
+            maxWidth: { content: "1280px" },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="../shared/styles.css" />
+    <style>
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-ivory text-char">
+    <nav
+      id="navbar"
+      class="fixed left-1/2 top-5 z-[1000] flex w-[calc(100%-2rem)] max-w-[900px] -translate-x-1/2 items-center justify-between gap-10 rounded-full border border-terra/20 bg-ivory/90 px-7 py-3.5 shadow-[0_4px_32px_rgba(68,45,28,0.08)] backdrop-blur-xl transition-all duration-700 ease-lux md:min-w-[600px]"
+    >
+      <a
+        href="../index.html"
+        class="flex items-center gap-2.5 leading-none text-char no-underline"
+      >
+        <span
+          class="inline-block h-2 w-2 flex-shrink-0 rounded-full bg-terra"
+        ></span>
+        <span
+          ><span class="logo-ekam text-[1.4rem] text-char">EKAM</span
+          ><span class="logo-byseri text-terra">by SERI</span></span
+        >
+      </a>
+      <ul class="hidden list-none gap-8 md:flex">
+        <li>
+          <a
+            href="../index.html#collections"
+            class="link-underline text-[0.78rem] uppercase tracking-brand text-char/75 no-underline transition hover:text-char"
+            >Collections</a
+          >
+        </li>
+        <li>
+          <a
+            href="../index.html#craftsmanship"
+            class="link-underline text-[0.78rem] uppercase tracking-brand text-char/75 no-underline transition hover:text-char"
+            >Craftsmanship</a
+          >
+        </li>
+        <li>
+          <a
+            href="../index.html#heritage"
+            class="link-underline text-[0.78rem] uppercase tracking-brand text-char/75 no-underline transition hover:text-char"
+            >Heritage</a
+          >
+        </li>
+        <li>
+          <a
+            href="../about.html"
+            class="link-underline text-[0.78rem] uppercase tracking-brand text-char/75 no-underline transition hover:text-char"
+            >About</a
+          >
+        </li>
+      </ul>
+      <a
+        href="../contact.html"
+        class="hidden whitespace-nowrap rounded-full bg-char px-6 py-2.5 text-[0.78rem] uppercase tracking-brand text-ivory no-underline transition-all duration-700 ease-lux hover:-translate-y-px hover:bg-earth md:inline-block"
+        >Enquire</a
+      >
+      <button
+        id="navToggle"
+        aria-label="Toggle navigation"
+        class="flex h-[15px] w-[22px] flex-col justify-between border-0 bg-transparent p-0 md:hidden"
+      >
+        <span
+          class="h-0.5 w-full rounded bg-char transition-all duration-300 ease-lux"
+        ></span>
+        <span
+          class="h-0.5 w-full rounded bg-char transition-all duration-300 ease-lux"
+        ></span>
+        <span
+          class="h-0.5 w-full rounded bg-char transition-all duration-300 ease-lux"
+        ></span>
+      </button>
+    </nav>
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 z-[998] flex translate-y-[-100%] items-center justify-center bg-ivory/95 opacity-0 backdrop-blur-2xl transition-all duration-500 ease-lux [&.open]:translate-y-0 [&.open]:opacity-100"
+    >
+      <ul class="flex list-none flex-col items-center gap-6 p-10 text-center">
+        <li>
+          <a
+            href="../index.html#collections"
+            class="font-serif text-3xl font-light uppercase tracking-wide text-char no-underline transition hover:text-terra"
+            >Collections</a
+          >
+        </li>
+        <li>
+          <a
+            href="../index.html#craftsmanship"
+            class="font-serif text-3xl font-light uppercase tracking-wide text-char no-underline transition hover:text-terra"
+            >Craftsmanship</a
+          >
+        </li>
+        <li>
+          <a
+            href="../index.html#heritage"
+            class="font-serif text-3xl font-light uppercase tracking-wide text-char no-underline transition hover:text-terra"
+            >Heritage</a
+          >
+        </li>
+        <li>
+          <a
+            href="../about.html"
+            class="font-serif text-3xl font-light uppercase tracking-wide text-char no-underline transition hover:text-terra"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="../contact.html"
+            class="mt-2 rounded-full bg-char px-8 py-3.5 text-sm uppercase tracking-brand text-ivory no-underline transition hover:bg-terra"
+            >Enquire</a
+          >
+        </li>
+      </ul>
+    </div>
+    <header
+      class="relative grid min-h-[88vh] grid-cols-1 overflow-hidden md:grid-cols-2"
+      style="
+        background: linear-gradient(
+          135deg,
+          #f2ead8 0%,
+          #e0caaa 45%,
+          #c89870 100%
+        );
+      "
+    >
+      <div
+        class="relative z-10 flex flex-col justify-center px-7 pb-16 pt-32 md:px-[90px] md:pt-24"
+      >
+        <nav
+          aria-label="Breadcrumb"
+          class="mb-8 flex items-center gap-2 text-[0.7rem] uppercase tracking-wide2 text-char/50"
+        >
+          <a
+            href="../index.html"
+            class="no-underline transition hover:text-terra"
+            >Home</a
+          ><span>/</span>
+          <a
+            href="../index.html#collections"
+            class="no-underline transition hover:text-terra"
+            >Collections</a
+          ><span>/</span>
+          <span class="text-terra">Mirror & Frame</span>
+        </nav>
+        <span
+          class="mb-5 flex items-center gap-4 text-[0.65rem] uppercase tracking-wide3 text-terra"
+          ><span class="h-px w-10 bg-terra/60"></span>Mirror Artistry</span
+        >
+        <h1
+          class="mb-7 font-serif text-[clamp(3rem,6vw,6rem)] font-light leading-[0.95] tracking-tight text-char"
+        >
+          Mirror &amp;<br /><em class="italic text-terra">Frame</em>
+        </h1>
+        <p
+          class="mb-9 max-w-[440px] text-[0.97rem] font-light leading-[1.85] text-char/70"
+        >
+          Mosaic frames, mirror vases and bespoke name plates, each a
+          constellation of hand-placed mirror fragments inspired by the peacock,
+          the lotus and the saree, scattering light across your walls.
+        </p>
+        <div
+          class="flex flex-wrap items-center gap-x-7 gap-y-3 text-[0.62rem] uppercase tracking-wide2 text-char/55"
+        >
+          <span
+            ><span
+              class="font-serif text-2xl not-italic text-char"
+              id="liveCount"
+              >6</span
+            >
+            &nbsp;Pieces</span
+          >
+          <span class="h-8 w-px bg-char/15"></span><span>Made to order</span>
+          <span class="h-8 w-px bg-char/15"></span><span>Kutch, Gujarat</span>
+        </div>
+      </div>
+      <div class="relative flex items-center justify-center px-7 pb-16 md:p-12">
+        <div
+          class="img-slot zoom shape-pebble h-[60vh] w-full max-w-[460px] shadow-[0_30px_80px_rgba(68,45,28,0.25)]"
+          style="--ph: linear-gradient(145deg, #5c6b3a 0%, #3a4525 100%)"
+        >
+          <img
+            src="PASTE_IMAGE_URL"
+            alt="Mirror & Frame collection hero"
+            onerror="this.classList.add('img-missing')"
+          />
+        </div>
+      </div>
+    </header>
+    <section
+      class="sticky top-0 z-[900] border-b border-char/10 bg-linen/95 backdrop-blur-md"
+    >
+      <div
+        class="mx-auto flex max-w-content flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:justify-between md:px-[90px]"
+      >
+        <div class="flex flex-wrap items-center gap-2" id="filterChips">
+          <button
+            data-filter="all"
+            class="chip rounded-full border border-terra bg-terra px-4 py-2 text-[0.68rem] uppercase tracking-wide2 text-ivory transition"
+          >
+            All</button
+          ><button
+            data-filter="frame"
+            class="chip rounded-full border border-char/20 px-4 py-2 text-[0.68rem] uppercase tracking-wide2 text-char/70 transition hover:border-terra hover:text-terra"
+          >
+            Frames</button
+          ><button
+            data-filter="piece"
+            class="chip rounded-full border border-char/20 px-4 py-2 text-[0.68rem] uppercase tracking-wide2 text-char/70 transition hover:border-terra hover:text-terra"
+          >
+            Mirror Pieces</button
+          ><button
+            data-filter="nameplate"
+            class="chip rounded-full border border-char/20 px-4 py-2 text-[0.68rem] uppercase tracking-wide2 text-char/70 transition hover:border-terra hover:text-terra"
+          >
+            Name Plates
+          </button>
+        </div>
+        <div class="flex items-center gap-3">
+          <label
+            for="sortSelect"
+            class="text-[0.62rem] uppercase tracking-wide2 text-char/45"
+            >Sort</label
+          >
+          <select
+            id="sortSelect"
+            class="cursor-pointer rounded-full border border-char/20 bg-transparent px-4 py-2 text-[0.72rem] uppercase tracking-wide2 text-char/70 outline-none transition hover:border-terra"
+          >
+            <option value="featured">Featured</option>
+            <option value="low">Price · Low to High</option>
+            <option value="high">Price · High to Low</option>
+          </select>
+        </div>
+      </div>
+    </section>
+    <main class="mx-auto max-w-content px-6 py-24 md:px-[90px]">
+      <div
+        id="productGrid"
+        class="grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+      >
+        <a
+          href="../products/mirror-mosaic-frame.html"
+          class="product-card reveal group block no-underline"
+          data-category="frame"
+          data-price="1850"
+          ><div
+            class="img-slot zoom shape-arch mb-5 aspect-[4/5]"
+            style="--ph: linear-gradient(145deg, #5c6b3a, #3a4525)"
+          >
+            <img
+              src="PASTE_IMAGE_URL"
+              alt="Mirror Mosaic Frame"
+              loading="lazy"
+              onerror="this.classList.add('img-missing')"
+            /><span
+              class="absolute bottom-4 left-4 z-10 rounded-full bg-ivory/85 px-3 py-1 text-[0.6rem] uppercase tracking-wide2 text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
+              >View piece →</span
+            >
+          </div>
+          <span class="text-[0.6rem] uppercase tracking-wide2 text-terra"
+            >Frame</span
+          >
+          <h3
+            class="mt-1 font-serif text-2xl font-normal text-char transition group-hover:text-terra"
+          >
+            Mirror Mosaic Frame
+          </h3>
+          <p class="mt-1.5 text-[0.95rem] text-grey">₹1,850</p></a
+        >
+        <a
+          href="../products/peacock-mirror-frame.html"
+          class="product-card reveal group block no-underline"
+          data-category="frame"
+          data-price="2650"
+          ><div
+            class="img-slot zoom shape-arch mb-5 aspect-[4/5]"
+            style="--ph: linear-gradient(180deg, #1d3547, #0e1f2b)"
+          >
+            <img
+              src="PASTE_IMAGE_URL"
+              alt="Peacock Mirror Frame"
+              loading="lazy"
+              onerror="this.classList.add('img-missing')"
+            /><span
+              class="absolute bottom-4 left-4 z-10 rounded-full bg-ivory/85 px-3 py-1 text-[0.6rem] uppercase tracking-wide2 text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
+              >View piece →</span
+            >
+          </div>
+          <span class="text-[0.6rem] uppercase tracking-wide2 text-terra"
+            >Frame</span
+          >
+          <h3
+            class="mt-1 font-serif text-2xl font-normal text-char transition group-hover:text-terra"
+          >
+            Peacock Mirror Frame
+          </h3>
+          <p class="mt-1.5 text-[0.95rem] text-grey">₹2,650</p></a
+        >
+        <a
+          href="../products/lotus-mirror-vase.html"
+          class="product-card reveal group block no-underline"
+          data-category="piece"
+          data-price="1450"
+          ><div
+            class="img-slot zoom shape-arch mb-5 aspect-[4/5]"
+            style="--ph: linear-gradient(135deg, #c8a84b, #8a6e28)"
+          >
+            <img
+              src="PASTE_IMAGE_URL"
+              alt="Lotus Mirror Vase"
+              loading="lazy"
+              onerror="this.classList.add('img-missing')"
+            /><span
+              class="absolute bottom-4 left-4 z-10 rounded-full bg-ivory/85 px-3 py-1 text-[0.6rem] uppercase tracking-wide2 text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
+              >View piece →</span
+            >
+          </div>
+          <span class="text-[0.6rem] uppercase tracking-wide2 text-terra"
+            >Vase</span
+          >
+          <h3
+            class="mt-1 font-serif text-2xl font-normal text-char transition group-hover:text-terra"
+          >
+            Lotus Mirror Vase
+          </h3>
+          <p class="mt-1.5 text-[0.95rem] text-grey">₹1,450</p></a
+        >
+        <a
+          href="../products/saree-wall-piece.html"
+          class="product-card reveal group block no-underline"
+          data-category="piece"
+          data-price="2200"
+          ><div
+            class="img-slot zoom shape-arch mb-5 aspect-[4/5]"
+            style="--ph: linear-gradient(145deg, #c2673a, #743014)"
+          >
+            <img
+              src="PASTE_IMAGE_URL"
+              alt="Saree Wall Piece"
+              loading="lazy"
+              onerror="this.classList.add('img-missing')"
+            /><span
+              class="absolute bottom-4 left-4 z-10 rounded-full bg-ivory/85 px-3 py-1 text-[0.6rem] uppercase tracking-wide2 text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
+              >View piece →</span
+            >
+          </div>
+          <span class="text-[0.6rem] uppercase tracking-wide2 text-terra"
+            >Wall Piece</span
+          >
+          <h3
+            class="mt-1 font-serif text-2xl font-normal text-char transition group-hover:text-terra"
+          >
+            Saree Wall Piece
+          </h3>
+          <p class="mt-1.5 text-[0.95rem] text-grey">₹2,200</p></a
+        >
+        <a
+          href="../products/bespoke-name-plate.html"
+          class="product-card reveal group block no-underline"
+          data-category="nameplate"
+          data-price="1150"
+          ><div
+            class="img-slot zoom shape-arch mb-5 aspect-[4/5]"
+            style="--ph: linear-gradient(145deg, #c2673a, #8b3e1a)"
+          >
+            <img
+              src="PASTE_IMAGE_URL"
+              alt="Bespoke Name Plate"
+              loading="lazy"
+              onerror="this.classList.add('img-missing')"
+            /><span
+              class="absolute bottom-4 left-4 z-10 rounded-full bg-ivory/85 px-3 py-1 text-[0.6rem] uppercase tracking-wide2 text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
+              >View piece →</span
+            >
+          </div>
+          <span class="text-[0.6rem] uppercase tracking-wide2 text-terra"
+            >Name Plate</span
+          >
+          <h3
+            class="mt-1 font-serif text-2xl font-normal text-char transition group-hover:text-terra"
+          >
+            Bespoke Name Plate
+          </h3>
+          <p class="mt-1.5 text-[0.95rem] text-grey">₹1,150</p></a
+        >
+        <a
+          href="../products/ceremonial-wall-mirror.html"
+          class="product-card reveal group block no-underline"
+          data-category="piece"
+          data-price="2850"
+          ><div
+            class="img-slot zoom shape-arch mb-5 aspect-[4/5]"
+            style="--ph: linear-gradient(180deg, #1d3547, #0e1f2b)"
+          >
+            <img
+              src="PASTE_IMAGE_URL"
+              alt="Ceremonial Wall Mirror"
+              loading="lazy"
+              onerror="this.classList.add('img-missing')"
+            /><span
+              class="absolute bottom-4 left-4 z-10 rounded-full bg-ivory/85 px-3 py-1 text-[0.6rem] uppercase tracking-wide2 text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
+              >View piece →</span
+            >
+          </div>
+          <span class="text-[0.6rem] uppercase tracking-wide2 text-terra"
+            >Mirror</span
+          >
+          <h3
+            class="mt-1 font-serif text-2xl font-normal text-char transition group-hover:text-terra"
+          >
+            Ceremonial Wall Mirror
+          </h3>
+          <p class="mt-1.5 text-[0.95rem] text-grey">₹2,850</p></a
+        >
+      </div>
+      <p
+        id="emptyState"
+        class="hidden py-16 text-center font-serif text-xl italic text-grey"
+      >
+        No pieces in this category yet.
+      </p>
+    </main>
+    <section
+      class="relative overflow-hidden bg-char px-6 py-40 text-center md:px-[90px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0"
+        style="
+          background: radial-gradient(
+            ellipse at 65% 40%,
+            rgba(194, 103, 58, 0.16) 0%,
+            transparent 58%
+          );
+        "
+      ></div>
+      <div class="relative z-10 mx-auto max-w-[860px]">
+        <span
+          class="mb-9 flex items-center justify-center gap-4 text-[0.62rem] uppercase tracking-wide3 text-gold/60"
+          ><span class="h-px w-8 bg-gold/40"></span>On Light<span
+            class="h-px w-8 bg-gold/40"
+          ></span
+        ></span>
+        <p
+          class="font-serif text-[clamp(2rem,4vw,4rem)] font-light leading-[1.1] tracking-tight text-ivory"
+        >
+          A mirror does not decorate a wall. It
+          <em class="italic text-gold">gives it back</em> the room, fragment by
+          fragment.
+        </p>
+      </div>
+    </section>
+    <section class="mx-auto max-w-content px-6 py-28 md:px-[90px]">
+      <span
+        class="mb-3 block text-[0.72rem] uppercase tracking-wide2 text-terra"
+        >Continue exploring</span
+      >
+      <h2
+        class="mb-12 font-serif text-[clamp(2rem,3.5vw,3.2rem)] font-light tracking-tight"
+      >
+        Other Collections
+      </h2>
+      <div class="grid grid-cols-2 gap-4 md:grid-cols-5">
+        <a href="pooja-chowki.html" class="group block no-underline"
+          ><div
+            class="img-slot zoom shape-arch mb-3 aspect-[3/4]"
+            style="--ph: linear-gradient(145deg, #c2673a, #743014)"
+          >
+            <img
+              src="PASTE_IMAGE_URL"
+              alt="Pooja & Chowki"
+              loading="lazy"
+              onerror="this.classList.add('img-missing')"
+            />
+          </div>
+          <span
+            class="font-serif text-base text-char transition group-hover:text-terra"
+            >Pooja & Chowki</span
+          ></a
+        >
+        <a href="terracotta.html" class="group block no-underline"
+          ><div
+            class="img-slot zoom shape-arch mb-3 aspect-[3/4]"
+            style="--ph: linear-gradient(145deg, #c2673a, #8b3e1a)"
+          >
+            <img
+              src="PASTE_IMAGE_URL"
+              alt="Terracotta"
+              loading="lazy"
+              onerror="this.classList.add('img-missing')"
+            />
+          </div>
+          <span
+            class="font-serif text-base text-char transition group-hover:text-terra"
+            >Terracotta</span
+          ></a
+        >
+        <a href="utility-keepsake.html" class="group block no-underline"
+          ><div
+            class="img-slot zoom shape-arch mb-3 aspect-[3/4]"
+            style="--ph: linear-gradient(135deg, #c8a84b, #8a6e28)"
+          >
+            <img
+              src="PASTE_IMAGE_URL"
+              alt="Utility & Keepsake"
+              loading="lazy"
+              onerror="this.classList.add('img-missing')"
+            />
+          </div>
+          <span
+            class="font-serif text-base text-char transition group-hover:text-terra"
+            >Utility & Keepsake</span
+          ></a
+        >
+        <a href="wall-decor.html" class="group block no-underline"
+          ><div
+            class="img-slot zoom shape-arch mb-3 aspect-[3/4]"
+            style="--ph: linear-gradient(180deg, #1d3547, #0e1f2b)"
+          >
+            <img
+              src="PASTE_IMAGE_URL"
+              alt="Wall Decor & Jharokha"
+              loading="lazy"
+              onerror="this.classList.add('img-missing')"
+            />
+          </div>
+          <span
+            class="font-serif text-base text-char transition group-hover:text-terra"
+            >Wall Decor</span
+          ></a
+        >
+        <a href="copper-bells.html" class="group block no-underline"
+          ><div
+            class="img-slot zoom shape-arch mb-3 aspect-[3/4]"
+            style="--ph: linear-gradient(135deg, #442d1c, #2b1810)"
+          >
+            <img
+              src="PASTE_IMAGE_URL"
+              alt="Copper Bells"
+              loading="lazy"
+              onerror="this.classList.add('img-missing')"
+            />
+          </div>
+          <span
+            class="font-serif text-base text-char transition group-hover:text-terra"
+            >Copper Bells</span
+          ></a
+        >
+      </div>
+    </section>
+
+    <footer
+      class="relative overflow-hidden bg-[#1e1008] px-6 pb-14 pt-32 text-ivory md:px-[90px]"
+    >
+      <span
+        class="pointer-events-none absolute -left-2.5 bottom-[-20px] select-none font-serif text-[clamp(6rem,18vw,22rem)] font-light leading-[0.85] tracking-tighter text-transparent [-webkit-text-stroke:1px_rgba(200,168,75,0.08)]"
+        >Ekam</span
+      >
+      <div
+        class="relative z-10 mb-10 grid grid-cols-1 items-start gap-12 border-b border-ivory/10 pb-14 text-center md:grid-cols-[1fr_auto_1fr] md:text-left"
+      >
+        <div>
+          <a href="../index.html" class="mb-4 block no-underline">
+            <span
+              class="logo-ekam text-[1.8rem] text-ivory"
+              style="letter-spacing: 0.14em"
+              >EKAM</span
+            >
+            <span
+              class="logo-byseri text-terra"
+              style="font-size: 0.62rem; letter-spacing: 0.38em"
+              >by SERI</span
+            >
+          </a>
+          <p
+            class="mx-auto max-w-[240px] text-[0.9rem] leading-relaxed text-ivory/40 md:mx-0"
+          >
+            Handcrafted decor rooted in the artisan heritage of Kutch, Gujarat —
+            where tradition meets the modern home.
+          </p>
+        </div>
+        <ul class="flex list-none flex-col items-center gap-4">
+          <li>
+            <a
+              href="../index.html#collections"
+              class="text-[0.78rem] uppercase tracking-brand text-ivory/50 no-underline transition hover:text-gold"
+              >Collections</a
+            >
+          </li>
+          <li>
+            <a
+              href="../index.html#craftsmanship"
+              class="text-[0.78rem] uppercase tracking-brand text-ivory/50 no-underline transition hover:text-gold"
+              >Craftsmanship</a
+            >
+          </li>
+          <li>
+            <a
+              href="../index.html#heritage"
+              class="text-[0.78rem] uppercase tracking-brand text-ivory/50 no-underline transition hover:text-gold"
+              >Heritage</a
+            >
+          </li>
+          <li>
+            <a
+              href="../about.html"
+              class="text-[0.78rem] uppercase tracking-brand text-ivory/50 no-underline transition hover:text-gold"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="../contact.html"
+              class="text-[0.78rem] uppercase tracking-brand text-ivory/50 no-underline transition hover:text-gold"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="text-center md:text-right">
+          <span
+            class="mt-3 block text-[0.68rem] uppercase tracking-wide2 text-ivory/30"
+            >Follow our journey</span
+          >
+          <a
+            href="https://instagram.com/ekambyseri"
+            target="_blank"
+            rel="noopener"
+            class="text-[0.88rem] leading-loose text-gold no-underline transition hover:opacity-75"
+            >@ekambyseri</a
+          >
+          <span
+            class="mt-3 block text-[0.68rem] uppercase tracking-wide2 text-ivory/30"
+            >Reach out</span
+          >
+          <a
+            href="tel:+918898010720"
+            class="block text-[0.88rem] leading-loose text-gold no-underline transition hover:opacity-75"
+            >Ritu · +91 88980 10720</a
+          >
+          <a
+            href="tel:+919925099994"
+            class="block text-[0.88rem] leading-loose text-gold no-underline transition hover:opacity-75"
+            >Seema · +91 99250 99994</a
+          >
+        </div>
+      </div>
+      <div
+        class="relative z-10 flex flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left"
+      >
+        <p class="font-serif text-base italic text-ivory/30">
+          "Crafted with heritage."
+        </p>
+        <p class="text-xs tracking-wide text-ivory/20">
+          © 2026 Ekam by Seri. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        var navbar = document.getElementById("navbar");
+        window.addEventListener("scroll", function () {
+          if (navbar)
+            navbar.classList.toggle(
+              "shadow-[0_6px_40px_rgba(68,45,28,0.13)]",
+              window.scrollY > 60,
+            );
+        });
+        var toggle = document.getElementById("navToggle"),
+          menu = document.getElementById("mobileMenu");
+        if (toggle && menu) {
+          toggle.addEventListener("click", function () {
+            var o = menu.classList.toggle("open");
+            document.body.style.overflow = o ? "hidden" : "";
+          });
+          menu.querySelectorAll("a").forEach(function (a) {
+            a.addEventListener("click", function () {
+              menu.classList.remove("open");
+              document.body.style.overflow = "";
+            });
+          });
+        }
+      })();
+      (function () {
+        var els = document.querySelectorAll(".reveal");
+        if (!("IntersectionObserver" in window)) {
+          els.forEach(function (el) {
+            el.classList.add("visible");
+          });
+          return;
+        }
+        var io = new IntersectionObserver(
+          function (es) {
+            es.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add("visible");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.12 },
+        );
+        els.forEach(function (el) {
+          io.observe(el);
+        });
+      })();
+      (function () {
+        var grid = document.getElementById("productGrid");
+        var cards = Array.prototype.slice.call(
+          grid.querySelectorAll(".product-card"),
+        );
+        var chips = document.querySelectorAll("#filterChips .chip");
+        var sortSel = document.getElementById("sortSelect");
+        var count = document.getElementById("liveCount");
+        var empty = document.getElementById("emptyState");
+        var current = "all";
+        function activeChip(btn) {
+          chips.forEach(function (c) {
+            var on = c === btn;
+            c.classList.toggle("bg-terra", on);
+            c.classList.toggle("text-ivory", on);
+            c.classList.toggle("border-terra", on);
+            c.classList.toggle("text-char/70", !on);
+            c.classList.toggle("border-char/20", !on);
+          });
+        }
+        function apply() {
+          var shown = 0;
+          cards.forEach(function (card) {
+            var m = current === "all" || card.dataset.category === current;
+            card.style.display = m ? "" : "none";
+            if (m) shown++;
+          });
+          if (count) count.textContent = shown;
+          if (empty) empty.classList.toggle("hidden", shown !== 0);
+        }
+        function sort(mode) {
+          var s = cards.slice().sort(function (a, b) {
+            var pa = +a.dataset.price,
+              pb = +b.dataset.price;
+            if (mode === "low") return pa - pb;
+            if (mode === "high") return pb - pa;
+            return 0;
+          });
+          if (mode === "featured") s = cards;
+          s.forEach(function (card) {
+            grid.appendChild(card);
+          });
+        }
+        chips.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            current = btn.dataset.filter;
+            activeChip(btn);
+            apply();
+          });
+        });
+        sortSel.addEventListener("change", function () {
+          sort(sortSel.value);
+          apply();
+        });
+      })();
+    </script>
+  </body>
+</html>
