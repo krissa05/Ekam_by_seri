@@ -284,3 +284,198 @@ select:focus-visible {
     transform: none;
   }
 }
+
+/* ============================================================
+   COLLECTION THEMES
+   ─────────────────────────────────────────────────────────────
+   KEY RULE: We NEVER override .img-slot background color
+   globally. Each product card keeps its own --ph gradient.
+   We only change:
+     • Body/page background (gradient, not flat)
+     • #mainImage border-radius (the unique shape per collection)
+     • Product card shape on listing pages (border-radius only)
+     • Full accent-color overrides for Mirror & Frame (green)
+   ============================================================ */
+
+/* ── Scroll line helper ────────────────────────────────────── */
+.scroll-line {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, currentColor, transparent);
+  animation: scrollPulse 2.4s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.6; }
+}
+
+/* ── Product card lift on hover ────────────────────────────── */
+a.group .img-slot {
+  transition: transform 0.7s cubic-bezier(0.16,1,0.3,1),
+              box-shadow 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+a.group:hover .img-slot {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(68,45,28,0.22);
+}
+
+/* ── Size chip feel ────────────────────────────────────────── */
+.size-chip {
+  transition: background 0.3s ease, color 0.3s ease,
+              border-color 0.3s ease, transform 0.18s ease;
+}
+.size-chip:active { transform: scale(0.96); }
+
+/* ══════════════════════════════════════════════════════════════
+   1. COPPER BELLS
+   Shape: tall temple arch
+   Background: warm amber gradient (close to default, enriched)
+   ══════════════════════════════════════════════════════════════ */
+html[data-collection="copper-bells"] body {
+  background: linear-gradient(155deg, #f5e8d4 0%, #eedcc0 45%, #f5e8d4 100%);
+}
+/* Main product image — tall arch */
+html[data-collection="copper-bells"] #mainImage {
+  border-radius: 999px 999px 28px 28px !important;
+  box-shadow: 0 36px 80px rgba(90,24,8,0.32) !important;
+}
+/* Product cards on listing page — arch shape, keep their own colors */
+html[data-collection="copper-bells"] .img-slot.shape-arch {
+  border-radius: 999px 999px 24px 24px !important;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   2. POOJA & CHOWKI
+   Shape: lotus / soft blob
+   Background: warm saffron gradient
+   ══════════════════════════════════════════════════════════════ */
+html[data-collection="pooja"] body {
+  background: linear-gradient(155deg, #fdf5e0 0%, #f5e4b0 45%, #fdf5e0 100%);
+}
+html[data-collection="pooja"] #mainImage {
+  border-radius: 50% 50% 50% 50% / 62% 62% 38% 38% !important;
+  box-shadow: 0 36px 80px rgba(120,82,0,0.28) !important;
+}
+/* Product cards on listing — lotus blob, keep individual colors */
+html[data-collection="pooja"] .img-slot.shape-arch {
+  border-radius: 50% 50% 50% 50% / 62% 62% 38% 38% !important;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   3. MIRROR & FRAME  ← FULL GREEN THEME
+   Shape: clean rectangle (mirror frame)
+   Background: rich forest green gradient
+   All accents: green
+   ══════════════════════════════════════════════════════════════ */
+html[data-collection="mirror"] body {
+  background: linear-gradient(155deg, #eef5ee 0%, #cce4cc 45%, #eef5ee 100%);
+}
+html[data-collection="mirror"] .bg-ivory  { background: linear-gradient(155deg, #eef5ee 0%, #d8ecd8 50%, #eef5ee 100%) !important; }
+html[data-collection="mirror"] .bg-linen  { background: #c8dfca !important; }
+html[data-collection="mirror"] .bg-char   { background: #163320 !important; }
+
+/* Shape: clean rectangle for mirror/frame aesthetic */
+html[data-collection="mirror"] #mainImage {
+  border-radius: 22px !important;
+  box-shadow: 0 36px 80px rgba(22,51,32,0.35),
+              0 0 0 2px rgba(80,160,90,0.25) !important;
+}
+/* Product cards on listing — rectangle */
+html[data-collection="mirror"] .img-slot.shape-arch {
+  border-radius: 22px !important;
+}
+
+/* ── Green accent overrides ── */
+html[data-collection="mirror"] .text-terra          { color: #267a36 !important; }
+html[data-collection="mirror"] .bg-terra            { background: #267a36 !important; }
+html[data-collection="mirror"] .hover\:bg-terra:hover { background: #1e5e2a !important; }
+html[data-collection="mirror"] .bg-earth            { background: #1e5e2a !important; }
+html[data-collection="mirror"] .hover\:bg-earth:hover { background: #267a36 !important; }
+html[data-collection="mirror"] .border-terra\/20    { border-color: rgba(38,122,54,0.2) !important; }
+html[data-collection="mirror"] .text-terra\/75      { color: rgba(38,122,54,0.75) !important; }
+html[data-collection="mirror"] .logo-byseri         { color: #267a36 !important; }
+html[data-collection="mirror"] .link-underline::after { background: #267a36 !important; }
+html[data-collection="mirror"] #navbar {
+  border-color: rgba(38,122,54,0.22) !important;
+  background: rgba(238,245,238,0.92) !important;
+}
+/* Buy button green */
+html[data-collection="mirror"] #buyBtn {
+  background: #1e5e2a !important;
+}
+html[data-collection="mirror"] #buyBtn:hover {
+  background: #267a36 !important;
+}
+/* Size chip active: green */
+html[data-collection="mirror"] .size-chip.active {
+  background: #163320 !important;
+  border-color: #163320 !important;
+}
+/* Thumb active outline: green */
+html[data-collection="mirror"] .thumb.active {
+  outline-color: #267a36 !important;
+}
+/* Text accents */
+html[data-collection="mirror"] .text-gold { color: #2a8a40 !important; }
+/* Dark section background */
+html[data-collection="mirror"] #sizeGuide { background: #163320 !important; }
+/* Story section linen bg */
+html[data-collection="mirror"] section.bg-linen { background: #c8dfca !important; }
+/* Breadcrumb active */
+html[data-collection="mirror"] nav[aria-label="Breadcrumb"] span.text-terra {
+  color: #267a36 !important;
+}
+/* FAQ plus sign */
+html[data-collection="mirror"] .faq-plus { color: #267a36 !important; }
+/* link-arrow color */
+html[data-collection="mirror"] a.link-arrow { color: #267a36 !important; }
+/* "View all" text */
+html[data-collection="mirror"] a.text-terra { color: #267a36 !important; }
+
+/* ══════════════════════════════════════════════════════════════
+   4. TERRACOTTA
+   Shape: organic uneven blob (raw clay feel)
+   Background: earthy warm gradient
+   ══════════════════════════════════════════════════════════════ */
+html[data-collection="terracotta"] body {
+  background: linear-gradient(155deg, #f2e8dc 0%, #e0ccb0 45%, #f2e8dc 100%);
+}
+html[data-collection="terracotta"] #mainImage {
+  border-radius: 50% 40% 60% 50% / 55% 58% 42% 46% !important;
+  box-shadow: 0 36px 80px rgba(58,28,8,0.32) !important;
+}
+html[data-collection="terracotta"] .img-slot.shape-arch {
+  border-radius: 50% 40% 60% 50% / 55% 58% 42% 46% !important;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   5. UTILITY & KEEPSAKE
+   Shape: smooth pebble / oval
+   Background: brass-warm gradient
+   ══════════════════════════════════════════════════════════════ */
+html[data-collection="utility"] body {
+  background: linear-gradient(155deg, #faf5e8 0%, #f0e4c0 45%, #faf5e8 100%);
+}
+html[data-collection="utility"] #mainImage {
+  border-radius: 240px !important;
+  box-shadow: 0 36px 80px rgba(120,88,24,0.28) !important;
+}
+html[data-collection="utility"] .img-slot.shape-arch {
+  border-radius: 240px !important;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   6. WALL DECOR & JHAROKHA
+   Shape: pointed Rajasthani arch (jharokha window)
+   Background: deep green-earth gradient
+   ══════════════════════════════════════════════════════════════ */
+html[data-collection="wall-decor"] body {
+  background: linear-gradient(155deg, #eff4e8 0%, #d8e8c4 45%, #eff4e8 100%);
+}
+html[data-collection="wall-decor"] #mainImage {
+  border-radius: 999px 999px 16px 16px !important;
+  box-shadow: 0 36px 80px rgba(28,56,12,0.32) !important;
+}
+html[data-collection="wall-decor"] .img-slot.shape-arch {
+  border-radius: 999px 999px 16px 16px !important;
+}
