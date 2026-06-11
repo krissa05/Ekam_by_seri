@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -190,7 +190,7 @@
       }
       .nav-links a {
         font-size: 0.68rem;
-        letter-spacing: 0.10em;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
         color: var(--char);
         text-decoration: none;
@@ -241,14 +241,16 @@
         padding: 10px 14px;
         border-radius: 12px;
         font-size: 0.68rem;
-        letter-spacing: 0.10em;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
-        color: rgba(36,26,16,0.7);
+        color: rgba(36, 26, 16, 0.7);
         text-decoration: none;
-        transition: background 0.2s, color 0.2s;
+        transition:
+          background 0.2s,
+          color 0.2s;
       }
       .col-drop-link:hover {
-        background: rgba(184,90,50,0.08);
+        background: rgba(184, 90, 50, 0.08);
         color: #b85a32;
       }
 
@@ -303,7 +305,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 90px 60px 40px 90px;
+        padding: 120px 60px 40px 90px;
         position: relative;
         z-index: 2;
       }
@@ -417,7 +419,10 @@
 
       .hero-right {
         position: relative;
-        overflow: visible;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       /* 3D floating orb — top-left of right panel */
@@ -473,8 +478,8 @@
           inset -10px -10px 24px rgba(80, 55, 5, 0.45),
           8px 14px 32px rgba(200, 168, 75, 0.35);
         border-radius: 50%;
-        bottom: 14%;
-        right: 2%;
+        bottom: 18%;
+        right: 5%;
         z-index: 4;
         pointer-events: none;
         animation: floatOrbA 8s ease-in-out infinite;
@@ -493,8 +498,8 @@
           inset -6px -6px 14px rgba(80, 55, 5, 0.4),
           5px 8px 20px rgba(200, 168, 75, 0.28);
         border-radius: 50%;
-        bottom: 26%;
-        right: 8%;
+        bottom: 30%;
+        right: 11%;
         z-index: 4;
         pointer-events: none;
         animation: floatOrbB 11s ease-in-out infinite 1.5s;
@@ -579,25 +584,29 @@
         inset: 0;
         opacity: 0;
         animation: fadeIn 1.4s ease 0.6s forwards;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       .hero-img {
         position: absolute;
         overflow: hidden;
       }
-      /* Big tall rectangle */
+      /* Big tall oval — centred in right panel */
       .hero-img:nth-child(1) {
-        top: 8%;
-        right: 8%;
-        width: 58%;
-        height: 72%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-30%, -50%);
+        width: 54%;
+        height: 76%;
         border-radius: 240px 240px 240px 240px;
       }
       /* Circle overlapping bottom-left */
       .hero-img:nth-child(2) {
-        bottom: 22%;
-        left: 8%;
-        width: 38%;
-        height: 36%;
+        bottom: 14%;
+        left: 10%;
+        width: 36%;
+        height: 34%;
         border-radius: 50%;
         border: 5px solid var(--ivory);
         z-index: 3;
@@ -718,7 +727,7 @@
       .hero-stats {
         display: flex;
         gap: 0;
-        margin-top: 56px;
+        margin-top: 32px;
         opacity: 0;
         animation: fadeUp 1.8s cubic-bezier(0.16, 1, 0.3, 1) 1.6s forwards;
       }
@@ -792,23 +801,30 @@
             ══════════════════════════════════════ */
       .philosophy {
         padding: 200px 90px 220px;
-        background-color: #e8dac4;
+        background-color: #3d2716;
         background-image:
           radial-gradient(
-            ellipse at 80% 20%,
-            rgba(194, 103, 58, 0.22) 0%,
-            transparent 55%
+            ellipse at 75% 15%,
+            rgba(194, 103, 58, 0.3) 0%,
+            transparent 52%
           ),
           radial-gradient(
-            ellipse at 20% 80%,
-            rgba(116, 48, 20, 0.14) 0%,
-            transparent 50%
+            ellipse at 20% 85%,
+            rgba(116, 48, 20, 0.35) 0%,
+            transparent 48%
           ),
           radial-gradient(
-            ellipse at 10% 30%,
-            rgba(245, 239, 230, 0.5) 0%,
-            transparent 50%
+            ellipse at 50% 50%,
+            rgba(61, 39, 22, 0) 0%,
+            transparent 100%
           );
+        background: linear-gradient(
+          135deg,
+          #2b1810 0%,
+          #4a2614 35%,
+          #3d2716 65%,
+          #1e1008 100%
+        );
         text-align: center;
         position: relative;
         overflow: hidden;
@@ -856,6 +872,7 @@
         letter-spacing: -0.03em;
         position: relative;
         z-index: 1;
+        color: #f2e8d8;
       }
       .philosophy-main em {
         font-style: italic;
@@ -864,7 +881,7 @@
       .philosophy-sub {
         font-size: 0.88rem;
         line-height: 2;
-        color: var(--grey);
+        color: rgba(242, 232, 216, 0.55);
         max-width: 420px;
         margin: 0 auto;
         position: relative;
@@ -3080,18 +3097,144 @@
         </span>
       </a>
       <ul class="nav-links">
-        <li style="position:relative;" id="navColItem">
-          <button id="navColBtn" style="font-size:0.68rem;letter-spacing:0.10em;text-transform:uppercase;color:var(--char);background:transparent;border:0;padding:0;cursor:pointer;opacity:0.72;display:flex;align-items:center;gap:5px;transition:opacity 0.3s;">
+        <li style="position: relative" id="navColItem">
+          <button
+            id="navColBtn"
+            style="
+              font-size: 0.68rem;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              color: var(--char);
+              background: transparent;
+              border: 0;
+              padding: 0;
+              cursor: pointer;
+              opacity: 0.72;
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              transition: opacity 0.3s;
+            "
+          >
             Collections
-            <svg id="navColArrow" width="10" height="6" viewBox="0 0 10 6" fill="none" style="transition:transform 0.3s;" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg
+              id="navColArrow"
+              width="10"
+              height="6"
+              viewBox="0 0 10 6"
+              fill="none"
+              style="transition: transform 0.3s"
+              aria-hidden="true"
+            >
+              <path
+                d="M1 1l4 4 4-4"
+                stroke="currentColor"
+                stroke-width="1.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </button>
-          <div id="navColDropdown" style="visibility:hidden;opacity:0;position:absolute;left:50%;top:calc(100% + 12px);transform:translateX(-50%);width:210px;background:rgba(242,234,216,0.97);border:1px solid rgba(68,45,28,0.1);border-radius:18px;padding:8px;box-shadow:0 16px 48px rgba(68,45,28,0.14);backdrop-filter:blur(16px);transition:opacity 0.25s ease,top 0.25s ease;z-index:999;">
-            <a href="collections/copper-bells.html" class="col-drop-link"><span style="width:8px;height:8px;border-radius:50%;background:#c2673a;flex-shrink:0;display:inline-block;"></span>Copper Bells</a>
-            <a href="collections/pooja-chowki.html" class="col-drop-link"><span style="width:8px;height:8px;border-radius:50%;background:#c8a84b;flex-shrink:0;display:inline-block;"></span>Pooja &amp; Chowki</a>
-            <a href="collections/mirror-frame.html" class="col-drop-link"><span style="width:8px;height:8px;border-radius:50%;background:#5c6b3a;flex-shrink:0;display:inline-block;"></span>Mirror &amp; Frame</a>
-            <a href="collections/terracotta.html" class="col-drop-link"><span style="width:8px;height:8px;border-radius:50%;background:#8a4820;flex-shrink:0;display:inline-block;"></span>Terracotta</a>
-            <a href="collections/utility-keepsake.html" class="col-drop-link"><span style="width:8px;height:8px;border-radius:50%;background:#a88030;flex-shrink:0;display:inline-block;"></span>Utility &amp; Keepsake</a>
-            <a href="collections/wall-decor.html" class="col-drop-link"><span style="width:8px;height:8px;border-radius:50%;background:#486830;flex-shrink:0;display:inline-block;"></span>Wall Decor</a>
+          <div
+            id="navColDropdown"
+            style="
+              visibility: hidden;
+              opacity: 0;
+              position: absolute;
+              left: 50%;
+              top: calc(100% + 12px);
+              transform: translateX(-50%);
+              width: 210px;
+              background: rgba(242, 234, 216, 0.97);
+              border: 1px solid rgba(68, 45, 28, 0.1);
+              border-radius: 18px;
+              padding: 8px;
+              box-shadow: 0 16px 48px rgba(68, 45, 28, 0.14);
+              backdrop-filter: blur(16px);
+              transition:
+                opacity 0.25s ease,
+                top 0.25s ease;
+              z-index: 999;
+            "
+          >
+            <a href="collections/copper-bells.html" class="col-drop-link"
+              ><span
+                style="
+                  width: 8px;
+                  height: 8px;
+                  border-radius: 50%;
+                  background: #c2673a;
+                  flex-shrink: 0;
+                  display: inline-block;
+                "
+              ></span
+              >Copper Bells</a
+            >
+            <a href="collections/pooja-chowki.html" class="col-drop-link"
+              ><span
+                style="
+                  width: 8px;
+                  height: 8px;
+                  border-radius: 50%;
+                  background: #c8a84b;
+                  flex-shrink: 0;
+                  display: inline-block;
+                "
+              ></span
+              >Pooja &amp; Chowki</a
+            >
+            <a href="collections/mirror-frame.html" class="col-drop-link"
+              ><span
+                style="
+                  width: 8px;
+                  height: 8px;
+                  border-radius: 50%;
+                  background: #5c6b3a;
+                  flex-shrink: 0;
+                  display: inline-block;
+                "
+              ></span
+              >Mirror &amp; Frame</a
+            >
+            <a href="collections/terracotta.html" class="col-drop-link"
+              ><span
+                style="
+                  width: 8px;
+                  height: 8px;
+                  border-radius: 50%;
+                  background: #8a4820;
+                  flex-shrink: 0;
+                  display: inline-block;
+                "
+              ></span
+              >Terracotta</a
+            >
+            <a href="collections/utility-keepsake.html" class="col-drop-link"
+              ><span
+                style="
+                  width: 8px;
+                  height: 8px;
+                  border-radius: 50%;
+                  background: #a88030;
+                  flex-shrink: 0;
+                  display: inline-block;
+                "
+              ></span
+              >Utility &amp; Keepsake</a
+            >
+            <a href="collections/wall-decor.html" class="col-drop-link"
+              ><span
+                style="
+                  width: 8px;
+                  height: 8px;
+                  border-radius: 50%;
+                  background: #486830;
+                  flex-shrink: 0;
+                  display: inline-block;
+                "
+              ></span
+              >Wall Decor</a
+            >
           </div>
         </li>
         <li><a href="#craftsmanship">Craft</a></li>
@@ -5094,126 +5237,345 @@
     </section>
 
     <!-- ══ ABOUT ══ -->
-    <section id="about" style="
-      background: linear-gradient(135deg,#241a10 0%,#3d2716 55%,#241a10 100%);
-      padding: 120px 0;
-      position: relative;
-      overflow: hidden;
-    ">
+    <section
+      id="about"
+      style="
+        background: linear-gradient(
+          135deg,
+          #241a10 0%,
+          #3d2716 55%,
+          #241a10 100%
+        );
+        padding: 120px 0;
+        position: relative;
+        overflow: hidden;
+      "
+    >
       <!-- Background botanical deco -->
-      <div style="
-        position:absolute;inset:0;pointer-events:none;
-        background: radial-gradient(ellipse at 80% 20%, rgba(194,103,58,0.12) 0%, transparent 55%),
-                    radial-gradient(ellipse at 10% 80%, rgba(200,168,75,0.08) 0%, transparent 50%);
-      "></div>
-      <div style="max-width:1280px;margin:0 auto;padding:0 90px;position:relative;z-index:1;">
+      <div
+        style="
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          background:
+            radial-gradient(
+              ellipse at 80% 20%,
+              rgba(194, 103, 58, 0.12) 0%,
+              transparent 55%
+            ),
+            radial-gradient(
+              ellipse at 10% 80%,
+              rgba(200, 168, 75, 0.08) 0%,
+              transparent 50%
+            );
+        "
+      ></div>
+      <div
+        style="
+          max-width: 1280px;
+          margin: 0 auto;
+          padding: 0 90px;
+          position: relative;
+          z-index: 1;
+        "
+      >
         <!-- Label -->
-        <div class="reveal" style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
-          <span style="height:1px;width:40px;background:rgba(194,103,58,0.5);display:block;"></span>
-          <span style="font-family:'Manrope',sans-serif;font-size:0.62rem;letter-spacing:0.38em;text-transform:uppercase;color:rgba(194,103,58,0.75);">The Makers</span>
+        <div
+          class="reveal"
+          style="
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+          "
+        >
+          <span
+            style="
+              height: 1px;
+              width: 40px;
+              background: rgba(194, 103, 58, 0.5);
+              display: block;
+            "
+          ></span>
+          <span
+            style="
+              font-family: &quot;Manrope&quot;, sans-serif;
+              font-size: 0.62rem;
+              letter-spacing: 0.38em;
+              text-transform: uppercase;
+              color: rgba(194, 103, 58, 0.75);
+            "
+            >The Makers</span
+          >
         </div>
         <!-- Headline -->
-        <h2 class="reveal" style="
-          font-family:'Cormorant Garamond',serif;
-          font-size:clamp(2.8rem,5vw,5rem);
-          font-weight:300;
-          line-height:1;
-          letter-spacing:-0.02em;
-          color:#f5ede0;
-          margin-bottom:70px;
-          max-width:640px;
-        ">Two sisters.<br/><em style="color:#c2673a;">One living craft.</em></h2>
+        <h2
+          class="reveal"
+          style="
+            font-family: &quot;Cormorant Garamond&quot;, serif;
+            font-size: clamp(2.8rem, 5vw, 5rem);
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: -0.02em;
+            color: #f5ede0;
+            margin-bottom: 70px;
+            max-width: 640px;
+          "
+        >
+          Two sisters.<br /><em style="color: #c2673a">One living craft.</em>
+        </h2>
 
         <!-- Two-column founders grid -->
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;" class="reveal">
-
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+          "
+          class="reveal"
+        >
           <!-- Founder 1: Ritu -->
           <div>
-            <div class="img-slot zoom shape-arch" style="
-              aspect-ratio:3/4;
-              width:100%;
-              max-width:380px;
-              --ph: linear-gradient(160deg,#c2673a 0%,#7a3010 60%,#4a1e08 100%);
-              margin-bottom:28px;
-              box-shadow: 0 24px 60px rgba(0,0,0,0.4);
-            ">
-              <img src="PASTE_IMAGE_URL" alt="Ritu — Co-founder, Ekam by Seri" onerror="this.classList.add('img-missing')" />
+            <div
+              class="img-slot zoom shape-arch"
+              style="
+                aspect-ratio: 3/4;
+                width: 100%;
+                max-width: 380px;
+                --ph: linear-gradient(
+                  160deg,
+                  #c2673a 0%,
+                  #7a3010 60%,
+                  #4a1e08 100%
+                );
+                margin-bottom: 28px;
+                box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+              "
+            >
+              <img
+                src="PASTE_IMAGE_URL"
+                alt="Ritu — Co-founder, Ekam by Seri"
+                onerror="this.classList.add('img-missing')"
+              />
             </div>
-            <span style="font-family:'Manrope',sans-serif;font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(194,103,58,0.7);">Co-Founder</span>
-            <h3 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#f5ede0;margin:8px 0 14px;">Ritu</h3>
-            <p style="font-family:'Manrope',sans-serif;font-size:0.9rem;line-height:1.9;color:rgba(245,237,224,0.6);max-width:340px;">
-              Ritu's hands first learned the patience of mud work in her grandmother's courtyard in Kutch — pressing mirror fragments into wet clay, watching patterns emerge like constellations. She brings that same slow devotion to every piece Ekam creates.
+            <span
+              style="
+                font-family: &quot;Manrope&quot;, sans-serif;
+                font-size: 0.6rem;
+                letter-spacing: 0.3em;
+                text-transform: uppercase;
+                color: rgba(194, 103, 58, 0.7);
+              "
+              >Co-Founder</span
+            >
+            <h3
+              style="
+                font-family: &quot;Cormorant Garamond&quot;, serif;
+                font-size: 2rem;
+                font-weight: 300;
+                color: #f5ede0;
+                margin: 8px 0 14px;
+              "
+            >
+              Ritu
+            </h3>
+            <p
+              style="
+                font-family: &quot;Manrope&quot;, sans-serif;
+                font-size: 0.9rem;
+                line-height: 1.9;
+                color: rgba(245, 237, 224, 0.6);
+                max-width: 340px;
+              "
+            >
+              Ritu's hands first learned the patience of mud work in her
+              grandmother's courtyard in Kutch — pressing mirror fragments into
+              wet clay, watching patterns emerge like constellations. She brings
+              that same slow devotion to every piece Ekam creates.
             </p>
-            <a href="https://wa.me/918898010720" target="_blank" rel="noopener" style="
-              display:inline-flex;align-items:center;gap:10px;
-              margin-top:22px;
-              font-family:'Manrope',sans-serif;font-size:0.72rem;
-              letter-spacing:0.2em;text-transform:uppercase;
-              color:#c2673a;text-decoration:none;
-              transition:gap 0.3s ease;
-            " class="link-arrow">Say hello</a>
+            <a
+              href="https://wa.me/918898010720"
+              target="_blank"
+              rel="noopener"
+              style="
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 22px;
+                font-family: &quot;Manrope&quot;, sans-serif;
+                font-size: 0.72rem;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: #c2673a;
+                text-decoration: none;
+                transition: gap 0.3s ease;
+              "
+              class="link-arrow"
+              >Say hello</a
+            >
           </div>
 
           <!-- Founder 2: Seema -->
           <div>
-            <div class="img-slot zoom shape-blob" style="
-              aspect-ratio:3/4;
-              width:100%;
-              max-width:380px;
-              --ph: linear-gradient(145deg,#c8a84b 0%,#8a6820 100%);
-              margin-bottom:28px;
-              box-shadow: 0 24px 60px rgba(0,0,0,0.4);
-            ">
-              <img src="PASTE_IMAGE_URL" alt="Seema — Co-founder, Ekam by Seri" onerror="this.classList.add('img-missing')" />
+            <div
+              class="img-slot zoom shape-blob"
+              style="
+                aspect-ratio: 3/4;
+                width: 100%;
+                max-width: 380px;
+                --ph: linear-gradient(145deg, #c8a84b 0%, #8a6820 100%);
+                margin-bottom: 28px;
+                box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+              "
+            >
+              <img
+                src="PASTE_IMAGE_URL"
+                alt="Seema — Co-founder, Ekam by Seri"
+                onerror="this.classList.add('img-missing')"
+              />
             </div>
-            <span style="font-family:'Manrope',sans-serif;font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(200,168,75,0.7);">Co-Founder</span>
-            <h3 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#f5ede0;margin:8px 0 14px;">Seema</h3>
-            <p style="font-family:'Manrope',sans-serif;font-size:0.9rem;line-height:1.9;color:rgba(245,237,224,0.6);max-width:340px;">
-              Seema is the bridge between the artisan's workshop and the modern home. She trained under Kutch's lippan masters and now carries that dialogue forward — ensuring each object arriving at your door holds the full weight of its origin.
+            <span
+              style="
+                font-family: &quot;Manrope&quot;, sans-serif;
+                font-size: 0.6rem;
+                letter-spacing: 0.3em;
+                text-transform: uppercase;
+                color: rgba(200, 168, 75, 0.7);
+              "
+              >Co-Founder</span
+            >
+            <h3
+              style="
+                font-family: &quot;Cormorant Garamond&quot;, serif;
+                font-size: 2rem;
+                font-weight: 300;
+                color: #f5ede0;
+                margin: 8px 0 14px;
+              "
+            >
+              Seema
+            </h3>
+            <p
+              style="
+                font-family: &quot;Manrope&quot;, sans-serif;
+                font-size: 0.9rem;
+                line-height: 1.9;
+                color: rgba(245, 237, 224, 0.6);
+                max-width: 340px;
+              "
+            >
+              Seema is the bridge between the artisan's workshop and the modern
+              home. She trained under Kutch's lippan masters and now carries
+              that dialogue forward — ensuring each object arriving at your door
+              holds the full weight of its origin.
             </p>
-            <a href="https://wa.me/919925099994" target="_blank" rel="noopener" style="
-              display:inline-flex;align-items:center;gap:10px;
-              margin-top:22px;
-              font-family:'Manrope',sans-serif;font-size:0.72rem;
-              letter-spacing:0.2em;text-transform:uppercase;
-              color:#c8a84b;text-decoration:none;
-              transition:gap 0.3s ease;
-            " class="link-arrow">Say hello</a>
+            <a
+              href="https://wa.me/919925099994"
+              target="_blank"
+              rel="noopener"
+              style="
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 22px;
+                font-family: &quot;Manrope&quot;, sans-serif;
+                font-size: 0.72rem;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: #c8a84b;
+                text-decoration: none;
+                transition: gap 0.3s ease;
+              "
+              class="link-arrow"
+              >Say hello</a
+            >
           </div>
         </div>
 
         <!-- Quote bar -->
-        <div class="reveal" style="
-          margin-top:80px;
-          padding:40px 50px;
-          border:1px solid rgba(194,103,58,0.2);
-          border-radius:20px;
-          background:rgba(255,255,255,0.04);
-          backdrop-filter:blur(8px);
-          display:flex;align-items:center;gap:40px;
-        ">
-          <span style="font-family:'Cormorant Garamond',serif;font-size:3.5rem;color:rgba(194,103,58,0.25);line-height:1;flex-shrink:0;">&ldquo;</span>
+        <div
+          class="reveal"
+          style="
+            margin-top: 80px;
+            padding: 40px 50px;
+            border: 1px solid rgba(194, 103, 58, 0.2);
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            gap: 40px;
+          "
+        >
+          <span
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-size: 3.5rem;
+              color: rgba(194, 103, 58, 0.25);
+              line-height: 1;
+              flex-shrink: 0;
+            "
+            >&ldquo;</span
+          >
           <div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;font-weight:300;color:rgba(245,237,224,0.88);line-height:1.55;margin-bottom:16px;">
-              We don't want Ekam to just decorate a shelf. We want it to start a conversation about where it came from — and the hands that made it possible.
+            <p
+              style="
+                font-family: &quot;Cormorant Garamond&quot;, serif;
+                font-size: 1.4rem;
+                font-style: italic;
+                font-weight: 300;
+                color: rgba(245, 237, 224, 0.88);
+                line-height: 1.55;
+                margin-bottom: 16px;
+              "
+            >
+              We don't want Ekam to just decorate a shelf. We want it to start a
+              conversation about where it came from — and the hands that made it
+              possible.
             </p>
-            <span style="font-family:'Manrope',sans-serif;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(194,103,58,0.65);">Ritu &amp; Seema, Ekam by Seri</span>
+            <span
+              style="
+                font-family: &quot;Manrope&quot;, sans-serif;
+                font-size: 0.68rem;
+                letter-spacing: 0.22em;
+                text-transform: uppercase;
+                color: rgba(194, 103, 58, 0.65);
+              "
+              >Ritu &amp; Seema, Ekam by Seri</span
+            >
           </div>
         </div>
 
         <!-- CTA -->
-        <div class="reveal" style="margin-top:50px;text-align:center;">
-          <a href="about.html" style="
-            display:inline-block;
-            font-family:'Manrope',sans-serif;font-size:0.78rem;
-            letter-spacing:0.18em;text-transform:uppercase;
-            color:#f5ede0;background:transparent;
-            border:1px solid rgba(194,103,58,0.4);
-            padding:16px 40px;border-radius:100px;
-            text-decoration:none;
-            transition:background 0.6s ease,border-color 0.6s ease;
-          " onmouseover="this.style.background='rgba(194,103,58,0.15)';this.style.borderColor='rgba(194,103,58,0.7)'"
-             onmouseout="this.style.background='transparent';this.style.borderColor='rgba(194,103,58,0.4)'">
+        <div class="reveal" style="margin-top: 50px; text-align: center">
+          <a
+            href="about.html"
+            style="
+              display: inline-block;
+              font-family: &quot;Manrope&quot;, sans-serif;
+              font-size: 0.78rem;
+              letter-spacing: 0.18em;
+              text-transform: uppercase;
+              color: #f5ede0;
+              background: transparent;
+              border: 1px solid rgba(194, 103, 58, 0.4);
+              padding: 16px 40px;
+              border-radius: 100px;
+              text-decoration: none;
+              transition:
+                background 0.6s ease,
+                border-color 0.6s ease;
+            "
+            onmouseover="
+              this.style.background = 'rgba(194,103,58,0.15)';
+              this.style.borderColor = 'rgba(194,103,58,0.7)';
+            "
+            onmouseout="
+              this.style.background = 'transparent';
+              this.style.borderColor = 'rgba(194,103,58,0.4)';
+            "
+          >
             Our full story &rarr;
           </a>
         </div>
@@ -5221,111 +5583,419 @@
     </section>
 
     <!-- ══ INSTAGRAM ══ -->
-    <section id="instagram" style="
-      background: linear-gradient(135deg,#f2ead8 0%,#e8d8b8 50%,#f2ead8 100%);
-      padding:100px 0;
-      position:relative;overflow:hidden;
-    ">
-      <div style="max-width:1280px;margin:0 auto;padding:0 90px;">
+    <section
+      id="instagram"
+      style="
+        background: linear-gradient(
+          135deg,
+          #f2ead8 0%,
+          #e8d8b8 50%,
+          #f2ead8 100%
+        );
+        padding: 100px 0;
+        position: relative;
+        overflow: hidden;
+      "
+    >
+      <div style="max-width: 1280px; margin: 0 auto; padding: 0 90px">
         <!-- Header -->
-        <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;" class="reveal">
+        <div
+          style="
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 48px;
+          "
+          class="reveal"
+        >
           <div>
-            <span style="font-family:'Manrope',sans-serif;font-size:0.62rem;letter-spacing:0.38em;text-transform:uppercase;color:rgba(184,88,50,0.75);display:block;margin-bottom:12px;">Follow Along</span>
-            <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.5rem);font-weight:300;line-height:1;color:#241a10;margin:0;">
+            <span
+              style="
+                font-family: &quot;Manrope&quot;, sans-serif;
+                font-size: 0.62rem;
+                letter-spacing: 0.38em;
+                text-transform: uppercase;
+                color: rgba(184, 88, 50, 0.75);
+                display: block;
+                margin-bottom: 12px;
+              "
+              >Follow Along</span
+            >
+            <h2
+              style="
+                font-family: &quot;Cormorant Garamond&quot;, serif;
+                font-size: clamp(2.2rem, 4vw, 3.5rem);
+                font-weight: 300;
+                line-height: 1;
+                color: #241a10;
+                margin: 0;
+              "
+            >
               @ekambyseri
             </h2>
           </div>
-          <a href="https://instagram.com/ekambyseri" target="_blank" rel="noopener" style="
-            display:inline-flex;align-items:center;gap:10px;
-            font-family:'Manrope',sans-serif;font-size:0.72rem;
-            letter-spacing:0.2em;text-transform:uppercase;
-            color:#b85a32;text-decoration:none;
-            padding-bottom:4px;
-            border-bottom:1px solid rgba(184,88,50,0.35);
-            transition:border-color 0.3s ease;
-          ">Follow on Instagram →</a>
+          <a
+            href="https://instagram.com/ekambyseri"
+            target="_blank"
+            rel="noopener"
+            style="
+              display: inline-flex;
+              align-items: center;
+              gap: 10px;
+              font-family: &quot;Manrope&quot;, sans-serif;
+              font-size: 0.72rem;
+              letter-spacing: 0.2em;
+              text-transform: uppercase;
+              color: #b85a32;
+              text-decoration: none;
+              padding-bottom: 4px;
+              border-bottom: 1px solid rgba(184, 88, 50, 0.35);
+              transition: border-color 0.3s ease;
+            "
+            >Follow on Instagram →</a
+          >
         </div>
 
         <!-- Instagram grid — 6 placeholder tiles -->
-        <div class="reveal" style="
-          display:grid;
-          grid-template-columns:repeat(6,1fr);
-          gap:12px;
-        ">
+        <div
+          class="reveal"
+          style="
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 12px;
+          "
+        >
           <!-- Tile 1 — tall feature -->
-          <a href="https://instagram.com/ekambyseri" target="_blank" rel="noopener" style="grid-column:span 2;grid-row:span 2;text-decoration:none;display:block;" class="group">
-            <div class="img-slot zoom" style="
-              width:100%;padding-bottom:100%;position:relative;
-              border-radius:20px;overflow:hidden;
-              --ph:linear-gradient(155deg,#c2673a 0%,#7a3010 100%);
-            ">
-              <img src="PASTE_IMAGE_URL" alt="Ekam by Seri on Instagram" onerror="this.classList.add('img-missing')" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
-              <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(36,26,16,0.6) 0%,transparent 50%);z-index:1;opacity:0;transition:opacity 0.4s ease;" class="ig-overlay"></div>
-              <span style="position:absolute;bottom:16px;left:16px;z-index:2;font-family:'Cormorant Garamond',serif;font-size:0.9rem;font-style:italic;color:rgba(255,255,255,0.9);opacity:0;transition:opacity 0.4s ease;" class="ig-caption">View post →</span>
+          <a
+            href="https://instagram.com/ekambyseri"
+            target="_blank"
+            rel="noopener"
+            style="
+              grid-column: span 2;
+              grid-row: span 2;
+              text-decoration: none;
+              display: block;
+            "
+            class="group"
+          >
+            <div
+              class="img-slot zoom"
+              style="
+                width: 100%;
+                padding-bottom: 100%;
+                position: relative;
+                border-radius: 20px;
+                overflow: hidden;
+                --ph: linear-gradient(155deg, #c2673a 0%, #7a3010 100%);
+              "
+            >
+              <img
+                src="PASTE_IMAGE_URL"
+                alt="Ekam by Seri on Instagram"
+                onerror="this.classList.add('img-missing')"
+                style="
+                  position: absolute;
+                  inset: 0;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                "
+              />
+              <div
+                style="
+                  position: absolute;
+                  inset: 0;
+                  background: linear-gradient(
+                    to top,
+                    rgba(36, 26, 16, 0.6) 0%,
+                    transparent 50%
+                  );
+                  z-index: 1;
+                  opacity: 0;
+                  transition: opacity 0.4s ease;
+                "
+                class="ig-overlay"
+              ></div>
+              <span
+                style="
+                  position: absolute;
+                  bottom: 16px;
+                  left: 16px;
+                  z-index: 2;
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-size: 0.9rem;
+                  font-style: italic;
+                  color: rgba(255, 255, 255, 0.9);
+                  opacity: 0;
+                  transition: opacity 0.4s ease;
+                "
+                class="ig-caption"
+                >View post →</span
+              >
             </div>
           </a>
           <!-- Tiles 2-5 -->
-          <a href="https://instagram.com/ekambyseri" target="_blank" rel="noopener" style="text-decoration:none;display:block;" class="group">
-            <div class="img-slot zoom" style="width:100%;padding-bottom:100%;position:relative;border-radius:14px;overflow:hidden;--ph:linear-gradient(145deg,#c8a84b,#8a6820);">
-              <img src="PASTE_IMAGE_URL" alt="Ekam by Seri on Instagram" onerror="this.classList.add('img-missing')" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <a
+            href="https://instagram.com/ekambyseri"
+            target="_blank"
+            rel="noopener"
+            style="text-decoration: none; display: block"
+            class="group"
+          >
+            <div
+              class="img-slot zoom"
+              style="
+                width: 100%;
+                padding-bottom: 100%;
+                position: relative;
+                border-radius: 14px;
+                overflow: hidden;
+                --ph: linear-gradient(145deg, #c8a84b, #8a6820);
+              "
+            >
+              <img
+                src="PASTE_IMAGE_URL"
+                alt="Ekam by Seri on Instagram"
+                onerror="this.classList.add('img-missing')"
+                style="
+                  position: absolute;
+                  inset: 0;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                "
+              />
             </div>
           </a>
-          <a href="https://instagram.com/ekambyseri" target="_blank" rel="noopener" style="text-decoration:none;display:block;" class="group">
-            <div class="img-slot zoom" style="width:100%;padding-bottom:100%;position:relative;border-radius:14px;overflow:hidden;--ph:linear-gradient(145deg,#5c6b3a,#3a4525);">
-              <img src="PASTE_IMAGE_URL" alt="Ekam by Seri on Instagram" onerror="this.classList.add('img-missing')" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <a
+            href="https://instagram.com/ekambyseri"
+            target="_blank"
+            rel="noopener"
+            style="text-decoration: none; display: block"
+            class="group"
+          >
+            <div
+              class="img-slot zoom"
+              style="
+                width: 100%;
+                padding-bottom: 100%;
+                position: relative;
+                border-radius: 14px;
+                overflow: hidden;
+                --ph: linear-gradient(145deg, #5c6b3a, #3a4525);
+              "
+            >
+              <img
+                src="PASTE_IMAGE_URL"
+                alt="Ekam by Seri on Instagram"
+                onerror="this.classList.add('img-missing')"
+                style="
+                  position: absolute;
+                  inset: 0;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                "
+              />
             </div>
           </a>
-          <a href="https://instagram.com/ekambyseri" target="_blank" rel="noopener" style="text-decoration:none;display:block;" class="group">
-            <div class="img-slot zoom" style="width:100%;padding-bottom:100%;position:relative;border-radius:14px;overflow:hidden;--ph:linear-gradient(135deg,#182d3d,#0e1d2a);">
-              <img src="PASTE_IMAGE_URL" alt="Ekam by Seri on Instagram" onerror="this.classList.add('img-missing')" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <a
+            href="https://instagram.com/ekambyseri"
+            target="_blank"
+            rel="noopener"
+            style="text-decoration: none; display: block"
+            class="group"
+          >
+            <div
+              class="img-slot zoom"
+              style="
+                width: 100%;
+                padding-bottom: 100%;
+                position: relative;
+                border-radius: 14px;
+                overflow: hidden;
+                --ph: linear-gradient(135deg, #182d3d, #0e1d2a);
+              "
+            >
+              <img
+                src="PASTE_IMAGE_URL"
+                alt="Ekam by Seri on Instagram"
+                onerror="this.classList.add('img-missing')"
+                style="
+                  position: absolute;
+                  inset: 0;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                "
+              />
             </div>
           </a>
-          <a href="https://instagram.com/ekambyseri" target="_blank" rel="noopener" style="text-decoration:none;display:block;" class="group">
-            <div class="img-slot zoom" style="width:100%;padding-bottom:100%;position:relative;border-radius:14px;overflow:hidden;--ph:linear-gradient(145deg,#743014,#442d1c);">
-              <img src="PASTE_IMAGE_URL" alt="Ekam by Seri on Instagram" onerror="this.classList.add('img-missing')" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <a
+            href="https://instagram.com/ekambyseri"
+            target="_blank"
+            rel="noopener"
+            style="text-decoration: none; display: block"
+            class="group"
+          >
+            <div
+              class="img-slot zoom"
+              style="
+                width: 100%;
+                padding-bottom: 100%;
+                position: relative;
+                border-radius: 14px;
+                overflow: hidden;
+                --ph: linear-gradient(145deg, #743014, #442d1c);
+              "
+            >
+              <img
+                src="PASTE_IMAGE_URL"
+                alt="Ekam by Seri on Instagram"
+                onerror="this.classList.add('img-missing')"
+                style="
+                  position: absolute;
+                  inset: 0;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                "
+              />
             </div>
           </a>
-          <a href="https://instagram.com/ekambyseri" target="_blank" rel="noopener" style="text-decoration:none;display:block;" class="group">
-            <div class="img-slot zoom" style="width:100%;padding-bottom:100%;position:relative;border-radius:14px;overflow:hidden;--ph:linear-gradient(155deg,#c2673a,#8b3e1a);">
-              <img src="PASTE_IMAGE_URL" alt="Ekam by Seri on Instagram" onerror="this.classList.add('img-missing')" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <a
+            href="https://instagram.com/ekambyseri"
+            target="_blank"
+            rel="noopener"
+            style="text-decoration: none; display: block"
+            class="group"
+          >
+            <div
+              class="img-slot zoom"
+              style="
+                width: 100%;
+                padding-bottom: 100%;
+                position: relative;
+                border-radius: 14px;
+                overflow: hidden;
+                --ph: linear-gradient(155deg, #c2673a, #8b3e1a);
+              "
+            >
+              <img
+                src="PASTE_IMAGE_URL"
+                alt="Ekam by Seri on Instagram"
+                onerror="this.classList.add('img-missing')"
+                style="
+                  position: absolute;
+                  inset: 0;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                "
+              />
             </div>
           </a>
           <!-- Row 2 remaining 2 tiles -->
-          <a href="https://instagram.com/ekambyseri" target="_blank" rel="noopener" style="text-decoration:none;display:block;" class="group">
-            <div class="img-slot zoom" style="width:100%;padding-bottom:100%;position:relative;border-radius:14px;overflow:hidden;--ph:linear-gradient(135deg,#c8a84b,#8a6e28);">
-              <img src="PASTE_IMAGE_URL" alt="Ekam by Seri on Instagram" onerror="this.classList.add('img-missing')" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <a
+            href="https://instagram.com/ekambyseri"
+            target="_blank"
+            rel="noopener"
+            style="text-decoration: none; display: block"
+            class="group"
+          >
+            <div
+              class="img-slot zoom"
+              style="
+                width: 100%;
+                padding-bottom: 100%;
+                position: relative;
+                border-radius: 14px;
+                overflow: hidden;
+                --ph: linear-gradient(135deg, #c8a84b, #8a6e28);
+              "
+            >
+              <img
+                src="PASTE_IMAGE_URL"
+                alt="Ekam by Seri on Instagram"
+                onerror="this.classList.add('img-missing')"
+                style="
+                  position: absolute;
+                  inset: 0;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                "
+              />
             </div>
           </a>
-          <a href="https://instagram.com/ekambyseri" target="_blank" rel="noopener" style="text-decoration:none;display:block;" class="group">
-            <div class="img-slot zoom" style="width:100%;padding-bottom:100%;position:relative;border-radius:14px;overflow:hidden;--ph:linear-gradient(145deg,#5c6b3a,#2d3518);">
-              <img src="PASTE_IMAGE_URL" alt="Ekam by Seri on Instagram" onerror="this.classList.add('img-missing')" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <a
+            href="https://instagram.com/ekambyseri"
+            target="_blank"
+            rel="noopener"
+            style="text-decoration: none; display: block"
+            class="group"
+          >
+            <div
+              class="img-slot zoom"
+              style="
+                width: 100%;
+                padding-bottom: 100%;
+                position: relative;
+                border-radius: 14px;
+                overflow: hidden;
+                --ph: linear-gradient(145deg, #5c6b3a, #2d3518);
+              "
+            >
+              <img
+                src="PASTE_IMAGE_URL"
+                alt="Ekam by Seri on Instagram"
+                onerror="this.classList.add('img-missing')"
+                style="
+                  position: absolute;
+                  inset: 0;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                "
+              />
             </div>
           </a>
         </div>
 
         <!-- IG hover effect script -->
         <script>
-          document.querySelectorAll('#instagram .group').forEach(function(card) {
-            var overlay = card.querySelector('.ig-overlay');
-            var caption = card.querySelector('.ig-caption');
-            card.addEventListener('mouseenter', function() {
-              if (overlay) overlay.style.opacity = '1';
-              if (caption) caption.style.opacity = '1';
+          document
+            .querySelectorAll("#instagram .group")
+            .forEach(function (card) {
+              var overlay = card.querySelector(".ig-overlay");
+              var caption = card.querySelector(".ig-caption");
+              card.addEventListener("mouseenter", function () {
+                if (overlay) overlay.style.opacity = "1";
+                if (caption) caption.style.opacity = "1";
+              });
+              card.addEventListener("mouseleave", function () {
+                if (overlay) overlay.style.opacity = "0";
+                if (caption) caption.style.opacity = "0";
+              });
             });
-            card.addEventListener('mouseleave', function() {
-              if (overlay) overlay.style.opacity = '0';
-              if (caption) caption.style.opacity = '0';
-            });
-          });
         </script>
 
         <!-- CTA line -->
-        <div style="text-align:center;margin-top:44px;" class="reveal">
-          <a href="https://instagram.com/ekambyseri" target="_blank" rel="noopener" style="
-            font-family:'Manrope',sans-serif;font-size:0.72rem;
-            letter-spacing:0.22em;text-transform:uppercase;
-            color:#b85a32;text-decoration:none;
-          ">See all posts on Instagram →</a>
+        <div style="text-align: center; margin-top: 44px" class="reveal">
+          <a
+            href="https://instagram.com/ekambyseri"
+            target="_blank"
+            rel="noopener"
+            style="
+              font-family: &quot;Manrope&quot;, sans-serif;
+              font-size: 0.72rem;
+              letter-spacing: 0.22em;
+              text-transform: uppercase;
+              color: #b85a32;
+              text-decoration: none;
+            "
+            >See all posts on Instagram →</a
+          >
         </div>
       </div>
     </section>
@@ -5550,32 +6220,32 @@
       reveals.forEach((el) => observer.observe(el));
 
       // ── Collections nav dropdown (homepage) ──
-      (function() {
-        var btn = document.getElementById('navColBtn');
-        var drop = document.getElementById('navColDropdown');
-        var arrow = document.getElementById('navColArrow');
-        var item = document.getElementById('navColItem');
+      (function () {
+        var btn = document.getElementById("navColBtn");
+        var drop = document.getElementById("navColDropdown");
+        var arrow = document.getElementById("navColArrow");
+        var item = document.getElementById("navColItem");
         if (!btn || !drop) return;
         function show() {
-          drop.style.visibility = 'visible';
-          drop.style.opacity = '1';
-          drop.style.top = 'calc(100% + 6px)';
-          arrow.style.transform = 'rotate(180deg)';
-          btn.style.opacity = '1';
+          drop.style.visibility = "visible";
+          drop.style.opacity = "1";
+          drop.style.top = "calc(100% + 6px)";
+          arrow.style.transform = "rotate(180deg)";
+          btn.style.opacity = "1";
         }
         function hide() {
-          drop.style.opacity = '0';
-          drop.style.top = 'calc(100% + 12px)';
-          arrow.style.transform = 'rotate(0deg)';
-          btn.style.opacity = '0.72';
-          setTimeout(function() {
-            if (drop.style.opacity === '0') drop.style.visibility = 'hidden';
+          drop.style.opacity = "0";
+          drop.style.top = "calc(100% + 12px)";
+          arrow.style.transform = "rotate(0deg)";
+          btn.style.opacity = "0.72";
+          setTimeout(function () {
+            if (drop.style.opacity === "0") drop.style.visibility = "hidden";
           }, 260);
         }
-        item.addEventListener('mouseenter', show);
-        item.addEventListener('mouseleave', hide);
-        btn.addEventListener('click', function() {
-          window.location.href = '#collections';
+        item.addEventListener("mouseenter", show);
+        item.addEventListener("mouseleave", hide);
+        btn.addEventListener("click", function () {
+          window.location.href = "#collections";
         });
       })();
 
