@@ -82,12 +82,19 @@
         >
       </a>
       <ul class="hidden list-none gap-8 md:flex">
-        <li>
-          <a
-            href="../index.html#collections"
-            class="link-underline text-[0.78rem] uppercase tracking-brand text-char/75 no-underline transition hover:text-char"
-            >Collections</a
-          >
+        <li class="relative group/col">
+          <button class="link-underline flex items-center gap-1.5 text-[0.78rem] uppercase tracking-brand text-char/75 no-underline transition hover:text-char bg-transparent border-0 p-0 cursor-pointer" aria-expanded="false" aria-haspopup="true">
+            Collections
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" class="transition-transform duration-300 group-hover/col:rotate-180" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="invisible absolute left-1/2 top-full z-50 mt-3 w-52 -translate-x-1/2 rounded-2xl border border-char/10 bg-ivory/95 p-2 opacity-0 shadow-[0_16px_48px_rgba(68,45,28,0.14)] backdrop-blur-xl transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/col:visible group-hover/col:opacity-100 group-hover/col:mt-2">
+            <a href="../collections/copper-bells.html" class="flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[0.72rem] uppercase tracking-brand text-char/70 no-underline transition hover:text-terra"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#c2673a]"></span>Copper Bells</a>
+            <a href="../collections/pooja-chowki.html" class="flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[0.72rem] uppercase tracking-brand text-char/70 no-underline transition hover:text-terra"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#c8a84b]"></span>Pooja &amp; Chowki</a>
+            <a href="../collections/mirror-frame.html" class="flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[0.72rem] uppercase tracking-brand text-char/70 no-underline transition hover:text-terra"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#5c6b3a]"></span>Mirror &amp; Frame</a>
+            <a href="../collections/terracotta.html" class="flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[0.72rem] uppercase tracking-brand text-char/70 no-underline transition hover:text-terra"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#8a4820]"></span>Terracotta</a>
+            <a href="../collections/utility-keepsake.html" class="flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[0.72rem] uppercase tracking-brand text-char/70 no-underline transition hover:text-terra"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#a88030]"></span>Utility &amp; Keepsake</a>
+            <a href="../collections/wall-decor.html" class="flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[0.72rem] uppercase tracking-brand text-char/70 no-underline transition hover:text-terra"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#486830]"></span>Wall Decor</a>
+          </div>
         </li>
         <li>
           <a
