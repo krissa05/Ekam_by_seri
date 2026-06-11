@@ -233,6 +233,23 @@
         background: var(--earth);
         transform: translateY(-1px);
       }
+      .col-drop-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 14px;
+        border-radius: 12px;
+        font-size: 0.68rem;
+        letter-spacing: 0.10em;
+        text-transform: uppercase;
+        color: rgba(36,26,16,0.7);
+        text-decoration: none;
+        transition: background 0.2s, color 0.2s;
+      }
+      .col-drop-link:hover {
+        background: rgba(184,90,50,0.08);
+        color: #b85a32;
+      }
 
       /* ══════════════════════════════════════
                HERO
@@ -3061,7 +3078,20 @@
         </span>
       </a>
       <ul class="nav-links">
-        <li><a href="#collections">Collections</a></li>
+        <li style="position:relative;" id="navColItem">
+          <button id="navColBtn" style="font-size:0.68rem;letter-spacing:0.10em;text-transform:uppercase;color:var(--char);background:transparent;border:0;padding:0;cursor:pointer;opacity:0.72;display:flex;align-items:center;gap:5px;transition:opacity 0.3s;">
+            Collections
+            <svg id="navColArrow" width="10" height="6" viewBox="0 0 10 6" fill="none" style="transition:transform 0.3s;" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div id="navColDropdown" style="visibility:hidden;opacity:0;position:absolute;left:50%;top:calc(100% + 12px);transform:translateX(-50%);width:210px;background:rgba(242,234,216,0.97);border:1px solid rgba(68,45,28,0.1);border-radius:18px;padding:8px;box-shadow:0 16px 48px rgba(68,45,28,0.14);backdrop-filter:blur(16px);transition:opacity 0.25s ease,top 0.25s ease;z-index:999;">
+            <a href="collections/copper-bells.html" class="col-drop-link"><span style="width:8px;height:8px;border-radius:50%;background:#c2673a;flex-shrink:0;display:inline-block;"></span>Copper Bells</a>
+            <a href="collections/pooja-chowki.html" class="col-drop-link"><span style="width:8px;height:8px;border-radius:50%;background:#c8a84b;flex-shrink:0;display:inline-block;"></span>Pooja &amp; Chowki</a>
+            <a href="collections/mirror-frame.html" class="col-drop-link"><span style="width:8px;height:8px;border-radius:50%;background:#5c6b3a;flex-shrink:0;display:inline-block;"></span>Mirror &amp; Frame</a>
+            <a href="collections/terracotta.html" class="col-drop-link"><span style="width:8px;height:8px;border-radius:50%;background:#8a4820;flex-shrink:0;display:inline-block;"></span>Terracotta</a>
+            <a href="collections/utility-keepsake.html" class="col-drop-link"><span style="width:8px;height:8px;border-radius:50%;background:#a88030;flex-shrink:0;display:inline-block;"></span>Utility &amp; Keepsake</a>
+            <a href="collections/wall-decor.html" class="col-drop-link"><span style="width:8px;height:8px;border-radius:50%;background:#486830;flex-shrink:0;display:inline-block;"></span>Wall Decor</a>
+          </div>
+        </li>
         <li><a href="#craftsmanship">Craft</a></li>
         <li><a href="#heritage">Heritage</a></li>
         <li><a href="#gallery">Gallery</a></li>
@@ -5516,6 +5546,36 @@
         { threshold: 0.12 },
       );
       reveals.forEach((el) => observer.observe(el));
+
+      // ── Collections nav dropdown (homepage) ──
+      (function() {
+        var btn = document.getElementById('navColBtn');
+        var drop = document.getElementById('navColDropdown');
+        var arrow = document.getElementById('navColArrow');
+        var item = document.getElementById('navColItem');
+        if (!btn || !drop) return;
+        function show() {
+          drop.style.visibility = 'visible';
+          drop.style.opacity = '1';
+          drop.style.top = 'calc(100% + 6px)';
+          arrow.style.transform = 'rotate(180deg)';
+          btn.style.opacity = '1';
+        }
+        function hide() {
+          drop.style.opacity = '0';
+          drop.style.top = 'calc(100% + 12px)';
+          arrow.style.transform = 'rotate(0deg)';
+          btn.style.opacity = '0.72';
+          setTimeout(function() {
+            if (drop.style.opacity === '0') drop.style.visibility = 'hidden';
+          }, 260);
+        }
+        item.addEventListener('mouseenter', show);
+        item.addEventListener('mouseleave', hide);
+        btn.addEventListener('click', function() {
+          window.location.href = '#collections';
+        });
+      })();
 
       // ── Mobile Navigation Drawer Toggle ──
       const navToggle = document.getElementById("navToggle");
