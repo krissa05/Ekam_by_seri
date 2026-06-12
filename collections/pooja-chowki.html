@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en" data-collection="pooja">
   <head>
     <meta charset="UTF-8" />
@@ -63,6 +63,44 @@
     <style>
       body {
         font-family: "Manrope", sans-serif;
+      }
+
+      /* Oval card hover lift */
+      .ekam-oval-card {
+        transition: transform 0.7s cubic-bezier(0.16,1,0.3,1),
+                    box-shadow 0.7s cubic-bezier(0.16,1,0.3,1);
+        cursor: pointer;
+      }
+      a.group:hover .ekam-oval-card {
+        transform: translateY(-8px);
+        box-shadow: 0 44px 80px rgba(68,20,5,0.32), 0 16px 36px rgba(80,20,5,0.22), inset 0 1px 0 rgba(240,180,100,0.25) !important;
+      }
+
+      /* Override the pooja theme blob shape for product grid — we now use inline oval */
+      html[data-collection="pooja"] .img-slot.shape-arch {
+        border-radius: 50% 50% 50% 50% / 42% 42% 58% 58% !important;
+      }
+
+      /* Filter chip active/hover state */
+      .chip {
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+      }
+      .chip[data-filter].active {
+        background: #7a2e0a !important;
+        color: #fdf5e8 !important;
+        border-color: #7a2e0a !important;
+        box-shadow: 0 2px 12px rgba(122,46,10,0.28) !important;
+      }
+      .chip[data-filter]:not(.active):hover {
+        border-color: #9e3e18 !important;
+        color: #9e3e18 !important;
+        background: rgba(158,62,24,0.06) !important;
+      }
+
+      /* Product section warm body override */
+      html[data-collection="pooja"] body {
+        background: linear-gradient(108deg, #fdf5ea 0%, #f8e8d4 40%, #f5e0c8 70%, #f8eed8 100%);
       }
     </style>
   </head>
@@ -1142,54 +1180,60 @@
     <section
       class="sticky top-0 z-[900] backdrop-blur-md"
       style="
-        background: rgba(250, 242, 230, 0.96);
-        border-bottom: 1px solid rgba(200, 168, 75, 0.2);
+        background: rgba(245, 232, 210, 0.97);
+        border-bottom: 1px solid rgba(200, 168, 75, 0.22);
+        box-shadow: 0 2px 24px rgba(184,90,50,0.08);
       "
     >
       <div
-        class="mx-auto flex max-w-[1320px] flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:justify-between md:px-[80px]"
+        class="mx-auto flex max-w-[1320px] flex-col gap-4 px-6 py-5 md:flex-row md:items-center md:justify-between md:px-[80px]"
       >
-        <div class="flex flex-wrap items-center gap-2" id="filterChips">
+        <div class="flex flex-wrap items-center gap-2.5" id="filterChips">
           <button
             data-filter="all"
-            class="chip rounded-full px-5 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition"
+            class="chip rounded-full px-6 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition-all duration-300"
             style="
-              background: #9e3e18;
+              background: #7a2e0a;
               color: #fdf5e8;
-              border: 1px solid #9e3e18;
+              border: 1.5px solid #7a2e0a;
+              box-shadow: 0 2px 12px rgba(122,46,10,0.25);
+              font-weight: 500;
             "
           >
             All
           </button>
           <button
             data-filter="chowki"
-            class="chip rounded-full px-5 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition hover:border-[#9e3e18] hover:text-[#9e3e18]"
+            class="chip rounded-full px-6 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition-all duration-300 hover:border-[#9e3e18] hover:text-[#9e3e18]"
             style="
-              border: 1px solid rgba(42, 21, 8, 0.18);
-              color: rgba(42, 21, 8, 0.6);
-              background: transparent;
+              border: 1.5px solid rgba(42, 21, 8, 0.2);
+              color: rgba(42, 21, 8, 0.62);
+              background: rgba(255,255,255,0.45);
+              backdrop-filter: blur(8px);
             "
           >
             Chowkis
           </button>
           <button
             data-filter="plate"
-            class="chip rounded-full px-5 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition hover:border-[#9e3e18] hover:text-[#9e3e18]"
+            class="chip rounded-full px-6 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition-all duration-300 hover:border-[#9e3e18] hover:text-[#9e3e18]"
             style="
-              border: 1px solid rgba(42, 21, 8, 0.18);
-              color: rgba(42, 21, 8, 0.6);
-              background: transparent;
+              border: 1.5px solid rgba(42, 21, 8, 0.2);
+              color: rgba(42, 21, 8, 0.62);
+              background: rgba(255,255,255,0.45);
+              backdrop-filter: blur(8px);
             "
           >
             Plates &amp; Thalis
           </button>
           <button
             data-filter="holder"
-            class="chip rounded-full px-5 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition hover:border-[#9e3e18] hover:text-[#9e3e18]"
+            class="chip rounded-full px-6 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition-all duration-300 hover:border-[#9e3e18] hover:text-[#9e3e18]"
             style="
-              border: 1px solid rgba(42, 21, 8, 0.18);
-              color: rgba(42, 21, 8, 0.6);
-              background: transparent;
+              border: 1.5px solid rgba(42, 21, 8, 0.2);
+              color: rgba(42, 21, 8, 0.62);
+              background: rgba(255,255,255,0.45);
+              backdrop-filter: blur(8px);
             "
           >
             Idol Holders
@@ -1198,17 +1242,18 @@
         <div class="flex items-center gap-3">
           <label
             for="sortSelect"
-            class="text-[0.58rem] uppercase tracking-[0.32em]"
-            style="color: rgba(42, 21, 8, 0.38)"
+            class="text-[0.58rem] uppercase tracking-[0.38em] font-medium"
+            style="color: rgba(42, 21, 8, 0.42)"
             >Sort</label
           >
           <select
             id="sortSelect"
-            class="cursor-pointer rounded-full px-4 py-2 text-[0.62rem] uppercase tracking-[0.22em] outline-none transition"
+            class="cursor-pointer rounded-full px-5 py-2 text-[0.62rem] uppercase tracking-[0.22em] outline-none transition"
             style="
-              border: 1px solid rgba(200, 168, 75, 0.35);
-              background: transparent;
-              color: rgba(42, 21, 8, 0.65);
+              border: 1.5px solid rgba(200, 168, 75, 0.4);
+              background: rgba(255,255,255,0.5);
+              color: rgba(42, 21, 8, 0.7);
+              backdrop-filter: blur(8px);
             "
           >
             <option value="featured">Featured</option>
@@ -1226,26 +1271,36 @@
       style="
         background:
           radial-gradient(
-            ellipse at 0% 0%,
-            rgba(184, 90, 50, 0.22) 0%,
+            ellipse at 0% 40%,
+            rgba(194, 80, 38, 0.45) 0%,
             transparent 40%
           ),
           radial-gradient(
-            ellipse at 100% 100%,
-            rgba(184, 90, 50, 0.18) 0%,
-            transparent 38%
+            ellipse at 15% 70%,
+            rgba(210, 110, 60, 0.28) 0%,
+            transparent 32%
           ),
           radial-gradient(
-            ellipse at 50% 50%,
-            rgba(220, 168, 100, 0.08) 0%,
-            transparent 60%
+            ellipse at 88% 20%,
+            rgba(240, 195, 140, 0.22) 0%,
+            transparent 36%
+          ),
+          radial-gradient(
+            ellipse at 100% 80%,
+            rgba(194, 80, 38, 0.18) 0%,
+            transparent 35%
           ),
           linear-gradient(
-            160deg,
-            #fdf8f0 0%,
-            #f8eed8 35%,
-            #f2e2c8 65%,
-            #f8eed8 100%
+            108deg,
+            #c8623a 0%,
+            #d4804e 10%,
+            #e0a06a 22%,
+            #ebb87a 34%,
+            #f2d0a0 48%,
+            #f7e2c4 62%,
+            #faedd8 76%,
+            #fdf5ea 88%,
+            #fefaf4 100%
           );
       "
     >
@@ -1488,7 +1543,7 @@
         <!-- PRODUCT GRID -->
         <div
           id="productGrid"
-          class="grid grid-cols-1 gap-x-6 gap-y-0 sm:grid-cols-2 lg:grid-cols-3"
+          class="grid grid-cols-1 gap-x-0 gap-y-0 sm:grid-cols-2 lg:grid-cols-3"
         >
           <!-- ── CARD 1 : Lotus Pooja Chowki ── -->
           <a
@@ -1496,154 +1551,67 @@
             class="product-card reveal group block no-underline"
             data-category="chowki"
             data-price="2450"
-            style="padding: 0 16px 40px"
+            style="padding: 32px 28px 36px;"
           >
-            <div class="relative mb-6 overflow-visible">
-              <!-- vertical gold left border on card -->
+            <div class="relative mb-8 flex justify-center">
+              <!-- Oval egg-shaped product display -->
               <div
-                class="absolute -left-4 bottom-0 top-0 w-[1px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                style="
-                  background: linear-gradient(
-                    to bottom,
-                    transparent,
-                    rgba(200, 168, 75, 0.5),
-                    transparent
-                  );
-                "
-              ></div>
-              <div
-                class="img-slot zoom shape-arch aspect-[4/5]"
+                class="ekam-oval-card zoom"
                 style="
                   --ph: linear-gradient(
                     145deg,
                     #d4724a 0%,
-                    #8e3f1e 55%,
-                    #5a2010 100%
+                    #9e4020 42%,
+                    #6b2210 75%,
+                    #4a1608 100%
                   );
+                  width: 100%;
+                  max-width: 260px;
+                  aspect-ratio: 4/5;
+                  border-radius: 50% 50% 50% 50% / 42% 42% 58% 58%;
+                  position: relative;
+                  overflow: hidden;
+                  background: var(--ph);
+                  box-shadow: 0 28px 64px rgba(90,28,8,0.28), 0 8px 24px rgba(90,28,8,0.18), inset 0 1px 0 rgba(240,180,100,0.18);
                 "
               >
                 <img
                   src="PASTE_IMAGE_URL"
                   alt="Lotus Pooja Chowki"
                   loading="lazy"
-                  onerror="this.classList.add('img-missing')"
+                  style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"
+                  onerror="this.style.display='none'"
                 />
                 <span
-                  class="absolute bottom-4 left-4 z-10 rounded-full bg-ivory/85 px-3 py-1 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
+                  class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/85 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
                   >View piece →</span
                 >
               </div>
             </div>
             <!-- gold lotus divider -->
-            <div class="mb-5 flex items-center gap-3">
-              <div
-                class="h-[1px] flex-1"
-                style="
-                  background: linear-gradient(
-                    90deg,
-                    rgba(200, 168, 75, 0.5),
-                    transparent
-                  );
-                "
-              ></div>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                style="opacity: 0.6; flex-shrink: 0"
-              >
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(60 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(120 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(180 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(240 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(300 8 8)"
-                />
-                <circle cx="8" cy="8" r="1.2" fill="#c8a84b" opacity="0.7" />
+            <div class="mb-4 flex items-center gap-3">
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.45), transparent);"></div>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="opacity:0.55;flex-shrink:0">
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none"/>
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(60 8 8)"/>
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(120 8 8)"/>
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(180 8 8)"/>
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(240 8 8)"/>
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(300 8 8)"/>
+                <circle cx="8" cy="8" r="1.2" fill="#c8a84b" opacity="0.7"/>
               </svg>
-              <div
-                class="h-[1px] flex-1"
-                style="
-                  background: linear-gradient(
-                    90deg,
-                    transparent,
-                    rgba(200, 168, 75, 0.5)
-                  );
-                "
-              ></div>
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.45));"></div>
             </div>
-            <span
-              class="text-[0.58rem] uppercase tracking-[0.32em]"
-              style="color: rgba(158, 62, 24, 0.75)"
-              >Lotus Chowki</span
-            >
+            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: rgba(158,62,24,0.8)">Lotus Chowki</span>
             <h3
-              class="mt-1.5 font-serif text-[1.45rem] font-light leading-tight transition"
+              class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300"
               style="color: #2a1508"
-              onmouseover="this.style.color = '#9e3e18'"
-              onmouseout="this.style.color = '#2a1508'"
+              onmouseover="this.style.color='#9e3e18'"
+              onmouseout="this.style.color='#2a1508'"
             >
               Lotus Pooja Chowki
             </h3>
-            <p
-              class="mt-2 font-sans text-[0.88rem]"
-              style="color: rgba(42, 21, 8, 0.5)"
-            >
-              &#8377;2,450
-            </p>
+            <p class="font-sans text-[0.92rem]" style="color: rgba(42,21,8,0.55)">&#8377;2,450</p>
           </a>
 
           <!-- ── CARD 2 : Singhasan Chowki (featured / best seller) ── -->
@@ -1652,168 +1620,79 @@
             class="product-card reveal reveal-d1 group block no-underline"
             data-category="chowki"
             data-price="2950"
-            style="padding: 0 16px 40px; position: relative"
+            style="padding: 32px 28px 36px; position: relative;"
           >
             <!-- vertical separators both sides -->
             <div
               class="pointer-events-none absolute bottom-0 left-0 top-0 w-[1px]"
-              style="
-                background: linear-gradient(
-                  to bottom,
-                  transparent 5%,
-                  rgba(200, 168, 75, 0.25) 30%,
-                  rgba(200, 168, 75, 0.35) 50%,
-                  rgba(200, 168, 75, 0.25) 70%,
-                  transparent 95%
-                );
-              "
+              style="background: linear-gradient(to bottom, transparent 5%, rgba(200,168,75,0.3) 30%, rgba(200,168,75,0.45) 50%, rgba(200,168,75,0.3) 70%, transparent 95%);"
             ></div>
             <div
               class="pointer-events-none absolute bottom-0 right-0 top-0 w-[1px]"
-              style="
-                background: linear-gradient(
-                  to bottom,
-                  transparent 5%,
-                  rgba(200, 168, 75, 0.25) 30%,
-                  rgba(200, 168, 75, 0.35) 50%,
-                  rgba(200, 168, 75, 0.25) 70%,
-                  transparent 95%
-                );
-              "
+              style="background: linear-gradient(to bottom, transparent 5%, rgba(200,168,75,0.3) 30%, rgba(200,168,75,0.45) 50%, rgba(200,168,75,0.3) 70%, transparent 95%);"
             ></div>
-            <div class="relative mb-6 overflow-visible">
+            <!-- Small gold ornament dots at card separator midpoints -->
+            <div class="pointer-events-none absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 h-2.5 w-2.5 rounded-full" style="background: rgba(200,168,75,0.5); border: 1px solid rgba(200,168,75,0.8);"></div>
+            <div class="pointer-events-none absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 h-2.5 w-2.5 rounded-full" style="background: rgba(200,168,75,0.5); border: 1px solid rgba(200,168,75,0.8);"></div>
+            <div class="relative mb-8 flex justify-center">
+              <!-- Oval egg-shaped product display — darker/featured -->
               <div
-                class="img-slot zoom shape-arch aspect-[4/5]"
+                class="ekam-oval-card zoom"
                 style="
                   --ph: linear-gradient(
                     145deg,
                     #a84830 0%,
-                    #6b2410 55%,
-                    #3d1408 100%
+                    #701a08 42%,
+                    #3d0e04 75%,
+                    #1e0802 100%
                   );
+                  width: 100%;
+                  max-width: 260px;
+                  aspect-ratio: 4/5;
+                  border-radius: 50% 50% 50% 50% / 42% 42% 58% 58%;
+                  position: relative;
+                  overflow: hidden;
+                  background: var(--ph);
+                  box-shadow: 0 36px 80px rgba(50,12,2,0.35), 0 12px 32px rgba(80,20,5,0.25), inset 0 1px 0 rgba(240,180,100,0.15);
                 "
               >
                 <img
                   src="PASTE_IMAGE_URL"
                   alt="Singhasan Chowki"
                   loading="lazy"
-                  onerror="this.classList.add('img-missing')"
+                  style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"
+                  onerror="this.style.display='none'"
                 />
                 <span
-                  class="absolute bottom-4 left-4 z-10 rounded-full bg-ivory/85 px-3 py-1 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
+                  class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/85 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
                   >View piece →</span
                 >
               </div>
             </div>
-            <div class="mb-5 flex items-center gap-3">
-              <div
-                class="h-[1px] flex-1"
-                style="
-                  background: linear-gradient(
-                    90deg,
-                    rgba(200, 168, 75, 0.5),
-                    transparent
-                  );
-                "
-              ></div>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                style="opacity: 0.6; flex-shrink: 0"
-              >
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(60 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(120 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(180 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(240 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(300 8 8)"
-                />
-                <circle cx="8" cy="8" r="1.2" fill="#c8a84b" opacity="0.7" />
+            <!-- gold lotus divider -->
+            <div class="mb-4 flex items-center gap-3">
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.45), transparent);"></div>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="opacity:0.55;flex-shrink:0">
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none"/>
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(60 8 8)"/>
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(120 8 8)"/>
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(180 8 8)"/>
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(240 8 8)"/>
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(300 8 8)"/>
+                <circle cx="8" cy="8" r="1.2" fill="#c8a84b" opacity="0.7"/>
               </svg>
-              <div
-                class="h-[1px] flex-1"
-                style="
-                  background: linear-gradient(
-                    90deg,
-                    transparent,
-                    rgba(200, 168, 75, 0.5)
-                  );
-                "
-              ></div>
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.45));"></div>
             </div>
-            <span
-              class="text-[0.58rem] uppercase tracking-[0.32em]"
-              style="color: rgba(158, 62, 24, 0.75)"
-              >Singhasan</span
-            >
+            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: rgba(158,62,24,0.8)">Singhasan</span>
             <h3
-              class="mt-1.5 font-serif text-[1.45rem] font-light leading-tight transition"
+              class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300"
               style="color: #9e3e18"
-              onmouseover="this.style.color = '#6b2410'"
-              onmouseout="this.style.color = '#9e3e18'"
+              onmouseover="this.style.color='#6b2410'"
+              onmouseout="this.style.color='#9e3e18'"
             >
               Singhasan Chowki
             </h3>
-            <p
-              class="mt-2 font-sans text-[0.88rem]"
-              style="color: rgba(42, 21, 8, 0.5)"
-            >
-              &#8377;2,950
-            </p>
+            <p class="font-sans text-[0.92rem]" style="color: rgba(42,21,8,0.55)">&#8377;2,950</p>
           </a>
 
           <!-- ── CARD 3 : Mirror Diya Plate ── -->
@@ -1822,152 +1701,67 @@
             class="product-card reveal reveal-d2 group block no-underline"
             data-category="plate"
             data-price="890"
-            style="padding: 0 16px 40px"
+            style="padding: 32px 28px 36px;"
           >
-            <div
-              class="absolute -right-4 bottom-0 top-0 w-[1px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-              style="
-                background: linear-gradient(
-                  to bottom,
-                  transparent,
-                  rgba(200, 168, 75, 0.5),
-                  transparent
-                );
-              "
-            ></div>
-            <div class="relative mb-6">
+            <div class="relative mb-8 flex justify-center">
+              <!-- Oval egg-shaped product display -->
               <div
-                class="img-slot zoom shape-arch aspect-[4/5]"
+                class="ekam-oval-card zoom"
                 style="
                   --ph: linear-gradient(
                     150deg,
-                    #c8a84b 0%,
-                    #d4742a 45%,
-                    #8e3f1e 100%
+                    #d4a040 0%,
+                    #c8783a 35%,
+                    #9e4018 65%,
+                    #6b2010 100%
                   );
+                  width: 100%;
+                  max-width: 260px;
+                  aspect-ratio: 4/5;
+                  border-radius: 50% 50% 50% 50% / 42% 42% 58% 58%;
+                  position: relative;
+                  overflow: hidden;
+                  background: var(--ph);
+                  box-shadow: 0 28px 64px rgba(90,28,8,0.25), 0 8px 24px rgba(90,28,8,0.15), inset 0 1px 0 rgba(240,190,80,0.22);
                 "
               >
                 <img
                   src="PASTE_IMAGE_URL"
                   alt="Mirror Diya Plate"
                   loading="lazy"
-                  onerror="this.classList.add('img-missing')"
+                  style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"
+                  onerror="this.style.display='none'"
                 />
                 <span
-                  class="absolute bottom-4 left-4 z-10 rounded-full bg-ivory/85 px-3 py-1 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
+                  class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/85 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
                   >View piece →</span
                 >
               </div>
             </div>
-            <div class="mb-5 flex items-center gap-3">
-              <div
-                class="h-[1px] flex-1"
-                style="
-                  background: linear-gradient(
-                    90deg,
-                    rgba(200, 168, 75, 0.5),
-                    transparent
-                  );
-                "
-              ></div>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                style="opacity: 0.6; flex-shrink: 0"
-              >
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(60 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(120 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(180 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(240 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(300 8 8)"
-                />
-                <circle cx="8" cy="8" r="1.2" fill="#c8a84b" opacity="0.7" />
+            <!-- gold lotus divider -->
+            <div class="mb-4 flex items-center gap-3">
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.45), transparent);"></div>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="opacity:0.55;flex-shrink:0">
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none"/>
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(60 8 8)"/>
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(120 8 8)"/>
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(180 8 8)"/>
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(240 8 8)"/>
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(300 8 8)"/>
+                <circle cx="8" cy="8" r="1.2" fill="#c8a84b" opacity="0.7"/>
               </svg>
-              <div
-                class="h-[1px] flex-1"
-                style="
-                  background: linear-gradient(
-                    90deg,
-                    transparent,
-                    rgba(200, 168, 75, 0.5)
-                  );
-                "
-              ></div>
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.45));"></div>
             </div>
-            <span
-              class="text-[0.58rem] uppercase tracking-[0.32em]"
-              style="color: rgba(158, 62, 24, 0.75)"
-              >Diya Plate</span
-            >
+            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: rgba(158,62,24,0.8)">Diya Plate</span>
             <h3
-              class="mt-1.5 font-serif text-[1.45rem] font-light leading-tight transition"
+              class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300"
               style="color: #2a1508"
-              onmouseover="this.style.color = '#9e3e18'"
-              onmouseout="this.style.color = '#2a1508'"
+              onmouseover="this.style.color='#9e3e18'"
+              onmouseout="this.style.color='#2a1508'"
             >
               Mirror Diya Plate
             </h3>
-            <p
-              class="mt-2 font-sans text-[0.88rem]"
-              style="color: rgba(42, 21, 8, 0.5)"
-            >
-              &#8377;890
-            </p>
+            <p class="font-sans text-[0.92rem]" style="color: rgba(42,21,8,0.55)">&#8377;890</p>
           </a>
 
           <!-- ── CARD 4 : Kutch Pooja Thali ── -->
@@ -1976,141 +1770,41 @@
             class="product-card reveal group block no-underline"
             data-category="plate"
             data-price="1650"
-            style="padding: 0 16px 40px"
+            style="padding: 32px 28px 36px;"
           >
-            <div class="relative mb-6">
+            <div class="relative mb-8 flex justify-center">
               <div
-                class="img-slot zoom shape-arch aspect-[4/5]"
+                class="ekam-oval-card zoom"
                 style="
                   --ph: linear-gradient(
                     145deg,
                     #e8a060 0%,
-                    #c2673a 40%,
-                    #7a2e0a 100%
+                    #c2673a 38%,
+                    #8a3010 68%,
+                    #5a1e08 100%
                   );
+                  width: 100%;
+                  max-width: 260px;
+                  aspect-ratio: 4/5;
+                  border-radius: 50% 50% 50% 50% / 42% 42% 58% 58%;
+                  position: relative;
+                  overflow: hidden;
+                  background: var(--ph);
+                  box-shadow: 0 28px 64px rgba(90,28,8,0.25), 0 8px 24px rgba(90,28,8,0.15), inset 0 1px 0 rgba(240,190,100,0.2);
                 "
               >
-                <img
-                  src="PASTE_IMAGE_URL"
-                  alt="Kutch Pooja Thali"
-                  loading="lazy"
-                  onerror="this.classList.add('img-missing')"
-                />
-                <span
-                  class="absolute bottom-4 left-4 z-10 rounded-full bg-ivory/85 px-3 py-1 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
-                  >View piece →</span
-                >
+                <img src="PASTE_IMAGE_URL" alt="Kutch Pooja Thali" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'"/>
+                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/85 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
               </div>
             </div>
-            <div class="mb-5 flex items-center gap-3">
-              <div
-                class="h-[1px] flex-1"
-                style="
-                  background: linear-gradient(
-                    90deg,
-                    rgba(200, 168, 75, 0.5),
-                    transparent
-                  );
-                "
-              ></div>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                style="opacity: 0.6; flex-shrink: 0"
-              >
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(60 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(120 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(180 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(240 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(300 8 8)"
-                />
-                <circle cx="8" cy="8" r="1.2" fill="#c8a84b" opacity="0.7" />
-              </svg>
-              <div
-                class="h-[1px] flex-1"
-                style="
-                  background: linear-gradient(
-                    90deg,
-                    transparent,
-                    rgba(200, 168, 75, 0.5)
-                  );
-                "
-              ></div>
+            <div class="mb-4 flex items-center gap-3">
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.45), transparent);"></div>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="opacity:0.55;flex-shrink:0"><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(60 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(120 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(180 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(240 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(300 8 8)"/><circle cx="8" cy="8" r="1.2" fill="#c8a84b" opacity="0.7"/></svg>
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.45));"></div>
             </div>
-            <span
-              class="text-[0.58rem] uppercase tracking-[0.32em]"
-              style="color: rgba(158, 62, 24, 0.75)"
-              >Pooja Thali</span
-            >
-            <h3
-              class="mt-1.5 font-serif text-[1.45rem] font-light leading-tight transition"
-              style="color: #2a1508"
-              onmouseover="this.style.color = '#9e3e18'"
-              onmouseout="this.style.color = '#2a1508'"
-            >
-              Kutch Pooja Thali
-            </h3>
-            <p
-              class="mt-2 font-sans text-[0.88rem]"
-              style="color: rgba(42, 21, 8, 0.5)"
-            >
-              &#8377;1,650
-            </p>
+            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: rgba(158,62,24,0.8)">Pooja Thali</span>
+            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300" style="color: #2a1508" onmouseover="this.style.color='#9e3e18'" onmouseout="this.style.color='#2a1508'">Kutch Pooja Thali</h3>
+            <p class="font-sans text-[0.92rem]" style="color: rgba(42,21,8,0.55)">&#8377;1,650</p>
           </a>
 
           <!-- ── CARD 5 : Round Idol Holder ── -->
@@ -2119,167 +1813,39 @@
             class="product-card reveal reveal-d1 group block no-underline"
             data-category="holder"
             data-price="1250"
-            style="padding: 0 16px 40px; position: relative"
+            style="padding: 32px 28px 36px; position: relative;"
           >
-            <div
-              class="pointer-events-none absolute bottom-0 left-0 top-0 w-[1px]"
-              style="
-                background: linear-gradient(
-                  to bottom,
-                  transparent 5%,
-                  rgba(200, 168, 75, 0.22) 30%,
-                  rgba(200, 168, 75, 0.32) 50%,
-                  rgba(200, 168, 75, 0.22) 70%,
-                  transparent 95%
-                );
-              "
-            ></div>
-            <div
-              class="pointer-events-none absolute bottom-0 right-0 top-0 w-[1px]"
-              style="
-                background: linear-gradient(
-                  to bottom,
-                  transparent 5%,
-                  rgba(200, 168, 75, 0.22) 30%,
-                  rgba(200, 168, 75, 0.32) 50%,
-                  rgba(200, 168, 75, 0.22) 70%,
-                  transparent 95%
-                );
-              "
-            ></div>
-            <div class="relative mb-6">
+            <div class="pointer-events-none absolute bottom-0 left-0 top-0 w-[1px]" style="background: linear-gradient(to bottom, transparent 5%, rgba(200,168,75,0.28) 30%, rgba(200,168,75,0.4) 50%, rgba(200,168,75,0.28) 70%, transparent 95%);"></div>
+            <div class="pointer-events-none absolute bottom-0 right-0 top-0 w-[1px]" style="background: linear-gradient(to bottom, transparent 5%, rgba(200,168,75,0.28) 30%, rgba(200,168,75,0.4) 50%, rgba(200,168,75,0.28) 70%, transparent 95%);"></div>
+            <div class="pointer-events-none absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 h-2.5 w-2.5 rounded-full" style="background: rgba(200,168,75,0.4); border: 1px solid rgba(200,168,75,0.7);"></div>
+            <div class="pointer-events-none absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 h-2.5 w-2.5 rounded-full" style="background: rgba(200,168,75,0.4); border: 1px solid rgba(200,168,75,0.7);"></div>
+            <div class="relative mb-8 flex justify-center">
               <div
-                class="img-slot zoom shape-arch aspect-[4/5]"
+                class="ekam-oval-card zoom"
                 style="
-                  --ph: linear-gradient(
-                    160deg,
-                    #c88040 0%,
-                    #8e3f1e 50%,
-                    #4a1e08 100%
-                  );
+                  --ph: linear-gradient(160deg, #c88040 0%, #9e4020 42%, #5a2010 75%, #3a1008 100%);
+                  width: 100%;
+                  max-width: 260px;
+                  aspect-ratio: 4/5;
+                  border-radius: 50% 50% 50% 50% / 42% 42% 58% 58%;
+                  position: relative;
+                  overflow: hidden;
+                  background: var(--ph);
+                  box-shadow: 0 28px 64px rgba(90,28,8,0.25), 0 8px 24px rgba(90,28,8,0.15), inset 0 1px 0 rgba(240,180,100,0.18);
                 "
               >
-                <img
-                  src="PASTE_IMAGE_URL"
-                  alt="Round Idol Holder"
-                  loading="lazy"
-                  onerror="this.classList.add('img-missing')"
-                />
-                <span
-                  class="absolute bottom-4 left-4 z-10 rounded-full bg-ivory/85 px-3 py-1 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
-                  >View piece →</span
-                >
+                <img src="PASTE_IMAGE_URL" alt="Round Idol Holder" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'"/>
+                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/85 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
               </div>
             </div>
-            <div class="mb-5 flex items-center gap-3">
-              <div
-                class="h-[1px] flex-1"
-                style="
-                  background: linear-gradient(
-                    90deg,
-                    rgba(200, 168, 75, 0.5),
-                    transparent
-                  );
-                "
-              ></div>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                style="opacity: 0.6; flex-shrink: 0"
-              >
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(60 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(120 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(180 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(240 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(300 8 8)"
-                />
-                <circle cx="8" cy="8" r="1.2" fill="#c8a84b" opacity="0.7" />
-              </svg>
-              <div
-                class="h-[1px] flex-1"
-                style="
-                  background: linear-gradient(
-                    90deg,
-                    transparent,
-                    rgba(200, 168, 75, 0.5)
-                  );
-                "
-              ></div>
+            <div class="mb-4 flex items-center gap-3">
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.45), transparent);"></div>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="opacity:0.55;flex-shrink:0"><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(60 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(120 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(180 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(240 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(300 8 8)"/><circle cx="8" cy="8" r="1.2" fill="#c8a84b" opacity="0.7"/></svg>
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.45));"></div>
             </div>
-            <span
-              class="text-[0.58rem] uppercase tracking-[0.32em]"
-              style="color: rgba(158, 62, 24, 0.75)"
-              >Idol Holder</span
-            >
-            <h3
-              class="mt-1.5 font-serif text-[1.45rem] font-light leading-tight transition"
-              style="color: #2a1508"
-              onmouseover="this.style.color = '#9e3e18'"
-              onmouseout="this.style.color = '#2a1508'"
-            >
-              Round Idol Holder
-            </h3>
-            <p
-              class="mt-2 font-sans text-[0.88rem]"
-              style="color: rgba(42, 21, 8, 0.5)"
-            >
-              &#8377;1,250
-            </p>
+            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: rgba(158,62,24,0.8)">Idol Holder</span>
+            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300" style="color: #2a1508" onmouseover="this.style.color='#9e3e18'" onmouseout="this.style.color='#2a1508'">Round Idol Holder</h3>
+            <p class="font-sans text-[0.92rem]" style="color: rgba(42,21,8,0.55)">&#8377;1,250</p>
           </a>
 
           <!-- ── CARD 6 : Square Idol Holder ── -->
@@ -2288,141 +1854,35 @@
             class="product-card reveal reveal-d2 group block no-underline"
             data-category="holder"
             data-price="1350"
-            style="padding: 0 16px 40px"
+            style="padding: 32px 28px 36px;"
           >
-            <div class="relative mb-6">
+            <div class="relative mb-8 flex justify-center">
               <div
-                class="img-slot zoom shape-arch aspect-[4/5]"
+                class="ekam-oval-card zoom"
                 style="
-                  --ph: linear-gradient(
-                    135deg,
-                    #d4a850 0%,
-                    #b87830 45%,
-                    #6b3010 100%
-                  );
+                  --ph: linear-gradient(135deg, #d4a850 0%, #b07830 38%, #7a3810 68%, #4a1e08 100%);
+                  width: 100%;
+                  max-width: 260px;
+                  aspect-ratio: 4/5;
+                  border-radius: 50% 50% 50% 50% / 42% 42% 58% 58%;
+                  position: relative;
+                  overflow: hidden;
+                  background: var(--ph);
+                  box-shadow: 0 28px 64px rgba(80,40,8,0.22), 0 8px 24px rgba(80,40,8,0.14), inset 0 1px 0 rgba(240,200,100,0.2);
                 "
               >
-                <img
-                  src="PASTE_IMAGE_URL"
-                  alt="Square Idol Holder"
-                  loading="lazy"
-                  onerror="this.classList.add('img-missing')"
-                />
-                <span
-                  class="absolute bottom-4 left-4 z-10 rounded-full bg-ivory/85 px-3 py-1 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
-                  >View piece →</span
-                >
+                <img src="PASTE_IMAGE_URL" alt="Square Idol Holder" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'"/>
+                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/85 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
               </div>
             </div>
-            <div class="mb-5 flex items-center gap-3">
-              <div
-                class="h-[1px] flex-1"
-                style="
-                  background: linear-gradient(
-                    90deg,
-                    rgba(200, 168, 75, 0.5),
-                    transparent
-                  );
-                "
-              ></div>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                style="opacity: 0.6; flex-shrink: 0"
-              >
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(60 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(120 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(180 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(240 8 8)"
-                />
-                <ellipse
-                  cx="8"
-                  cy="5"
-                  rx="2.5"
-                  ry="4.5"
-                  stroke="#c8a84b"
-                  stroke-width="0.7"
-                  fill="none"
-                  transform="rotate(300 8 8)"
-                />
-                <circle cx="8" cy="8" r="1.2" fill="#c8a84b" opacity="0.7" />
-              </svg>
-              <div
-                class="h-[1px] flex-1"
-                style="
-                  background: linear-gradient(
-                    90deg,
-                    transparent,
-                    rgba(200, 168, 75, 0.5)
-                  );
-                "
-              ></div>
+            <div class="mb-4 flex items-center gap-3">
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.45), transparent);"></div>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="opacity:0.55;flex-shrink:0"><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(60 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(120 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(180 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(240 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(300 8 8)"/><circle cx="8" cy="8" r="1.2" fill="#c8a84b" opacity="0.7"/></svg>
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.45));"></div>
             </div>
-            <span
-              class="text-[0.58rem] uppercase tracking-[0.32em]"
-              style="color: rgba(158, 62, 24, 0.75)"
-              >Idol Holder</span
-            >
-            <h3
-              class="mt-1.5 font-serif text-[1.45rem] font-light leading-tight transition"
-              style="color: #2a1508"
-              onmouseover="this.style.color = '#9e3e18'"
-              onmouseout="this.style.color = '#2a1508'"
-            >
-              Square Idol Holder
-            </h3>
-            <p
-              class="mt-2 font-sans text-[0.88rem]"
-              style="color: rgba(42, 21, 8, 0.5)"
-            >
-              &#8377;1,350
-            </p>
+            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: rgba(158,62,24,0.8)">Idol Holder</span>
+            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300" style="color: #2a1508" onmouseover="this.style.color='#9e3e18'" onmouseout="this.style.color='#2a1508'">Square Idol Holder</h3>
+            <p class="font-sans text-[0.92rem]" style="color: rgba(42,21,8,0.55)">&#8377;1,350</p>
           </a>
         </div>
         <!-- end product grid -->
@@ -2451,185 +1911,55 @@
         ></div>
 
         <!-- trust strip -->
-        <div class="mt-12 grid grid-cols-2 gap-6 md:grid-cols-4">
+        <div class="mt-12 grid grid-cols-2 gap-8 md:grid-cols-4" style="padding: 28px 20px; border-radius: 16px; background: rgba(255,255,255,0.22); backdrop-filter: blur(12px); border: 1px solid rgba(200,168,75,0.18);">
           <div class="flex items-center gap-4">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              style="flex-shrink: 0; opacity: 0.6"
-            >
-              <path
-                d="M16 4 C10 4 6 9 6 14 C6 22 16 28 16 28 S26 22 26 14 C26 9 22 4 16 4Z"
-                stroke="#c8a84b"
-                stroke-width="1"
-                fill="none"
-              />
-              <path
-                d="M11 14 L15 18 L21 11"
-                stroke="#c8a84b"
-                stroke-width="1"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+            <div class="flex-shrink-0 rounded-full flex items-center justify-center" style="width:42px;height:42px;background:rgba(200,168,75,0.1);border:1px solid rgba(200,168,75,0.22);">
+              <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
+                <path d="M16 4 C10 4 6 9 6 14 C6 22 16 28 16 28 S26 22 26 14 C26 9 22 4 16 4Z" stroke="#c8a84b" stroke-width="1" fill="none"/>
+                <path d="M11 14 L15 18 L21 11" stroke="#c8a84b" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
             <div>
-              <p
-                class="text-[0.65rem] font-semibold uppercase tracking-[0.25em]"
-                style="color: rgba(42, 21, 8, 0.7)"
-              >
-                Handcrafted
-              </p>
-              <p
-                class="text-[0.6rem] font-light"
-                style="color: rgba(42, 21, 8, 0.42)"
-              >
-                With devotion
-              </p>
+              <p class="text-[0.65rem] font-semibold uppercase tracking-[0.25em]" style="color: rgba(42,21,8,0.75)">Handcrafted</p>
+              <p class="text-[0.6rem] font-light mt-0.5" style="color: rgba(42,21,8,0.45)">With devotion</p>
             </div>
           </div>
           <div class="flex items-center gap-4">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              style="flex-shrink: 0; opacity: 0.6"
-            >
-              <circle
-                cx="16"
-                cy="16"
-                r="11"
-                stroke="#c8a84b"
-                stroke-width="1"
-                fill="none"
-              />
-              <path
-                d="M16 6 C14 10 10 12 10 16 C10 20 12 22 16 22 S22 20 22 16 C22 12 18 10 16 6Z"
-                stroke="#c8a84b"
-                stroke-width="0.8"
-                fill="none"
-              />
-              <ellipse
-                cx="16"
-                cy="20"
-                rx="5"
-                ry="2"
-                stroke="#c8a84b"
-                stroke-width="0.7"
-                fill="none"
-              />
-              <line
-                x1="16"
-                y1="10"
-                x2="16"
-                y2="22"
-                stroke="#c8a84b"
-                stroke-width="0.6"
-              />
-              <line
-                x1="11"
-                y1="16"
-                x2="21"
-                y2="16"
-                stroke="#c8a84b"
-                stroke-width="0.6"
-              />
-            </svg>
+            <div class="flex-shrink-0 rounded-full flex items-center justify-center" style="width:42px;height:42px;background:rgba(200,168,75,0.1);border:1px solid rgba(200,168,75,0.22);">
+              <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
+                <circle cx="16" cy="16" r="11" stroke="#c8a84b" stroke-width="1" fill="none"/>
+                <path d="M16 6 C14 10 10 12 10 16 C10 20 12 22 16 22 S22 20 22 16 C22 12 18 10 16 6Z" stroke="#c8a84b" stroke-width="0.8" fill="none"/>
+                <line x1="16" y1="10" x2="16" y2="22" stroke="#c8a84b" stroke-width="0.6"/>
+                <line x1="11" y1="16" x2="21" y2="16" stroke="#c8a84b" stroke-width="0.6"/>
+              </svg>
+            </div>
             <div>
-              <p
-                class="text-[0.65rem] font-semibold uppercase tracking-[0.25em]"
-                style="color: rgba(42, 21, 8, 0.7)"
-              >
-                Made to Order
-              </p>
-              <p
-                class="text-[0.6rem] font-light"
-                style="color: rgba(42, 21, 8, 0.42)"
-              >
-                Just for you
-              </p>
+              <p class="text-[0.65rem] font-semibold uppercase tracking-[0.25em]" style="color: rgba(42,21,8,0.75)">Made to Order</p>
+              <p class="text-[0.6rem] font-light mt-0.5" style="color: rgba(42,21,8,0.45)">Just for you</p>
             </div>
           </div>
           <div class="flex items-center gap-4">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              style="flex-shrink: 0; opacity: 0.6"
-            >
-              <path
-                d="M16 3 L18.5 10.5 L26.5 10.5 L20 15.5 L22.5 23 L16 18 L9.5 23 L12 15.5 L5.5 10.5 L13.5 10.5 Z"
-                stroke="#c8a84b"
-                stroke-width="0.9"
-                fill="none"
-                stroke-linejoin="round"
-              />
-            </svg>
+            <div class="flex-shrink-0 rounded-full flex items-center justify-center" style="width:42px;height:42px;background:rgba(200,168,75,0.1);border:1px solid rgba(200,168,75,0.22);">
+              <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
+                <path d="M16 3 L18.5 10.5 L26.5 10.5 L20 15.5 L22.5 23 L16 18 L9.5 23 L12 15.5 L5.5 10.5 L13.5 10.5 Z" stroke="#c8a84b" stroke-width="0.9" fill="none" stroke-linejoin="round"/>
+              </svg>
+            </div>
             <div>
-              <p
-                class="text-[0.65rem] font-semibold uppercase tracking-[0.25em]"
-                style="color: rgba(42, 21, 8, 0.7)"
-              >
-                Kutch, Gujarat
-              </p>
-              <p
-                class="text-[0.6rem] font-light"
-                style="color: rgba(42, 21, 8, 0.42)"
-              >
-                Proudly made in India
-              </p>
+              <p class="text-[0.65rem] font-semibold uppercase tracking-[0.25em]" style="color: rgba(42,21,8,0.75)">Kutch, Gujarat</p>
+              <p class="text-[0.6rem] font-light mt-0.5" style="color: rgba(42,21,8,0.45)">Proudly made in India</p>
             </div>
           </div>
           <div class="flex items-center gap-4">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              style="flex-shrink: 0; opacity: 0.6"
-            >
-              <rect
-                x="5"
-                y="10"
-                width="22"
-                height="16"
-                rx="2"
-                stroke="#c8a84b"
-                stroke-width="0.9"
-                fill="none"
-              />
-              <path
-                d="M10 10 L10 7 C10 4.8 12.7 3 16 3 S22 4.8 22 7 L22 10"
-                stroke="#c8a84b"
-                stroke-width="0.9"
-                fill="none"
-                stroke-linecap="round"
-              />
-              <circle
-                cx="16"
-                cy="18"
-                r="2.5"
-                stroke="#c8a84b"
-                stroke-width="0.8"
-                fill="none"
-              />
-            </svg>
+            <div class="flex-shrink-0 rounded-full flex items-center justify-center" style="width:42px;height:42px;background:rgba(200,168,75,0.1);border:1px solid rgba(200,168,75,0.22);">
+              <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
+                <rect x="5" y="10" width="22" height="16" rx="2" stroke="#c8a84b" stroke-width="0.9" fill="none"/>
+                <path d="M10 10 L10 7 C10 4.8 12.7 3 16 3 S22 4.8 22 7 L22 10" stroke="#c8a84b" stroke-width="0.9" fill="none" stroke-linecap="round"/>
+                <circle cx="16" cy="18" r="2.5" stroke="#c8a84b" stroke-width="0.8" fill="none"/>
+              </svg>
+            </div>
             <div>
-              <p
-                class="text-[0.65rem] font-semibold uppercase tracking-[0.25em]"
-                style="color: rgba(42, 21, 8, 0.7)"
-              >
-                Secure Packaging
-              </p>
-              <p
-                class="text-[0.6rem] font-light"
-                style="color: rgba(42, 21, 8, 0.42)"
-              >
-                Safe &amp; insured delivery
-              </p>
+              <p class="text-[0.65rem] font-semibold uppercase tracking-[0.25em]" style="color: rgba(42,21,8,0.75)">Secure Packaging</p>
+              <p class="text-[0.6rem] font-light mt-0.5" style="color: rgba(42,21,8,0.45)">Safe &amp; insured delivery</p>
             </div>
           </div>
         </div>
