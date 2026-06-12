@@ -68,24 +68,21 @@
       }
       a.group:hover .ekam-oval-card {
         transform: translateY(-8px);
-        box-shadow: 0 44px 80px rgba(0,0,0,0.30), 0 16px 36px rgba(0,0,0,0.20), inset 0 1px 0 rgba(240,200,120,0.25) !important;
-      }
-      html[data-collection="copper"] .img-slot.shape-arch {
-        border-radius: 50% 50% 50% 50% / 42% 42% 58% 58% !important;
+        box-shadow: 0 44px 80px rgba(0,0,0,0.42), 0 16px 36px rgba(0,0,0,0.30), inset 0 1px 0 rgba(232,208,128,0.35) !important;
       }
       .chip { cursor: pointer; transition: all 0.3s cubic-bezier(0.16,1,0.3,1); }
       .chip[data-filter].active {
-        background: #3a2614 !important; color: #fdf5e8 !important; border-color: #3a2614 !important;
-        box-shadow: 0 2px 12px rgba(58, 38, 20,0.28) !important;
+        background: #c8a84b !important; color: #241a10 !important; border-color: #c8a84b !important;
+        box-shadow: 0 2px 14px rgba(200,168,75,0.4) !important;
       }
       .chip[data-filter]:not(.active):hover {
-        border-color: #8a5a2e !important; color: #8a5a2e !important; background: rgba(138, 90, 46,0.06) !important;
+        border-color: #e8d080 !important; color: #e8d080 !important; background: rgba(232,208,128,0.1) !important;
       }
-      html[data-collection="copper"] body { background: linear-gradient(108deg, #f7efe2 0%, #ecdcc4 40%, #e6d2b6 70%, #f2e6d2 100%); }
+      html[data-collection="copper"] body { background: linear-gradient(125deg, #2b1810 0%, #1c0f06 55%, #2b1810 100%); }
     </style>
   </head>
 
-  <body class="text-char" style="background: #f7efe2">
+  <body class="text-char" style="background: #2b1810">
     <!-- ══ NAV ══ -->
     <nav
       id="navbar"
@@ -270,7 +267,7 @@
     <!-- ══ HERO ══ -->
     <header
       class="relative overflow-hidden"
-      style="min-height: 92vh; background: radial-gradient(ellipse at 0% 50%, rgba(107,70,40,0.6) 0%, transparent 45%), radial-gradient(ellipse at 25% 80%, rgba(138,94,52,0.4) 0%, transparent 38%), radial-gradient(ellipse at 55% 30%, rgba(176,136,88,0.22) 0%, transparent 40%), radial-gradient(ellipse at 90% 60%, rgba(230,214,188,0.18) 0%, transparent 45%), linear-gradient(105deg, #2b1810 0%, #442d1c 12%, #6b4628 26%, #8a5e34 38%, #b08858 52%, #cdaa7e 64%, #e0cba8 76%, #efe2cd 88%, #f8f0e2 100%);"
+      style="min-height: 92vh; background: radial-gradient(ellipse at 82% 26%, rgba(150, 110, 70,0.42) 0%, transparent 52%), radial-gradient(ellipse at 22% 88%, rgba(28, 15, 6,0.55) 0%, transparent 48%), linear-gradient(115deg, #1c0f06 0%, #2b1810 26%, #442d1c 52%, #6b4628 80%, #8a5e34 100%);"
     >
       <!-- ATMOSPHERIC TEXTURE LAYER -->
       <div
@@ -359,7 +356,7 @@
               >Collections</a
             >
             <span style="opacity: 0.3; font-size: 0.5rem">&#9670;</span>
-            <span style="color: rgba(150, 60, 20, 0.85)"
+            <span style="color: rgba(244, 236, 218,0.9)"
               >Copper Bells</span
             >
           </nav>
@@ -449,7 +446,7 @@
             </svg>
             <span
               class="text-[0.62rem] uppercase tracking-[0.42em]"
-              style="color: rgba(130, 65, 20, 0.72)"
+              style="color: rgba(232,208,128,0.9)"
               >Sacred Sound</span
             >
             <div
@@ -471,11 +468,11 @@
               font-size: clamp(3.2rem, 5.5vw, 6.2rem);
               line-height: 0.92;
               font-weight: 300;
-              color: #1c0f06;
+              color: #f4ecda;
             "
           >
             Copper<br />
-            <em style="font-style: italic; color: #8a5a2e; font-weight: 300"
+            <em style="font-style: italic; color: #dcb890; font-weight: 300"
               >Bells</em
             >
           </h1>
@@ -497,7 +494,7 @@
             class="mb-10 font-sans text-[0.9rem] font-light leading-[1.9]"
             style="
               max-width: 400px;
-              color: rgba(28, 15, 6, 0.58);
+              color: rgba(244, 236, 218, 0.82);
               letter-spacing: 0.01em;
             "
           >
@@ -505,7 +502,7 @@
           </p>
 
           <!-- metadata row -->
-          <div class="flex items-center" style="color: rgba(28, 15, 6, 0.42)">
+          <div class="flex items-center" style="color: rgba(244, 236, 218, 0.6)">
             <div class="flex items-center gap-3 pr-7">
               <svg
                 width="14"
@@ -525,7 +522,7 @@
               <span class="text-[0.6rem] uppercase tracking-[0.30em]">
                 <span
                   class="font-serif text-[1.45rem] font-light not-italic"
-                  style="color: rgba(28, 15, 6, 0.72)"
+                  style="color: rgba(244, 236, 218, 0.72)"
                   id="liveCount"
                   >6</span
                 >&thinsp;Pieces
@@ -632,20 +629,20 @@
             <!-- soft ambient glow -->
             <div
               class="pointer-events-none absolute inset-[-30px] rounded-full"
-              style="background: radial-gradient(circle, rgba(107,70,40,0.2) 0%, rgba(176,136,88,0.08) 50%, transparent 75%); filter: blur(20px);"
+              style="background: radial-gradient(circle, rgba(150, 110, 70,0.3) 0%, rgba(150, 110, 70,0.12) 55%, transparent 78%); filter: blur(22px);"
             ></div>
 
             <!-- main terracotta circle -->
             <div
               class="relative h-full w-full overflow-hidden rounded-full"
-              style="background: radial-gradient(circle at 35% 30%, rgba(200,160,110,0.8) 0%, transparent 42%), radial-gradient(circle at 68% 72%, rgba(28,15,6,0.65) 0%, transparent 38%), radial-gradient(circle at 50% 50%, #6b4628 0%, #442d1c 48%, #1c0f06 100%); box-shadow: 0 1px 0 0 rgba(220,180,100,0.3), 0 45px 110px rgba(0,0,0,0.34), 0 18px 45px rgba(0,0,0,0.24), inset 0 1px 0 rgba(232,180,100,0.22), inset 0 -3px 12px rgba(0,0,0,0.35);"
+              style="background: radial-gradient(circle at 35% 30%, rgba(255,235,200,0.45) 0%, transparent 42%), radial-gradient(circle at 50% 50%, #8a5e34 0%, #442d1c 52%, #1c0f06 100%); box-shadow: 0 1px 0 0 rgba(232,208,128,0.45), 0 45px 110px rgba(0,0,0,0.5), 0 18px 45px rgba(0,0,0,0.36), inset 0 1px 0 rgba(255,225,170,0.35), inset 0 -4px 16px rgba(0,0,0,0.45);"
             >
               <!-- mandala sacred geometry -->
               <svg
                 class="absolute inset-0 h-full w-full"
                 viewBox="0 0 500 500"
                 fill="none"
-                style="opacity: 0.14; mix-blend-mode: screen"
+                style="opacity: 0.42; mix-blend-mode: screen"
               >
                 <!-- rings -->
                 <circle
@@ -1006,7 +1003,7 @@
             <div
               class="pointer-events-none absolute inset-[-2px] rounded-full"
               style="
-                border: 1px solid rgba(200, 168, 75, 0.32);
+                border: 1.5px solid rgba(232,208,128,0.55);
                 box-shadow: 0 0 0 4px rgba(200, 168, 75, 0.05);
               "
             ></div>
@@ -1014,7 +1011,7 @@
 
           <!-- bottom-right corner ornament -->
           <div
-            class="pointer-events-none absolute bottom-10 right-8 opacity-40"
+            class="pointer-events-none absolute bottom-10 right-8 opacity-70"
           >
             <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
               <path
@@ -1028,7 +1025,7 @@
           </div>
 
           <!-- top ornament -->
-          <div class="pointer-events-none absolute right-14 top-28 opacity-30">
+          <div class="pointer-events-none absolute right-14 top-28 opacity-55">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
               <circle
                 cx="11"
@@ -1088,33 +1085,28 @@
     <!-- ══ FILTER / SORT BAR ══ -->
     <section
       class="sticky top-0 z-[900] backdrop-blur-md"
-      style="background: rgba(246,238,224,0.97); border-bottom: 1px solid rgba(200, 168, 75, 0.22); box-shadow: 0 2px 24px rgba(107, 70, 40,0.08);"
+      style="background: rgba(43, 24, 16,0.92); border-bottom: 1px solid rgba(200,168,75,0.3); box-shadow: 0 4px 26px rgba(0,0,0,0.3);"
     >
       <div
         class="mx-auto flex max-w-[1320px] flex-col gap-4 px-6 py-5 md:flex-row md:items-center md:justify-between md:px-[80px]"
       >
         <div class="flex flex-wrap items-center gap-2.5" id="filterChips">
-          <button data-filter="all" class="chip active rounded-full px-6 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition-all duration-300" style="border: 1.5px solid rgba(28, 15, 6,0.2); color: rgba(28, 15, 6,0.62); background: rgba(255,255,255,0.45); backdrop-filter: blur(8px);">All</button>
-          <button data-filter="bell" class="chip rounded-full px-6 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition-all duration-300" style="border: 1.5px solid rgba(28, 15, 6,0.2); color: rgba(28, 15, 6,0.62); background: rgba(255,255,255,0.45); backdrop-filter: blur(8px);">Temple Bells</button>
-          <button data-filter="chime" class="chip rounded-full px-6 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition-all duration-300" style="border: 1.5px solid rgba(28, 15, 6,0.2); color: rgba(28, 15, 6,0.62); background: rgba(255,255,255,0.45); backdrop-filter: blur(8px);">Chimes</button>
-          <button data-filter="set" class="chip rounded-full px-6 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition-all duration-300" style="border: 1.5px solid rgba(28, 15, 6,0.2); color: rgba(28, 15, 6,0.62); background: rgba(255,255,255,0.45); backdrop-filter: blur(8px);">Sets</button>
+          <button data-filter="all" class="chip active rounded-full px-6 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition-all duration-300" style="border: 1.5px solid rgba(244,236,218,0.3); color: rgba(244,236,218,0.85); background: rgba(255,255,255,0.05); backdrop-filter: blur(8px);">All</button>
+          <button data-filter="bell" class="chip rounded-full px-6 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition-all duration-300" style="border: 1.5px solid rgba(244,236,218,0.3); color: rgba(244,236,218,0.85); background: rgba(255,255,255,0.05); backdrop-filter: blur(8px);">Temple Bells</button>
+          <button data-filter="chime" class="chip rounded-full px-6 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition-all duration-300" style="border: 1.5px solid rgba(244,236,218,0.3); color: rgba(244,236,218,0.85); background: rgba(255,255,255,0.05); backdrop-filter: blur(8px);">Chimes</button>
+          <button data-filter="set" class="chip rounded-full px-6 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition-all duration-300" style="border: 1.5px solid rgba(244,236,218,0.3); color: rgba(244,236,218,0.85); background: rgba(255,255,255,0.05); backdrop-filter: blur(8px);">Sets</button>
         </div>
         <div class="flex items-center gap-3">
           <label
             for="sortSelect"
             class="text-[0.58rem] uppercase tracking-[0.38em] font-medium"
-            style="color: rgba(28, 15, 6, 0.42)"
+            style="color: rgba(244,236,218,0.6)"
             >Sort</label
           >
           <select
             id="sortSelect"
             class="cursor-pointer rounded-full px-5 py-2 text-[0.62rem] uppercase tracking-[0.22em] outline-none transition"
-            style="
-              border: 1.5px solid rgba(200, 168, 75, 0.4);
-              background: rgba(255,255,255,0.5);
-              color: rgba(28, 15, 6, 0.7);
-              backdrop-filter: blur(8px);
-            "
+            style="border: 1.5px solid rgba(200,168,75,0.4); background: rgba(255,255,255,0.06); color: rgba(244,236,218,0.85); backdrop-filter: blur(8px);"
           >
             <option value="featured">Featured</option>
             <option value="low">Price · Low to High</option>
@@ -1127,54 +1119,54 @@
     <main
       id="productMain"
       class="relative overflow-hidden"
-      style="background: radial-gradient(ellipse at 0% 40%, rgba(107,70,40,0.45) 0%, transparent 40%), radial-gradient(ellipse at 15% 70%, rgba(138,94,52,0.28) 0%, transparent 32%), radial-gradient(ellipse at 88% 20%, rgba(200,164,116,0.22) 0%, transparent 36%), radial-gradient(ellipse at 100% 80%, rgba(107,70,40,0.18) 0%, transparent 35%), linear-gradient(108deg, #2b1810 0%, #442d1c 10%, #6b4628 22%, #8a5e34 34%, #b08c5e 48%, #cdb088 62%, #e0ccaa 76%, #eee0cc 88%, #f8f2e6 100%);"
+      style="background: radial-gradient(ellipse at 88% 8%, rgba(150, 110, 70,0.34) 0%, transparent 46%), radial-gradient(ellipse at 8% 92%, rgba(28, 15, 6,0.5) 0%, transparent 46%), linear-gradient(125deg, #2b1810 0%, #442d1c 42%, #442d1c 68%, #2b1810 100%);"
     >
       <!-- background mandala watermark -->
       <div
-        class="pointer-events-none absolute inset-0 flex items-center justify-center opacity-[0.04]"
+        class="pointer-events-none absolute inset-0 flex items-center justify-center opacity-[0.1]"
       >
         <svg width="900" height="900" viewBox="0 0 900 900" fill="none">
-          <circle cx="450" cy="450" r="420" stroke="#442d1c" stroke-width="1" />
+          <circle cx="450" cy="450" r="420" stroke="#b08858" stroke-width="1" />
           <circle
             cx="450"
             cy="450"
             r="360"
-            stroke="#442d1c"
+            stroke="#b08858"
             stroke-width="0.8"
           />
           <circle
             cx="450"
             cy="450"
             r="300"
-            stroke="#442d1c"
+            stroke="#b08858"
             stroke-width="0.8"
           />
           <circle
             cx="450"
             cy="450"
             r="240"
-            stroke="#442d1c"
+            stroke="#b08858"
             stroke-width="0.7"
           />
           <circle
             cx="450"
             cy="450"
             r="180"
-            stroke="#442d1c"
+            stroke="#b08858"
             stroke-width="0.7"
           />
           <circle
             cx="450"
             cy="450"
             r="120"
-            stroke="#442d1c"
+            stroke="#b08858"
             stroke-width="0.6"
           />
           <circle
             cx="450"
             cy="450"
             r="60"
-            stroke="#442d1c"
+            stroke="#b08858"
             stroke-width="0.6"
           />
           <line
@@ -1182,7 +1174,7 @@
             y1="30"
             x2="450"
             y2="870"
-            stroke="#442d1c"
+            stroke="#b08858"
             stroke-width="0.5"
           />
           <line
@@ -1190,7 +1182,7 @@
             y1="450"
             x2="870"
             y2="450"
-            stroke="#442d1c"
+            stroke="#b08858"
             stroke-width="0.5"
           />
           <line
@@ -1198,7 +1190,7 @@
             y1="153"
             x2="747"
             y2="747"
-            stroke="#442d1c"
+            stroke="#b08858"
             stroke-width="0.4"
           />
           <line
@@ -1206,7 +1198,7 @@
             y1="153"
             x2="153"
             y2="747"
-            stroke="#442d1c"
+            stroke="#b08858"
             stroke-width="0.4"
           />
           <ellipse
@@ -1214,7 +1206,7 @@
             cy="90"
             rx="35"
             ry="75"
-            stroke="#442d1c"
+            stroke="#b08858"
             stroke-width="0.5"
             fill="none"
           />
@@ -1223,7 +1215,7 @@
             cy="90"
             rx="35"
             ry="75"
-            stroke="#442d1c"
+            stroke="#b08858"
             stroke-width="0.5"
             fill="none"
             transform="rotate(45 450 450)"
@@ -1233,7 +1225,7 @@
             cy="90"
             rx="35"
             ry="75"
-            stroke="#442d1c"
+            stroke="#b08858"
             stroke-width="0.5"
             fill="none"
             transform="rotate(90 450 450)"
@@ -1243,7 +1235,7 @@
             cy="90"
             rx="35"
             ry="75"
-            stroke="#442d1c"
+            stroke="#b08858"
             stroke-width="0.5"
             fill="none"
             transform="rotate(135 450 450)"
@@ -1253,7 +1245,7 @@
             cy="90"
             rx="35"
             ry="75"
-            stroke="#442d1c"
+            stroke="#b08858"
             stroke-width="0.5"
             fill="none"
             transform="rotate(180 450 450)"
@@ -1263,7 +1255,7 @@
             cy="90"
             rx="35"
             ry="75"
-            stroke="#442d1c"
+            stroke="#b08858"
             stroke-width="0.5"
             fill="none"
             transform="rotate(225 450 450)"
@@ -1273,7 +1265,7 @@
             cy="90"
             rx="35"
             ry="75"
-            stroke="#442d1c"
+            stroke="#b08858"
             stroke-width="0.5"
             fill="none"
             transform="rotate(270 450 450)"
@@ -1283,7 +1275,7 @@
             cy="90"
             rx="35"
             ry="75"
-            stroke="#442d1c"
+            stroke="#b08858"
             stroke-width="0.5"
             fill="none"
             transform="rotate(315 450 450)"
@@ -1336,7 +1328,7 @@
             class="rounded-full px-4 py-1 text-[0.58rem] uppercase tracking-[0.38em]"
             style="
               border: 1px solid rgba(200, 168, 75, 0.5);
-              color: rgba(138, 90, 46,0.8);
+              color: rgba(140, 80, 20, 0.8);
               background: rgba(200, 168, 75, 0.06);
             "
             >Best Seller</span
@@ -1369,299 +1361,131 @@
           id="productGrid"
           class="grid grid-cols-1 gap-x-0 gap-y-0 sm:grid-cols-2 lg:grid-cols-3"
         >
-          <a
-            href="../products/temple-bell.html"
-            class="product-card reveal group block no-underline"
-            data-category="bell"
-            data-price="1450"
-            style="padding: 32px 28px 36px;"
-          >
+          <a href="../products/temple-bell.html" class="product-card reveal group block no-underline" data-category="bell" data-price="1450" style="padding: 32px 28px 36px;">
             <div class="relative mb-8 flex justify-center">
-              <div
-                class="ekam-oval-card zoom"
-                style="
-                  --ph: linear-gradient(145deg,#8a5e34 0%,#442d1c 42%,#2b1810 75%,#1c0f06 100%);
-                  width: 100%;
-                  max-width: 260px;
-                  aspect-ratio: 4/5;
-                  border-radius: 50% 50% 50% 50% / 42% 42% 58% 58%;
-                  position: relative;
-                  overflow: hidden;
-                  background: var(--ph);
-                  box-shadow: 0 28px 64px rgba(0,0,0,0.28), 0 8px 24px rgba(0,0,0,0.18), inset 0 1px 0 rgba(240,180,100,0.18);
-                "
-              >
-                <img src="PASTE_IMAGE_URL" alt="Temple Bell" loading="lazy"
-                  style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"
-                  onerror="this.style.display='none'" />
-                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/85 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
+              <div class="ekam-oval-card zoom" style="--ph: linear-gradient(145deg,#8a5e34 0%,#442d1c 45%,#2b1810 100%); width: 100%; max-width: 260px; aspect-ratio: 4/5; border-radius: 48% 48% 34% 34% / 64% 64% 40% 40%; position: relative; overflow: hidden; background: var(--ph); box-shadow: 0 28px 60px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.28), inset 0 1px 0 rgba(232,208,128,0.22);">
+                <img src="PASTE_IMAGE_URL" alt="Temple Bell" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
+                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/90 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
               </div>
             </div>
             <div class="mb-4 flex items-center gap-3">
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.45), transparent);"></div>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="opacity:0.55;flex-shrink:0">
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(60 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(120 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(180 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(240 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(300 8 8)"/>
-                <circle cx="8" cy="8" r="1.2" fill="#c8a84b" opacity="0.7"/>
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.55), transparent);"></div>
+              <svg width="17" height="17" viewBox="0 0 16 16" fill="none" style="opacity:0.9;flex-shrink:0">
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(0 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(60 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(120 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(180 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(240 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(300 8 8)"/>
+                <circle cx="8" cy="8" r="1.3" fill="#e8d080"/>
               </svg>
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.45));"></div>
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.55));"></div>
             </div>
-            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: rgba(138, 90, 46,0.85)">Temple Bell</span>
-            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300"
-              style="color: #1c0f06"
-              onmouseover="this.style.color='#8a5a2e'" onmouseout="this.style.color='#1c0f06'">
+            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: #dcb890">Temple Bell</span>
+            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300" style="color: #f4ecda" onmouseover="this.style.color='#dcb890'" onmouseout="this.style.color='#f4ecda'">
               Temple Bell
             </h3>
-            <p class="font-sans text-[0.92rem]" style="color: rgba(28, 15, 6,0.55)">&#8377;1,450</p>
+            <p class="font-sans text-[0.92rem]" style="color: rgba(244,236,218,0.65)">&#8377;1,450</p>
           </a>
-          <a
-            href="../products/doorway-bell.html"
-            class="product-card reveal reveal-d1 group block no-underline"
-            data-category="bell"
-            data-price="1150"
-            style="padding: 32px 28px 36px;"
-          >
+          <a href="../products/doorway-bell.html" class="product-card reveal reveal-d1 group block no-underline" data-category="bell" data-price="1150" style="padding: 32px 28px 36px;">
             <div class="relative mb-8 flex justify-center">
-              <div
-                class="ekam-oval-card zoom"
-                style="
-                  --ph: linear-gradient(135deg,#442d1c 0%,#2b1810 100%);
-                  width: 100%;
-                  max-width: 260px;
-                  aspect-ratio: 4/5;
-                  border-radius: 50% 50% 50% 50% / 42% 42% 58% 58%;
-                  position: relative;
-                  overflow: hidden;
-                  background: var(--ph);
-                  box-shadow: 0 28px 64px rgba(0,0,0,0.28), 0 8px 24px rgba(0,0,0,0.18), inset 0 1px 0 rgba(240,180,100,0.18);
-                "
-              >
-                <img src="PASTE_IMAGE_URL" alt="Doorway Bell" loading="lazy"
-                  style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"
-                  onerror="this.style.display='none'" />
-                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/85 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
+              <div class="ekam-oval-card zoom" style="--ph: linear-gradient(135deg,#6b4628 0%,#3a2614 100%); width: 100%; max-width: 260px; aspect-ratio: 4/5; border-radius: 48% 48% 34% 34% / 64% 64% 40% 40%; position: relative; overflow: hidden; background: var(--ph); box-shadow: 0 28px 60px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.28), inset 0 1px 0 rgba(232,208,128,0.22);">
+                <img src="PASTE_IMAGE_URL" alt="Doorway Bell" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
+                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/90 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
               </div>
             </div>
             <div class="mb-4 flex items-center gap-3">
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.45), transparent);"></div>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="opacity:0.55;flex-shrink:0">
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(60 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(120 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(180 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(240 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(300 8 8)"/>
-                <circle cx="8" cy="8" r="1.2" fill="#c8a84b" opacity="0.7"/>
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.55), transparent);"></div>
+              <svg width="17" height="17" viewBox="0 0 16 16" fill="none" style="opacity:0.9;flex-shrink:0">
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(0 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(60 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(120 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(180 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(240 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(300 8 8)"/>
+                <circle cx="8" cy="8" r="1.3" fill="#e8d080"/>
               </svg>
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.45));"></div>
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.55));"></div>
             </div>
-            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: rgba(138, 90, 46,0.85)">Bell</span>
-            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300"
-              style="color: #1c0f06"
-              onmouseover="this.style.color='#8a5a2e'" onmouseout="this.style.color='#1c0f06'">
+            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: #dcb890">Bell</span>
+            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300" style="color: #f4ecda" onmouseover="this.style.color='#dcb890'" onmouseout="this.style.color='#f4ecda'">
               Doorway Bell
             </h3>
-            <p class="font-sans text-[0.92rem]" style="color: rgba(28, 15, 6,0.55)">&#8377;1,150</p>
+            <p class="font-sans text-[0.92rem]" style="color: rgba(244,236,218,0.65)">&#8377;1,150</p>
           </a>
-          <a
-            href="../products/garden-chime.html"
-            class="product-card reveal reveal-d2 group block no-underline"
-            data-category="chime"
-            data-price="1650"
-            style="padding: 32px 28px 36px;"
-          >
+          <a href="../products/garden-chime.html" class="product-card reveal reveal-d2 group block no-underline" data-category="chime" data-price="1650" style="padding: 32px 28px 36px;">
             <div class="relative mb-8 flex justify-center">
-              <div
-                class="ekam-oval-card zoom"
-                style="
-                  --ph: linear-gradient(135deg,#b08858 0%,#5a3a20 100%);
-                  width: 100%;
-                  max-width: 260px;
-                  aspect-ratio: 4/5;
-                  border-radius: 50% 50% 50% 50% / 42% 42% 58% 58%;
-                  position: relative;
-                  overflow: hidden;
-                  background: var(--ph);
-                  box-shadow: 0 28px 64px rgba(0,0,0,0.28), 0 8px 24px rgba(0,0,0,0.18), inset 0 1px 0 rgba(240,180,100,0.18);
-                "
-              >
-                <img src="PASTE_IMAGE_URL" alt="Garden Chime" loading="lazy"
-                  style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"
-                  onerror="this.style.display='none'" />
-                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/85 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
+              <div class="ekam-oval-card zoom" style="--ph: linear-gradient(135deg,#b08858 0%,#5a3a20 100%); width: 100%; max-width: 260px; aspect-ratio: 4/5; border-radius: 48% 48% 34% 34% / 64% 64% 40% 40%; position: relative; overflow: hidden; background: var(--ph); box-shadow: 0 28px 60px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.28), inset 0 1px 0 rgba(232,208,128,0.22);">
+                <img src="PASTE_IMAGE_URL" alt="Garden Chime" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
+                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/90 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
               </div>
             </div>
             <div class="mb-4 flex items-center gap-3">
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.45), transparent);"></div>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="opacity:0.55;flex-shrink:0">
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(60 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(120 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(180 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(240 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(300 8 8)"/>
-                <circle cx="8" cy="8" r="1.2" fill="#c8a84b" opacity="0.7"/>
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.55), transparent);"></div>
+              <svg width="17" height="17" viewBox="0 0 16 16" fill="none" style="opacity:0.9;flex-shrink:0">
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(0 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(60 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(120 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(180 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(240 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(300 8 8)"/>
+                <circle cx="8" cy="8" r="1.3" fill="#e8d080"/>
               </svg>
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.45));"></div>
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.55));"></div>
             </div>
-            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: rgba(138, 90, 46,0.85)">Chime</span>
-            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300"
-              style="color: #1c0f06"
-              onmouseover="this.style.color='#8a5a2e'" onmouseout="this.style.color='#1c0f06'">
+            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: #dcb890">Chime</span>
+            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300" style="color: #f4ecda" onmouseover="this.style.color='#dcb890'" onmouseout="this.style.color='#f4ecda'">
               Garden Chime
             </h3>
-            <p class="font-sans text-[0.92rem]" style="color: rgba(28, 15, 6,0.55)">&#8377;1,650</p>
+            <p class="font-sans text-[0.92rem]" style="color: rgba(244,236,218,0.65)">&#8377;1,650</p>
           </a>
-          <a
-            href="../products/ceremonial-bell-set.html"
-            class="product-card reveal group block no-underline"
-            data-category="set"
-            data-price="2850"
-            style="padding: 32px 28px 36px;"
-          >
+          <a href="../products/ceremonial-bell-set.html" class="product-card reveal group block no-underline" data-category="set" data-price="2850" style="padding: 32px 28px 36px;">
             <div class="relative mb-8 flex justify-center">
-              <div
-                class="ekam-oval-card zoom"
-                style="
-                  --ph: linear-gradient(145deg,#8a5e34 0%,#442d1c 42%,#2b1810 75%,#1c0f06 100%);
-                  width: 100%;
-                  max-width: 260px;
-                  aspect-ratio: 4/5;
-                  border-radius: 50% 50% 50% 50% / 42% 42% 58% 58%;
-                  position: relative;
-                  overflow: hidden;
-                  background: var(--ph);
-                  box-shadow: 0 28px 64px rgba(0,0,0,0.28), 0 8px 24px rgba(0,0,0,0.18), inset 0 1px 0 rgba(240,180,100,0.18);
-                "
-              >
-                <img src="PASTE_IMAGE_URL" alt="Ceremonial Bell Set" loading="lazy"
-                  style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"
-                  onerror="this.style.display='none'" />
-                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/85 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
+              <div class="ekam-oval-card zoom" style="--ph: linear-gradient(145deg,#8a5e34 0%,#442d1c 45%,#2b1810 100%); width: 100%; max-width: 260px; aspect-ratio: 4/5; border-radius: 48% 48% 34% 34% / 64% 64% 40% 40%; position: relative; overflow: hidden; background: var(--ph); box-shadow: 0 28px 60px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.28), inset 0 1px 0 rgba(232,208,128,0.22);">
+                <img src="PASTE_IMAGE_URL" alt="Ceremonial Bell Set" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
+                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/90 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
               </div>
             </div>
             <div class="mb-4 flex items-center gap-3">
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.45), transparent);"></div>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="opacity:0.55;flex-shrink:0">
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(60 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(120 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(180 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(240 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(300 8 8)"/>
-                <circle cx="8" cy="8" r="1.2" fill="#c8a84b" opacity="0.7"/>
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.55), transparent);"></div>
+              <svg width="17" height="17" viewBox="0 0 16 16" fill="none" style="opacity:0.9;flex-shrink:0">
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(0 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(60 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(120 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(180 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(240 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(300 8 8)"/>
+                <circle cx="8" cy="8" r="1.3" fill="#e8d080"/>
               </svg>
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.45));"></div>
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.55));"></div>
             </div>
-            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: rgba(138, 90, 46,0.85)">Set</span>
-            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300"
-              style="color: #1c0f06"
-              onmouseover="this.style.color='#8a5a2e'" onmouseout="this.style.color='#1c0f06'">
+            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: #dcb890">Set</span>
+            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300" style="color: #f4ecda" onmouseover="this.style.color='#dcb890'" onmouseout="this.style.color='#f4ecda'">
               Ceremonial Bell Set
             </h3>
-            <p class="font-sans text-[0.92rem]" style="color: rgba(28, 15, 6,0.55)">&#8377;2,850</p>
+            <p class="font-sans text-[0.92rem]" style="color: rgba(244,236,218,0.65)">&#8377;2,850</p>
           </a>
-          <a
-            href="../products/brass-wind-chime.html"
-            class="product-card reveal reveal-d1 group block no-underline"
-            data-category="chime"
-            data-price="1950"
-            style="padding: 32px 28px 36px;"
-          >
+          <a href="../products/brass-wind-chime.html" class="product-card reveal reveal-d1 group block no-underline" data-category="chime" data-price="1950" style="padding: 32px 28px 36px;">
             <div class="relative mb-8 flex justify-center">
-              <div
-                class="ekam-oval-card zoom"
-                style="
-                  --ph: linear-gradient(135deg,#442d1c 0%,#2b1810 100%);
-                  width: 100%;
-                  max-width: 260px;
-                  aspect-ratio: 4/5;
-                  border-radius: 50% 50% 50% 50% / 42% 42% 58% 58%;
-                  position: relative;
-                  overflow: hidden;
-                  background: var(--ph);
-                  box-shadow: 0 28px 64px rgba(0,0,0,0.28), 0 8px 24px rgba(0,0,0,0.18), inset 0 1px 0 rgba(240,180,100,0.18);
-                "
-              >
-                <img src="PASTE_IMAGE_URL" alt="Brass Wind Chime" loading="lazy"
-                  style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"
-                  onerror="this.style.display='none'" />
-                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/85 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
+              <div class="ekam-oval-card zoom" style="--ph: linear-gradient(135deg,#6b4628 0%,#3a2614 100%); width: 100%; max-width: 260px; aspect-ratio: 4/5; border-radius: 48% 48% 34% 34% / 64% 64% 40% 40%; position: relative; overflow: hidden; background: var(--ph); box-shadow: 0 28px 60px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.28), inset 0 1px 0 rgba(232,208,128,0.22);">
+                <img src="PASTE_IMAGE_URL" alt="Brass Wind Chime" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
+                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/90 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
               </div>
             </div>
             <div class="mb-4 flex items-center gap-3">
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.45), transparent);"></div>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="opacity:0.55;flex-shrink:0">
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(60 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(120 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(180 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(240 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(300 8 8)"/>
-                <circle cx="8" cy="8" r="1.2" fill="#c8a84b" opacity="0.7"/>
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.55), transparent);"></div>
+              <svg width="17" height="17" viewBox="0 0 16 16" fill="none" style="opacity:0.9;flex-shrink:0">
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(0 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(60 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(120 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(180 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(240 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(300 8 8)"/>
+                <circle cx="8" cy="8" r="1.3" fill="#e8d080"/>
               </svg>
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.45));"></div>
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.55));"></div>
             </div>
-            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: rgba(138, 90, 46,0.85)">Chime</span>
-            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300"
-              style="color: #1c0f06"
-              onmouseover="this.style.color='#8a5a2e'" onmouseout="this.style.color='#1c0f06'">
+            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: #dcb890">Chime</span>
+            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300" style="color: #f4ecda" onmouseover="this.style.color='#dcb890'" onmouseout="this.style.color='#f4ecda'">
               Brass Wind Chime
             </h3>
-            <p class="font-sans text-[0.92rem]" style="color: rgba(28, 15, 6,0.55)">&#8377;1,950</p>
+            <p class="font-sans text-[0.92rem]" style="color: rgba(244,236,218,0.65)">&#8377;1,950</p>
           </a>
-          <a
-            href="../products/hanging-bell-cluster.html"
-            class="product-card reveal reveal-d2 group block no-underline"
-            data-category="set"
-            data-price="2450"
-            style="padding: 32px 28px 36px;"
-          >
+          <a href="../products/hanging-bell-cluster.html" class="product-card reveal reveal-d2 group block no-underline" data-category="set" data-price="2450" style="padding: 32px 28px 36px;">
             <div class="relative mb-8 flex justify-center">
-              <div
-                class="ekam-oval-card zoom"
-                style="
-                  --ph: linear-gradient(135deg,#b08858 0%,#5a3a20 100%);
-                  width: 100%;
-                  max-width: 260px;
-                  aspect-ratio: 4/5;
-                  border-radius: 50% 50% 50% 50% / 42% 42% 58% 58%;
-                  position: relative;
-                  overflow: hidden;
-                  background: var(--ph);
-                  box-shadow: 0 28px 64px rgba(0,0,0,0.28), 0 8px 24px rgba(0,0,0,0.18), inset 0 1px 0 rgba(240,180,100,0.18);
-                "
-              >
-                <img src="PASTE_IMAGE_URL" alt="Hanging Bell Cluster" loading="lazy"
-                  style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"
-                  onerror="this.style.display='none'" />
-                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/85 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
+              <div class="ekam-oval-card zoom" style="--ph: linear-gradient(135deg,#b08858 0%,#5a3a20 100%); width: 100%; max-width: 260px; aspect-ratio: 4/5; border-radius: 48% 48% 34% 34% / 64% 64% 40% 40%; position: relative; overflow: hidden; background: var(--ph); box-shadow: 0 28px 60px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.28), inset 0 1px 0 rgba(232,208,128,0.22);">
+                <img src="PASTE_IMAGE_URL" alt="Hanging Bell Cluster" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
+                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/90 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
               </div>
             </div>
             <div class="mb-4 flex items-center gap-3">
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.45), transparent);"></div>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="opacity:0.55;flex-shrink:0">
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(60 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(120 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(180 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(240 8 8)"/>
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#c8a84b" stroke-width="0.7" fill="none" transform="rotate(300 8 8)"/>
-                <circle cx="8" cy="8" r="1.2" fill="#c8a84b" opacity="0.7"/>
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.55), transparent);"></div>
+              <svg width="17" height="17" viewBox="0 0 16 16" fill="none" style="opacity:0.9;flex-shrink:0">
+                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(0 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(60 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(120 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(180 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(240 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(300 8 8)"/>
+                <circle cx="8" cy="8" r="1.3" fill="#e8d080"/>
               </svg>
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.45));"></div>
+              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.55));"></div>
             </div>
-            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: rgba(138, 90, 46,0.85)">Set</span>
-            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300"
-              style="color: #1c0f06"
-              onmouseover="this.style.color='#8a5a2e'" onmouseout="this.style.color='#1c0f06'">
+            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: #dcb890">Set</span>
+            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300" style="color: #f4ecda" onmouseover="this.style.color='#dcb890'" onmouseout="this.style.color='#f4ecda'">
               Hanging Bell Cluster
             </h3>
-            <p class="font-sans text-[0.92rem]" style="color: rgba(28, 15, 6,0.55)">&#8377;2,450</p>
+            <p class="font-sans text-[0.92rem]" style="color: rgba(244,236,218,0.65)">&#8377;2,450</p>
           </a>
         <!-- gold bottom rule -->
         <div
@@ -1679,61 +1503,47 @@
         ></div>
 
         <!-- trust strip -->
-        <div class="mt-12 grid grid-cols-2 gap-8 md:grid-cols-4" style="padding: 28px 20px; border-radius: 16px; background: rgba(255,255,255,0.22); backdrop-filter: blur(12px); border: 1px solid rgba(200,168,75,0.18);">
-          <div class="flex items-center gap-4">
-            <div class="flex-shrink-0 rounded-full flex items-center justify-center" style="width:42px;height:42px;background:rgba(200,168,75,0.1);border:1px solid rgba(200,168,75,0.22);">
-              <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
-                <path d="M16 4 C10 4 6 9 6 14 C6 22 16 28 16 28 S26 22 26 14 C26 9 22 4 16 4Z" stroke="#c8a84b" stroke-width="1" fill="none"/>
-                <path d="M11 14 L15 18 L21 11" stroke="#c8a84b" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+        <div class="mt-16 flex flex-col gap-8 sm:flex-row sm:gap-0 sm:items-stretch sm:divide-x sm:divide-[rgba(200,168,75,0.22)]" style="padding: 46px 36px; border-radius: 22px; background: rgba(255,255,255,0.05); backdrop-filter: blur(14px); border: 1px solid rgba(200,168,75,0.3); box-shadow: 0 20px 60px rgba(0,0,0,0.25);">
+          <div class="flex flex-1 flex-col items-center text-center gap-3.5 px-6 py-2">
+            <div class="flex-shrink-0 rounded-full flex items-center justify-center" style="width:54px;height:54px;background:rgba(232,208,128,0.08);border:1px solid rgba(200,168,75,0.35);">
+              <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><path d="M16 4 C10 4 6 9 6 14 C6 22 16 28 16 28 S26 22 26 14 C26 9 22 4 16 4Z" stroke="#e8d080" stroke-width="1" fill="none"/><path d="M11 14 L15 18 L21 11" stroke="#e8d080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <div>
-              <p class="text-[0.65rem] font-semibold uppercase tracking-[0.25em]" style="color: rgba(28,15,6,0.75)">Handcrafted</p>
-              <p class="text-[0.6rem] font-light mt-0.5" style="color: rgba(28,15,6,0.45)">With devotion</p>
+              <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] leading-snug" style="color: rgba(244,236,218,0.92)">Handcrafted</p>
+              <p class="text-[0.62rem] font-light mt-1 leading-snug" style="color: rgba(244,236,218,0.55)">With devotion</p>
             </div>
           </div>
-          <div class="flex items-center gap-4">
-            <div class="flex-shrink-0 rounded-full flex items-center justify-center" style="width:42px;height:42px;background:rgba(200,168,75,0.1);border:1px solid rgba(200,168,75,0.22);">
-              <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
-                <circle cx="16" cy="16" r="11" stroke="#c8a84b" stroke-width="1" fill="none"/>
-                <path d="M16 6 C14 10 10 12 10 16 C10 20 12 22 16 22 S22 20 22 16 C22 12 18 10 16 6Z" stroke="#c8a84b" stroke-width="0.8" fill="none"/>
-                <line x1="16" y1="10" x2="16" y2="22" stroke="#c8a84b" stroke-width="0.6"/>
-                <line x1="11" y1="16" x2="21" y2="16" stroke="#c8a84b" stroke-width="0.6"/>
-              </svg>
+          <div class="flex flex-1 flex-col items-center text-center gap-3.5 px-6 py-2">
+            <div class="flex-shrink-0 rounded-full flex items-center justify-center" style="width:54px;height:54px;background:rgba(232,208,128,0.08);border:1px solid rgba(200,168,75,0.35);">
+              <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11" stroke="#e8d080" stroke-width="1" fill="none"/><path d="M16 6 C14 10 10 12 10 16 C10 20 12 22 16 22 S22 20 22 16 C22 12 18 10 16 6Z" stroke="#e8d080" stroke-width="0.8" fill="none"/><line x1="16" y1="10" x2="16" y2="22" stroke="#e8d080" stroke-width="0.6"/><line x1="11" y1="16" x2="21" y2="16" stroke="#e8d080" stroke-width="0.6"/></svg>
             </div>
             <div>
-              <p class="text-[0.65rem] font-semibold uppercase tracking-[0.25em]" style="color: rgba(28,15,6,0.75)">Made to Order</p>
-              <p class="text-[0.6rem] font-light mt-0.5" style="color: rgba(28,15,6,0.45)">Just for you</p>
+              <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] leading-snug" style="color: rgba(244,236,218,0.92)">Made to Order</p>
+              <p class="text-[0.62rem] font-light mt-1 leading-snug" style="color: rgba(244,236,218,0.55)">Just for you</p>
             </div>
           </div>
-          <div class="flex items-center gap-4">
-            <div class="flex-shrink-0 rounded-full flex items-center justify-center" style="width:42px;height:42px;background:rgba(200,168,75,0.1);border:1px solid rgba(200,168,75,0.22);">
-              <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
-                <path d="M16 3 L18.5 10.5 L26.5 10.5 L20 15.5 L22.5 23 L16 18 L9.5 23 L12 15.5 L5.5 10.5 L13.5 10.5 Z" stroke="#c8a84b" stroke-width="0.9" fill="none" stroke-linejoin="round"/>
-              </svg>
+          <div class="flex flex-1 flex-col items-center text-center gap-3.5 px-6 py-2">
+            <div class="flex-shrink-0 rounded-full flex items-center justify-center" style="width:54px;height:54px;background:rgba(232,208,128,0.08);border:1px solid rgba(200,168,75,0.35);">
+              <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><path d="M16 3 L18.5 10.5 L26.5 10.5 L20 15.5 L22.5 23 L16 18 L9.5 23 L12 15.5 L5.5 10.5 L13.5 10.5 Z" stroke="#e8d080" stroke-width="0.9" fill="none" stroke-linejoin="round"/></svg>
             </div>
             <div>
-              <p class="text-[0.65rem] font-semibold uppercase tracking-[0.25em]" style="color: rgba(28,15,6,0.75)">Kutch, Gujarat</p>
-              <p class="text-[0.6rem] font-light mt-0.5" style="color: rgba(28,15,6,0.45)">Proudly made in India</p>
+              <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] leading-snug" style="color: rgba(244,236,218,0.92)">Kutch, Gujarat</p>
+              <p class="text-[0.62rem] font-light mt-1 leading-snug" style="color: rgba(244,236,218,0.55)">Proudly made in India</p>
             </div>
           </div>
-          <div class="flex items-center gap-4">
-            <div class="flex-shrink-0 rounded-full flex items-center justify-center" style="width:42px;height:42px;background:rgba(200,168,75,0.1);border:1px solid rgba(200,168,75,0.22);">
-              <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
-                <rect x="5" y="10" width="22" height="16" rx="2" stroke="#c8a84b" stroke-width="0.9" fill="none"/>
-                <path d="M10 10 L10 7 C10 4.8 12.7 3 16 3 S22 4.8 22 7 L22 10" stroke="#c8a84b" stroke-width="0.9" fill="none" stroke-linecap="round"/>
-                <circle cx="16" cy="18" r="2.5" stroke="#c8a84b" stroke-width="0.8" fill="none"/>
-              </svg>
+          <div class="flex flex-1 flex-col items-center text-center gap-3.5 px-6 py-2">
+            <div class="flex-shrink-0 rounded-full flex items-center justify-center" style="width:54px;height:54px;background:rgba(232,208,128,0.08);border:1px solid rgba(200,168,75,0.35);">
+              <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><rect x="5" y="10" width="22" height="16" rx="2" stroke="#e8d080" stroke-width="0.9" fill="none"/><path d="M10 10 L10 7 C10 4.8 12.7 3 16 3 S22 4.8 22 7 L22 10" stroke="#e8d080" stroke-width="0.9" fill="none" stroke-linecap="round"/><circle cx="16" cy="18" r="2.5" stroke="#e8d080" stroke-width="0.8" fill="none"/></svg>
             </div>
             <div>
-              <p class="text-[0.65rem] font-semibold uppercase tracking-[0.25em]" style="color: rgba(28,15,6,0.75)">Secure Packaging</p>
-              <p class="text-[0.6rem] font-light mt-0.5" style="color: rgba(28,15,6,0.45)">Safe &amp; insured delivery</p>
+              <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] leading-snug" style="color: rgba(244,236,218,0.92)">Secure Packaging</p>
+              <p class="text-[0.62rem] font-light mt-1 leading-snug" style="color: rgba(244,236,218,0.55)">Safe &amp; insured delivery</p>
             </div>
           </div>
         </div>
 
         <!-- centre lotus ornament -->
-        <div class="mt-10 flex justify-center opacity-30">
+        <div class="mt-10 flex justify-center opacity-60">
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
             <ellipse
               cx="14"
@@ -1809,7 +1619,7 @@
         style="
           background: radial-gradient(
             ellipse at 65% 40%,
-            rgba(138,94,52,0.16) 0%,
+            rgba(150, 110, 70,0.16) 0%,
             transparent 58%
           );
         "
@@ -1831,38 +1641,38 @@
     </section>
     <!-- ══ OTHER COLLECTIONS ══ -->
     <section class="mx-auto max-w-content px-6 py-28 md:px-[90px]">
-      <span class="mb-3 block text-[0.72rem] uppercase tracking-wide2 text-terra">Continue exploring</span>
-      <h2 class="mb-12 font-serif text-[clamp(2rem,3.5vw,3.2rem)] font-light tracking-tight">Other Collections</h2>
+      <span class="mb-3 block text-[0.72rem] uppercase tracking-wide2" style="color: rgba(232,208,128,0.9)">Continue exploring</span>
+      <h2 class="mb-12 font-serif text-[clamp(2rem,3.5vw,3.2rem)] font-light tracking-tight" style="color: #f4ecda">Other Collections</h2>
       <div class="grid grid-cols-2 gap-4 md:grid-cols-5">
         <a href="pooja-chowki.html" class="group block no-underline">
           <div class="img-slot zoom shape-arch mb-3 aspect-[3/4]" style="--ph: linear-gradient(145deg, #c2673a, #743014)">
             <img src="PASTE_IMAGE_URL" alt="Pooja &amp; Chowki" loading="lazy" onerror="this.classList.add('img-missing')" />
           </div>
-          <span class="font-serif text-base text-char transition group-hover:text-terra">Pooja &amp; Chowki</span>
+          <span class="font-serif text-base transition group-hover:text-gold" style="color: rgba(244,236,218,0.85)">Pooja &amp; Chowki</span>
         </a>
         <a href="mirror-frame.html" class="group block no-underline">
           <div class="img-slot zoom shape-arch mb-3 aspect-[3/4]" style="--ph: linear-gradient(145deg, #5c6b3a, #3a4525)">
             <img src="PASTE_IMAGE_URL" alt="Mirror &amp; Frame" loading="lazy" onerror="this.classList.add('img-missing')" />
           </div>
-          <span class="font-serif text-base text-char transition group-hover:text-terra">Mirror &amp; Frame</span>
+          <span class="font-serif text-base transition group-hover:text-gold" style="color: rgba(244,236,218,0.85)">Mirror &amp; Frame</span>
         </a>
         <a href="terracotta.html" class="group block no-underline">
           <div class="img-slot zoom shape-arch mb-3 aspect-[3/4]" style="--ph: linear-gradient(145deg, #c2673a, #8b3e1a)">
             <img src="PASTE_IMAGE_URL" alt="Terracotta" loading="lazy" onerror="this.classList.add('img-missing')" />
           </div>
-          <span class="font-serif text-base text-char transition group-hover:text-terra">Terracotta</span>
+          <span class="font-serif text-base transition group-hover:text-gold" style="color: rgba(244,236,218,0.85)">Terracotta</span>
         </a>
         <a href="utility-keepsake.html" class="group block no-underline">
           <div class="img-slot zoom shape-arch mb-3 aspect-[3/4]" style="--ph: linear-gradient(180deg, #c8a84b, #8a6e28)">
             <img src="PASTE_IMAGE_URL" alt="Utility &amp; Keepsake" loading="lazy" onerror="this.classList.add('img-missing')" />
           </div>
-          <span class="font-serif text-base text-char transition group-hover:text-terra">Utility &amp; Keepsake</span>
+          <span class="font-serif text-base transition group-hover:text-gold" style="color: rgba(244,236,218,0.85)">Utility &amp; Keepsake</span>
         </a>
         <a href="wall-decor.html" class="group block no-underline">
           <div class="img-slot zoom shape-arch mb-3 aspect-[3/4]" style="--ph: linear-gradient(145deg, #1d3547, #0e1f2b)">
             <img src="PASTE_IMAGE_URL" alt="Wall Decor" loading="lazy" onerror="this.classList.add('img-missing')" />
           </div>
-          <span class="font-serif text-base text-char transition group-hover:text-terra">Wall Decor</span>
+          <span class="font-serif text-base transition group-hover:text-gold" style="color: rgba(244,236,218,0.85)">Wall Decor</span>
         </a>
       </div>
     </section>
