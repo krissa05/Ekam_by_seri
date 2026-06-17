@@ -533,15 +533,23 @@ html[data-collection="utility"] .img-slot.shape-arch {
 /* ══════════════════════════════════════════════════════════════
    6. WALL DECOR & JHAROKHA
    Shape: pointed Rajasthani arch (jharokha window)
-   Background: deep green-earth gradient
+   Background: slate-navy to soft grey gradient
    ══════════════════════════════════════════════════════════════ */
 html[data-collection="wall-decor"] body {
-  background: linear-gradient(155deg, #eff4e8 0%, #d8e8c4 45%, #eff4e8 100%);
+  background: linear-gradient(155deg, #d4d8dd 0%, #c0c8ca 45%, #d4d8dd 100%);
 }
 html[data-collection="wall-decor"] #mainImage {
   border-radius: 999px 999px 16px 16px !important;
-  box-shadow: 0 36px 80px rgba(28, 56, 12, 0.32) !important;
+  box-shadow: 0 36px 80px rgba(26, 45, 66, 0.32) !important;
 }
 html[data-collection="wall-decor"] .img-slot.shape-arch {
   border-radius: 999px 999px 16px 16px !important;
+}
+/* Story + FAQ sections */
+html[data-collection="wall-decor"] .bg-linen {
+  background: #aab7b7 !important;
+}
+/* Dark Size Guide interlude */
+html[data-collection="wall-decor"] #sizeGuide {
+  background: #1a2d42 !important;
 }
