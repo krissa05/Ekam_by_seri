@@ -371,7 +371,12 @@ html[data-collection="pooja"] #mainImage {
 html[data-collection="pooja"] .img-slot.shape-arch {
   border-radius: 24px !important;
 }
-
+html[data-collection="pooja"] .bg-linen {
+  background: #e7b78a !important;
+}
+html[data-collection="pooja"] #sizeGuide {
+  background: #5c2410 !important;
+}
 /* ══════════════════════════════════════════════════════════════
    3. MIRROR & FRAME  ← FULL GREEN THEME
    Shape: clean rectangle (mirror frame)
