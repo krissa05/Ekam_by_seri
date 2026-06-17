@@ -61,24 +61,45 @@
     </script>
     <link rel="stylesheet" href="../shared/styles.css" />
     <style>
-      body { font-family: "Manrope", sans-serif; }
+      body {
+        font-family: "Manrope", sans-serif;
+      }
       .ekam-oval-card {
-        transition: transform 0.7s cubic-bezier(0.16,1,0.3,1), box-shadow 0.7s cubic-bezier(0.16,1,0.3,1);
+        transition:
+          transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+          box-shadow 0.7s cubic-bezier(0.16, 1, 0.3, 1);
         cursor: pointer;
       }
       a.group:hover .ekam-oval-card {
         transform: translateY(-8px);
-        box-shadow: 0 44px 80px rgba(0,0,0,0.42), 0 16px 36px rgba(0,0,0,0.30), inset 0 1px 0 rgba(232,208,128,0.35) !important;
+        box-shadow:
+          0 44px 80px rgba(0, 0, 0, 0.42),
+          0 16px 36px rgba(0, 0, 0, 0.3),
+          inset 0 1px 0 rgba(232, 208, 128, 0.35) !important;
       }
-      .chip { cursor: pointer; transition: all 0.3s cubic-bezier(0.16,1,0.3,1); }
+      .chip {
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
       .chip[data-filter].active {
-        background: #c8a84b !important; color: #241a10 !important; border-color: #c8a84b !important;
-        box-shadow: 0 2px 14px rgba(200,168,75,0.4) !important;
+        background: #c8a84b !important;
+        color: #241a10 !important;
+        border-color: #c8a84b !important;
+        box-shadow: 0 2px 14px rgba(200, 168, 75, 0.4) !important;
       }
       .chip[data-filter]:not(.active):hover {
-        border-color: #e8d080 !important; color: #e8d080 !important; background: rgba(232,208,128,0.1) !important;
+        border-color: #e8d080 !important;
+        color: #e8d080 !important;
+        background: rgba(232, 208, 128, 0.1) !important;
       }
-      html[data-collection="utility"] body { background: linear-gradient(125deg, #6e561e 0%, #403310 55%, #6e561e 100%); }
+      html[data-collection="utility"] body {
+        background: linear-gradient(
+          125deg,
+          #6e561e 0%,
+          #403310 55%,
+          #6e561e 100%
+        );
+      }
     </style>
   </head>
 
@@ -267,7 +288,28 @@
     <!-- ══ HERO ══ -->
     <header
       class="relative overflow-hidden"
-      style="min-height: 92vh; background: radial-gradient(ellipse at 82% 26%, rgba(200, 164, 80,0.42) 0%, transparent 52%), radial-gradient(ellipse at 22% 88%, rgba(64, 51, 16,0.55) 0%, transparent 48%), linear-gradient(115deg, #403310 0%, #6e561e 26%, #8a6e28 52%, #b8902e 80%, #d4b24a 100%);"
+      style="
+        min-height: 92vh;
+        background:
+          radial-gradient(
+            ellipse at 82% 26%,
+            rgba(200, 164, 80, 0.42) 0%,
+            transparent 52%
+          ),
+          radial-gradient(
+            ellipse at 22% 88%,
+            rgba(64, 51, 16, 0.55) 0%,
+            transparent 48%
+          ),
+          linear-gradient(
+            115deg,
+            #403310 0%,
+            #6e561e 26%,
+            #8a6e28 52%,
+            #b8902e 80%,
+            #d4b24a 100%
+          );
+      "
     >
       <!-- ATMOSPHERIC TEXTURE LAYER -->
       <div
@@ -356,7 +398,7 @@
               >Collections</a
             >
             <span style="opacity: 0.3; font-size: 0.5rem">&#9670;</span>
-            <span style="color: rgba(244, 236, 218,0.9)"
+            <span style="color: rgba(244, 236, 218, 0.9)"
               >Utility &amp; Keepsake</span
             >
           </nav>
@@ -446,7 +488,7 @@
             </svg>
             <span
               class="text-[0.62rem] uppercase tracking-[0.42em]"
-              style="color: rgba(232,208,128,0.9)"
+              style="color: rgba(232, 208, 128, 0.9)"
               >Everyday Luxury</span
             >
             <div
@@ -498,11 +540,16 @@
               letter-spacing: 0.01em;
             "
           >
-            Jewellery boxes, hamper boxes, trays and vanity pieces &mdash; each a handcrafted keepsake that transforms the everyday into an act of beauty and intentional living.
+            Jewellery boxes, hamper boxes, trays and vanity pieces &mdash; each
+            a handcrafted keepsake that transforms the everyday into an act of
+            beauty and intentional living.
           </p>
 
           <!-- metadata row -->
-          <div class="flex items-center" style="color: rgba(244, 236, 218, 0.6)">
+          <div
+            class="flex items-center"
+            style="color: rgba(244, 236, 218, 0.6)"
+          >
             <div class="flex items-center gap-3 pr-7">
               <svg
                 width="14"
@@ -629,13 +676,40 @@
             <!-- soft ambient glow -->
             <div
               class="pointer-events-none absolute inset-[-30px] rounded-full"
-              style="background: radial-gradient(circle, rgba(200, 164, 80,0.3) 0%, rgba(200, 164, 80,0.12) 55%, transparent 78%); filter: blur(22px);"
+              style="
+                background: radial-gradient(
+                  circle,
+                  rgba(200, 164, 80, 0.3) 0%,
+                  rgba(200, 164, 80, 0.12) 55%,
+                  transparent 78%
+                );
+                filter: blur(22px);
+              "
             ></div>
 
             <!-- main terracotta circle -->
             <div
               class="relative h-full w-full overflow-hidden rounded-full"
-              style="background: radial-gradient(circle at 35% 30%, rgba(255,235,200,0.45) 0%, transparent 42%), radial-gradient(circle at 50% 50%, #dcc06a 0%, #a8842e 52%, #6e561e 100%); box-shadow: 0 1px 0 0 rgba(232,208,128,0.45), 0 45px 110px rgba(0,0,0,0.5), 0 18px 45px rgba(0,0,0,0.36), inset 0 1px 0 rgba(255,225,170,0.35), inset 0 -4px 16px rgba(0,0,0,0.45);"
+              style="
+                background:
+                  radial-gradient(
+                    circle at 35% 30%,
+                    rgba(255, 235, 200, 0.45) 0%,
+                    transparent 42%
+                  ),
+                  radial-gradient(
+                    circle at 50% 50%,
+                    #dcc06a 0%,
+                    #a8842e 52%,
+                    #6e561e 100%
+                  );
+                box-shadow:
+                  0 1px 0 0 rgba(232, 208, 128, 0.45),
+                  0 45px 110px rgba(0, 0, 0, 0.5),
+                  0 18px 45px rgba(0, 0, 0, 0.36),
+                  inset 0 1px 0 rgba(255, 225, 170, 0.35),
+                  inset 0 -4px 16px rgba(0, 0, 0, 0.45);
+              "
             >
               <!-- mandala sacred geometry -->
               <svg
@@ -1003,7 +1077,7 @@
             <div
               class="pointer-events-none absolute inset-[-2px] rounded-full"
               style="
-                border: 1.5px solid rgba(232,208,128,0.55);
+                border: 1.5px solid rgba(232, 208, 128, 0.55);
                 box-shadow: 0 0 0 4px rgba(200, 168, 75, 0.05);
               "
             ></div>
@@ -1085,28 +1159,81 @@
     <!-- ══ FILTER / SORT BAR ══ -->
     <section
       class="sticky top-0 z-[900] backdrop-blur-md"
-      style="background: rgba(110, 86, 30,0.92); border-bottom: 1px solid rgba(200,168,75,0.3); box-shadow: 0 4px 26px rgba(0,0,0,0.3);"
+      style="
+        background: rgba(110, 86, 30, 0.92);
+        border-bottom: 1px solid rgba(200, 168, 75, 0.3);
+        box-shadow: 0 4px 26px rgba(0, 0, 0, 0.3);
+      "
     >
       <div
         class="mx-auto flex max-w-[1320px] flex-col gap-4 px-6 py-5 md:flex-row md:items-center md:justify-between md:px-[80px]"
       >
         <div class="flex flex-wrap items-center gap-2.5" id="filterChips">
-          <button data-filter="all" class="chip active rounded-full px-6 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition-all duration-300" style="border: 1.5px solid rgba(244,236,218,0.3); color: rgba(244,236,218,0.85); background: rgba(255,255,255,0.05); backdrop-filter: blur(8px);">All</button>
-          <button data-filter="box" class="chip rounded-full px-6 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition-all duration-300" style="border: 1.5px solid rgba(244,236,218,0.3); color: rgba(244,236,218,0.85); background: rgba(255,255,255,0.05); backdrop-filter: blur(8px);">Boxes</button>
-          <button data-filter="tray" class="chip rounded-full px-6 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition-all duration-300" style="border: 1.5px solid rgba(244,236,218,0.3); color: rgba(244,236,218,0.85); background: rgba(255,255,255,0.05); backdrop-filter: blur(8px);">Trays</button>
-          <button data-filter="vanity" class="chip rounded-full px-6 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition-all duration-300" style="border: 1.5px solid rgba(244,236,218,0.3); color: rgba(244,236,218,0.85); background: rgba(255,255,255,0.05); backdrop-filter: blur(8px);">Vanity</button>
+          <button
+            data-filter="all"
+            class="chip active rounded-full px-6 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition-all duration-300"
+            style="
+              border: 1.5px solid rgba(244, 236, 218, 0.3);
+              color: rgba(244, 236, 218, 0.85);
+              background: rgba(255, 255, 255, 0.05);
+              backdrop-filter: blur(8px);
+            "
+          >
+            All
+          </button>
+          <button
+            data-filter="box"
+            class="chip rounded-full px-6 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition-all duration-300"
+            style="
+              border: 1.5px solid rgba(244, 236, 218, 0.3);
+              color: rgba(244, 236, 218, 0.85);
+              background: rgba(255, 255, 255, 0.05);
+              backdrop-filter: blur(8px);
+            "
+          >
+            Boxes
+          </button>
+          <button
+            data-filter="tray"
+            class="chip rounded-full px-6 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition-all duration-300"
+            style="
+              border: 1.5px solid rgba(244, 236, 218, 0.3);
+              color: rgba(244, 236, 218, 0.85);
+              background: rgba(255, 255, 255, 0.05);
+              backdrop-filter: blur(8px);
+            "
+          >
+            Trays
+          </button>
+          <button
+            data-filter="vanity"
+            class="chip rounded-full px-6 py-2 text-[0.62rem] uppercase tracking-[0.28em] transition-all duration-300"
+            style="
+              border: 1.5px solid rgba(244, 236, 218, 0.3);
+              color: rgba(244, 236, 218, 0.85);
+              background: rgba(255, 255, 255, 0.05);
+              backdrop-filter: blur(8px);
+            "
+          >
+            Vanity
+          </button>
         </div>
         <div class="flex items-center gap-3">
           <label
             for="sortSelect"
             class="text-[0.58rem] uppercase tracking-[0.38em] font-medium"
-            style="color: rgba(244,236,218,0.6)"
+            style="color: rgba(244, 236, 218, 0.6)"
             >Sort</label
           >
           <select
             id="sortSelect"
             class="cursor-pointer rounded-full px-5 py-2 text-[0.62rem] uppercase tracking-[0.22em] outline-none transition"
-            style="border: 1.5px solid rgba(200,168,75,0.4); background: rgba(255,255,255,0.06); color: rgba(244,236,218,0.85); backdrop-filter: blur(8px);"
+            style="
+              border: 1.5px solid rgba(200, 168, 75, 0.4);
+              background: rgba(255, 255, 255, 0.06);
+              color: rgba(244, 236, 218, 0.85);
+              backdrop-filter: blur(8px);
+            "
           >
             <option value="featured">Featured</option>
             <option value="low">Price · Low to High</option>
@@ -1119,7 +1246,26 @@
     <main
       id="productMain"
       class="relative overflow-hidden"
-      style="background: radial-gradient(ellipse at 88% 8%, rgba(200, 164, 80,0.34) 0%, transparent 46%), radial-gradient(ellipse at 8% 92%, rgba(64, 51, 16,0.5) 0%, transparent 46%), linear-gradient(125deg, #6e561e 0%, #8a6e28 42%, #8a6e28 68%, #6e561e 100%);"
+      style="
+        background:
+          radial-gradient(
+            ellipse at 88% 8%,
+            rgba(200, 164, 80, 0.34) 0%,
+            transparent 46%
+          ),
+          radial-gradient(
+            ellipse at 8% 92%,
+            rgba(64, 51, 16, 0.5) 0%,
+            transparent 46%
+          ),
+          linear-gradient(
+            125deg,
+            #6e561e 0%,
+            #8a6e28 42%,
+            #8a6e28 68%,
+            #6e561e 100%
+          );
+      "
     >
       <!-- background mandala watermark -->
       <div
@@ -1361,132 +1507,953 @@
           id="productGrid"
           class="grid grid-cols-1 gap-x-0 gap-y-0 sm:grid-cols-2 lg:grid-cols-3"
         >
-          <a href="../products/jewellery-box.html" class="product-card reveal group block no-underline" data-category="box" data-price="2250" style="padding: 32px 28px 36px;">
+          <a
+            href="../products/jewellery-box.html"
+            class="product-card reveal group block no-underline"
+            data-category="box"
+            data-price="2250"
+            style="padding: 32px 28px 36px"
+          >
             <div class="relative mb-8 flex justify-center">
-              <div class="ekam-oval-card zoom" style="--ph: linear-gradient(145deg,#e0c860 0%,#a8842e 45%,#6e561e 100%); width: 100%; max-width: 260px; aspect-ratio: 4/5; border-radius: 24px; position: relative; overflow: hidden; background: var(--ph); box-shadow: 0 28px 60px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.28), inset 0 1px 0 rgba(232,208,128,0.22);">
-                <img src="https://piharwa.com/cdn/shop/files/30433-7.jpg?v=1720860662&width=1500" alt="Jewellery Box" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
-                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/90 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
+              <div
+                class="ekam-oval-card zoom"
+                style="
+                  --ph: linear-gradient(
+                    145deg,
+                    #e0c860 0%,
+                    #a8842e 45%,
+                    #6e561e 100%
+                  );
+                  width: 100%;
+                  max-width: 260px;
+                  aspect-ratio: 4/5;
+                  border-radius: 24px;
+                  position: relative;
+                  overflow: hidden;
+                  background: var(--ph);
+                  box-shadow:
+                    0 28px 60px rgba(0, 0, 0, 0.4),
+                    0 8px 24px rgba(0, 0, 0, 0.28),
+                    inset 0 1px 0 rgba(232, 208, 128, 0.22);
+                "
+              >
+                <img
+                  src="https://piharwa.com/cdn/shop/files/30433-7.jpg?v=1720860662&width=1500"
+                  alt="Jewellery Box"
+                  loading="lazy"
+                  style="
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                  "
+                  onerror="this.style.display = 'none'"
+                />
+                <span
+                  class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/90 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
+                  >View piece →</span
+                >
               </div>
             </div>
             <div class="mb-4 flex items-center gap-3">
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.55), transparent);"></div>
-              <svg width="17" height="17" viewBox="0 0 16 16" fill="none" style="opacity:0.9;flex-shrink:0">
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(0 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(60 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(120 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(180 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(240 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(300 8 8)"/>
-                <circle cx="8" cy="8" r="1.3" fill="#e8d080"/>
+              <div
+                class="h-[1px] flex-1"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    rgba(200, 168, 75, 0.55),
+                    transparent
+                  );
+                "
+              ></div>
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 16 16"
+                fill="none"
+                style="opacity: 0.9; flex-shrink: 0"
+              >
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(0 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(60 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(120 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(180 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(240 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(300 8 8)"
+                />
+                <circle cx="8" cy="8" r="1.3" fill="#e8d080" />
               </svg>
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.55));"></div>
+              <div
+                class="h-[1px] flex-1"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(200, 168, 75, 0.55)
+                  );
+                "
+              ></div>
             </div>
-            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: #f0d898">Box</span>
-            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300" style="color: #f4ecda" onmouseover="this.style.color='#f0d898'" onmouseout="this.style.color='#f4ecda'">
+            <span
+              class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5"
+              style="color: #f0d898"
+              >Box</span
+            >
+            <h3
+              class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300"
+              style="color: #f4ecda"
+              onmouseover="this.style.color = '#f0d898'"
+              onmouseout="this.style.color = '#f4ecda'"
+            >
               Jewellery Box
             </h3>
-            <p class="font-sans text-[0.92rem]" style="color: rgba(244,236,218,0.65)">&#8377;2,250</p>
+            <p
+              class="font-sans text-[0.92rem]"
+              style="color: rgba(244, 236, 218, 0.65)"
+            >
+              &#8377;2,250
+            </p>
           </a>
-          <a href="../products/hamper-box.html" class="product-card reveal reveal-d1 group block no-underline" data-category="box" data-price="2750" style="padding: 32px 28px 36px;">
+          <a
+            href="../products/hamper-box.html"
+            class="product-card reveal reveal-d1 group block no-underline"
+            data-category="box"
+            data-price="2750"
+            style="padding: 32px 28px 36px"
+          >
             <div class="relative mb-8 flex justify-center">
-              <div class="ekam-oval-card zoom" style="--ph: linear-gradient(180deg,#c8a84b 0%,#8a6e28 100%); width: 100%; max-width: 260px; aspect-ratio: 4/5; border-radius: 24px; position: relative; overflow: hidden; background: var(--ph); box-shadow: 0 28px 60px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.28), inset 0 1px 0 rgba(232,208,128,0.22);">
-                <img src="PASTE_IMAGE_URL" alt="Hamper Box" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
-                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/90 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
+              <div
+                class="ekam-oval-card zoom"
+                style="
+                  --ph: linear-gradient(180deg, #c8a84b 0%, #8a6e28 100%);
+                  width: 100%;
+                  max-width: 260px;
+                  aspect-ratio: 4/5;
+                  border-radius: 24px;
+                  position: relative;
+                  overflow: hidden;
+                  background: var(--ph);
+                  box-shadow:
+                    0 28px 60px rgba(0, 0, 0, 0.4),
+                    0 8px 24px rgba(0, 0, 0, 0.28),
+                    inset 0 1px 0 rgba(232, 208, 128, 0.22);
+                "
+              >
+                <img
+                  src="PASTE_IMAGE_URL"
+                  alt="Hamper Box"
+                  loading="lazy"
+                  style="
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                  "
+                  onerror="this.style.display = 'none'"
+                />
+                <span
+                  class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/90 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
+                  >View piece →</span
+                >
               </div>
             </div>
             <div class="mb-4 flex items-center gap-3">
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.55), transparent);"></div>
-              <svg width="17" height="17" viewBox="0 0 16 16" fill="none" style="opacity:0.9;flex-shrink:0">
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(0 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(60 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(120 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(180 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(240 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(300 8 8)"/>
-                <circle cx="8" cy="8" r="1.3" fill="#e8d080"/>
+              <div
+                class="h-[1px] flex-1"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    rgba(200, 168, 75, 0.55),
+                    transparent
+                  );
+                "
+              ></div>
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 16 16"
+                fill="none"
+                style="opacity: 0.9; flex-shrink: 0"
+              >
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(0 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(60 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(120 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(180 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(240 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(300 8 8)"
+                />
+                <circle cx="8" cy="8" r="1.3" fill="#e8d080" />
               </svg>
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.55));"></div>
+              <div
+                class="h-[1px] flex-1"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(200, 168, 75, 0.55)
+                  );
+                "
+              ></div>
             </div>
-            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: #f0d898">Box</span>
-            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300" style="color: #f4ecda" onmouseover="this.style.color='#f0d898'" onmouseout="this.style.color='#f4ecda'">
+            <span
+              class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5"
+              style="color: #f0d898"
+              >Box</span
+            >
+            <h3
+              class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300"
+              style="color: #f4ecda"
+              onmouseover="this.style.color = '#f0d898'"
+              onmouseout="this.style.color = '#f4ecda'"
+            >
               Hamper Box
             </h3>
-            <p class="font-sans text-[0.92rem]" style="color: rgba(244,236,218,0.65)">&#8377;2,750</p>
+            <p
+              class="font-sans text-[0.92rem]"
+              style="color: rgba(244, 236, 218, 0.65)"
+            >
+              &#8377;2,750
+            </p>
           </a>
-          <a href="../products/tissue-vessel.html" class="product-card reveal reveal-d2 group block no-underline" data-category="box" data-price="1350" style="padding: 32px 28px 36px;">
+          <a
+            href="../products/tissue-vessel.html"
+            class="product-card reveal reveal-d2 group block no-underline"
+            data-category="box"
+            data-price="1350"
+            style="padding: 32px 28px 36px"
+          >
             <div class="relative mb-8 flex justify-center">
-              <div class="ekam-oval-card zoom" style="--ph: linear-gradient(135deg,#f0d878 0%,#b8902e 100%); width: 100%; max-width: 260px; aspect-ratio: 4/5; border-radius: 24px; position: relative; overflow: hidden; background: var(--ph); box-shadow: 0 28px 60px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.28), inset 0 1px 0 rgba(232,208,128,0.22);">
-                <img src="PASTE_IMAGE_URL" alt="Tissue Vessel" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
-                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/90 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
+              <div
+                class="ekam-oval-card zoom"
+                style="
+                  --ph: linear-gradient(135deg, #f0d878 0%, #b8902e 100%);
+                  width: 100%;
+                  max-width: 260px;
+                  aspect-ratio: 4/5;
+                  border-radius: 24px;
+                  position: relative;
+                  overflow: hidden;
+                  background: var(--ph);
+                  box-shadow:
+                    0 28px 60px rgba(0, 0, 0, 0.4),
+                    0 8px 24px rgba(0, 0, 0, 0.28),
+                    inset 0 1px 0 rgba(232, 208, 128, 0.22);
+                "
+              >
+                <img
+                  src="PASTE_IMAGE_URL"
+                  alt="Tissue Vessel"
+                  loading="lazy"
+                  style="
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                  "
+                  onerror="this.style.display = 'none'"
+                />
+                <span
+                  class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/90 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
+                  >View piece →</span
+                >
               </div>
             </div>
             <div class="mb-4 flex items-center gap-3">
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.55), transparent);"></div>
-              <svg width="17" height="17" viewBox="0 0 16 16" fill="none" style="opacity:0.9;flex-shrink:0">
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(0 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(60 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(120 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(180 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(240 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(300 8 8)"/>
-                <circle cx="8" cy="8" r="1.3" fill="#e8d080"/>
+              <div
+                class="h-[1px] flex-1"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    rgba(200, 168, 75, 0.55),
+                    transparent
+                  );
+                "
+              ></div>
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 16 16"
+                fill="none"
+                style="opacity: 0.9; flex-shrink: 0"
+              >
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(0 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(60 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(120 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(180 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(240 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(300 8 8)"
+                />
+                <circle cx="8" cy="8" r="1.3" fill="#e8d080" />
               </svg>
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.55));"></div>
+              <div
+                class="h-[1px] flex-1"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(200, 168, 75, 0.55)
+                  );
+                "
+              ></div>
             </div>
-            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: #f0d898">Box</span>
-            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300" style="color: #f4ecda" onmouseover="this.style.color='#f0d898'" onmouseout="this.style.color='#f4ecda'">
+            <span
+              class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5"
+              style="color: #f0d898"
+              >Box</span
+            >
+            <h3
+              class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300"
+              style="color: #f4ecda"
+              onmouseover="this.style.color = '#f0d898'"
+              onmouseout="this.style.color = '#f4ecda'"
+            >
               Tissue Vessel
             </h3>
-            <p class="font-sans text-[0.92rem]" style="color: rgba(244,236,218,0.65)">&#8377;1,350</p>
+            <p
+              class="font-sans text-[0.92rem]"
+              style="color: rgba(244, 236, 218, 0.65)"
+            >
+              &#8377;1,350
+            </p>
           </a>
-          <a href="../products/mirror-tray.html" class="product-card reveal group block no-underline" data-category="tray" data-price="1650" style="padding: 32px 28px 36px;">
+          <a
+            href="../products/mirror-tray.html"
+            class="product-card reveal group block no-underline"
+            data-category="tray"
+            data-price="1650"
+            style="padding: 32px 28px 36px"
+          >
             <div class="relative mb-8 flex justify-center">
-              <div class="ekam-oval-card zoom" style="--ph: linear-gradient(145deg,#e0c860 0%,#a8842e 45%,#6e561e 100%); width: 100%; max-width: 260px; aspect-ratio: 4/5; border-radius: 24px; position: relative; overflow: hidden; background: var(--ph); box-shadow: 0 28px 60px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.28), inset 0 1px 0 rgba(232,208,128,0.22);">
-                <img src="PASTE_IMAGE_URL" alt="Mirror Tray" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
-                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/90 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
+              <div
+                class="ekam-oval-card zoom"
+                style="
+                  --ph: linear-gradient(
+                    145deg,
+                    #e0c860 0%,
+                    #a8842e 45%,
+                    #6e561e 100%
+                  );
+                  width: 100%;
+                  max-width: 260px;
+                  aspect-ratio: 4/5;
+                  border-radius: 24px;
+                  position: relative;
+                  overflow: hidden;
+                  background: var(--ph);
+                  box-shadow:
+                    0 28px 60px rgba(0, 0, 0, 0.4),
+                    0 8px 24px rgba(0, 0, 0, 0.28),
+                    inset 0 1px 0 rgba(232, 208, 128, 0.22);
+                "
+              >
+                <img
+                  src="PASTE_IMAGE_URL"
+                  alt="Mirror Tray"
+                  loading="lazy"
+                  style="
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                  "
+                  onerror="this.style.display = 'none'"
+                />
+                <span
+                  class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/90 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
+                  >View piece →</span
+                >
               </div>
             </div>
             <div class="mb-4 flex items-center gap-3">
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.55), transparent);"></div>
-              <svg width="17" height="17" viewBox="0 0 16 16" fill="none" style="opacity:0.9;flex-shrink:0">
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(0 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(60 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(120 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(180 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(240 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(300 8 8)"/>
-                <circle cx="8" cy="8" r="1.3" fill="#e8d080"/>
+              <div
+                class="h-[1px] flex-1"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    rgba(200, 168, 75, 0.55),
+                    transparent
+                  );
+                "
+              ></div>
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 16 16"
+                fill="none"
+                style="opacity: 0.9; flex-shrink: 0"
+              >
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(0 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(60 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(120 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(180 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(240 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(300 8 8)"
+                />
+                <circle cx="8" cy="8" r="1.3" fill="#e8d080" />
               </svg>
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.55));"></div>
+              <div
+                class="h-[1px] flex-1"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(200, 168, 75, 0.55)
+                  );
+                "
+              ></div>
             </div>
-            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: #f0d898">Tray</span>
-            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300" style="color: #f4ecda" onmouseover="this.style.color='#f0d898'" onmouseout="this.style.color='#f4ecda'">
+            <span
+              class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5"
+              style="color: #f0d898"
+              >Tray</span
+            >
+            <h3
+              class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300"
+              style="color: #f4ecda"
+              onmouseover="this.style.color = '#f0d898'"
+              onmouseout="this.style.color = '#f4ecda'"
+            >
               Mirror Tray
             </h3>
-            <p class="font-sans text-[0.92rem]" style="color: rgba(244,236,218,0.65)">&#8377;1,650</p>
+            <p
+              class="font-sans text-[0.92rem]"
+              style="color: rgba(244, 236, 218, 0.65)"
+            >
+              &#8377;1,650
+            </p>
           </a>
-          <a href="../products/keepsake-chest.html" class="product-card reveal reveal-d1 group block no-underline" data-category="box" data-price="2950" style="padding: 32px 28px 36px;">
+          <a
+            href="../products/keepsake-chest.html"
+            class="product-card reveal reveal-d1 group block no-underline"
+            data-category="box"
+            data-price="2950"
+            style="padding: 32px 28px 36px"
+          >
             <div class="relative mb-8 flex justify-center">
-              <div class="ekam-oval-card zoom" style="--ph: linear-gradient(180deg,#c8a84b 0%,#8a6e28 100%); width: 100%; max-width: 260px; aspect-ratio: 4/5; border-radius: 24px; position: relative; overflow: hidden; background: var(--ph); box-shadow: 0 28px 60px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.28), inset 0 1px 0 rgba(232,208,128,0.22);">
-                <img src="PASTE_IMAGE_URL" alt="Keepsake Chest" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
-                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/90 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
+              <div
+                class="ekam-oval-card zoom"
+                style="
+                  --ph: linear-gradient(180deg, #c8a84b 0%, #8a6e28 100%);
+                  width: 100%;
+                  max-width: 260px;
+                  aspect-ratio: 4/5;
+                  border-radius: 24px;
+                  position: relative;
+                  overflow: hidden;
+                  background: var(--ph);
+                  box-shadow:
+                    0 28px 60px rgba(0, 0, 0, 0.4),
+                    0 8px 24px rgba(0, 0, 0, 0.28),
+                    inset 0 1px 0 rgba(232, 208, 128, 0.22);
+                "
+              >
+                <img
+                  src="PASTE_IMAGE_URL"
+                  alt="Keepsake Chest"
+                  loading="lazy"
+                  style="
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                  "
+                  onerror="this.style.display = 'none'"
+                />
+                <span
+                  class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/90 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
+                  >View piece →</span
+                >
               </div>
             </div>
             <div class="mb-4 flex items-center gap-3">
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.55), transparent);"></div>
-              <svg width="17" height="17" viewBox="0 0 16 16" fill="none" style="opacity:0.9;flex-shrink:0">
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(0 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(60 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(120 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(180 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(240 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(300 8 8)"/>
-                <circle cx="8" cy="8" r="1.3" fill="#e8d080"/>
+              <div
+                class="h-[1px] flex-1"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    rgba(200, 168, 75, 0.55),
+                    transparent
+                  );
+                "
+              ></div>
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 16 16"
+                fill="none"
+                style="opacity: 0.9; flex-shrink: 0"
+              >
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(0 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(60 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(120 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(180 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(240 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(300 8 8)"
+                />
+                <circle cx="8" cy="8" r="1.3" fill="#e8d080" />
               </svg>
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.55));"></div>
+              <div
+                class="h-[1px] flex-1"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(200, 168, 75, 0.55)
+                  );
+                "
+              ></div>
             </div>
-            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: #f0d898">Chest</span>
-            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300" style="color: #f4ecda" onmouseover="this.style.color='#f0d898'" onmouseout="this.style.color='#f4ecda'">
+            <span
+              class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5"
+              style="color: #f0d898"
+              >Chest</span
+            >
+            <h3
+              class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300"
+              style="color: #f4ecda"
+              onmouseover="this.style.color = '#f0d898'"
+              onmouseout="this.style.color = '#f4ecda'"
+            >
               Keepsake Chest
             </h3>
-            <p class="font-sans text-[0.92rem]" style="color: rgba(244,236,218,0.65)">&#8377;2,950</p>
+            <p
+              class="font-sans text-[0.92rem]"
+              style="color: rgba(244, 236, 218, 0.65)"
+            >
+              &#8377;2,950
+            </p>
           </a>
-          <a href="../products/vanity-box.html" class="product-card reveal reveal-d2 group block no-underline" data-category="vanity" data-price="1950" style="padding: 32px 28px 36px;">
+          <a
+            href="../products/vanity-box.html"
+            class="product-card reveal reveal-d2 group block no-underline"
+            data-category="vanity"
+            data-price="1950"
+            style="padding: 32px 28px 36px"
+          >
             <div class="relative mb-8 flex justify-center">
-              <div class="ekam-oval-card zoom" style="--ph: linear-gradient(135deg,#f0d878 0%,#b8902e 100%); width: 100%; max-width: 260px; aspect-ratio: 4/5; border-radius: 24px; position: relative; overflow: hidden; background: var(--ph); box-shadow: 0 28px 60px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.28), inset 0 1px 0 rgba(232,208,128,0.22);">
-                <img src="PASTE_IMAGE_URL" alt="Vanity Box" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
-                <span class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/90 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100">View piece →</span>
+              <div
+                class="ekam-oval-card zoom"
+                style="
+                  --ph: linear-gradient(135deg, #f0d878 0%, #b8902e 100%);
+                  width: 100%;
+                  max-width: 260px;
+                  aspect-ratio: 4/5;
+                  border-radius: 24px;
+                  position: relative;
+                  overflow: hidden;
+                  background: var(--ph);
+                  box-shadow:
+                    0 28px 60px rgba(0, 0, 0, 0.4),
+                    0 8px 24px rgba(0, 0, 0, 0.28),
+                    inset 0 1px 0 rgba(232, 208, 128, 0.22);
+                "
+              >
+                <img
+                  src="PASTE_IMAGE_URL"
+                  alt="Vanity Box"
+                  loading="lazy"
+                  style="
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                  "
+                  onerror="this.style.display = 'none'"
+                />
+                <span
+                  class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-ivory/90 px-4 py-1.5 text-[0.58rem] uppercase tracking-[0.22em] text-char opacity-0 backdrop-blur transition duration-500 group-hover:opacity-100"
+                  >View piece →</span
+                >
               </div>
             </div>
             <div class="mb-4 flex items-center gap-3">
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, rgba(200,168,75,0.55), transparent);"></div>
-              <svg width="17" height="17" viewBox="0 0 16 16" fill="none" style="opacity:0.9;flex-shrink:0">
-                <ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(0 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(60 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(120 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(180 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(240 8 8)"/><ellipse cx="8" cy="5" rx="2.5" ry="4.5" stroke="#e8d080" stroke-width="0.8" fill="none" transform="rotate(300 8 8)"/>
-                <circle cx="8" cy="8" r="1.3" fill="#e8d080"/>
+              <div
+                class="h-[1px] flex-1"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    rgba(200, 168, 75, 0.55),
+                    transparent
+                  );
+                "
+              ></div>
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 16 16"
+                fill="none"
+                style="opacity: 0.9; flex-shrink: 0"
+              >
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(0 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(60 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(120 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(180 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(240 8 8)"
+                />
+                <ellipse
+                  cx="8"
+                  cy="5"
+                  rx="2.5"
+                  ry="4.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                  transform="rotate(300 8 8)"
+                />
+                <circle cx="8" cy="8" r="1.3" fill="#e8d080" />
               </svg>
-              <div class="h-[1px] flex-1" style="background: linear-gradient(90deg, transparent, rgba(200,168,75,0.55));"></div>
+              <div
+                class="h-[1px] flex-1"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(200, 168, 75, 0.55)
+                  );
+                "
+              ></div>
             </div>
-            <span class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5" style="color: #f0d898">Vanity</span>
-            <h3 class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300" style="color: #f4ecda" onmouseover="this.style.color='#f0d898'" onmouseout="this.style.color='#f4ecda'">
+            <span
+              class="block text-[0.58rem] uppercase tracking-[0.32em] mb-1.5"
+              style="color: #f0d898"
+              >Vanity</span
+            >
+            <h3
+              class="font-serif text-[1.5rem] font-light leading-tight mb-2 transition-colors duration-300"
+              style="color: #f4ecda"
+              onmouseover="this.style.color = '#f0d898'"
+              onmouseout="this.style.color = '#f4ecda'"
+            >
               Vanity Box
             </h3>
-            <p class="font-sans text-[0.92rem]" style="color: rgba(244,236,218,0.65)">&#8377;1,950</p>
+            <p
+              class="font-sans text-[0.92rem]"
+              style="color: rgba(244, 236, 218, 0.65)"
+            >
+              &#8377;1,950
+            </p>
           </a>
+        </div>
         <!-- gold bottom rule -->
         <div
           class="mt-20 h-[1px] w-full"
@@ -1503,41 +2470,210 @@
         ></div>
 
         <!-- trust strip -->
-        <div class="mt-16 flex flex-col gap-8 sm:flex-row sm:gap-0 sm:items-stretch sm:divide-x sm:divide-[rgba(200,168,75,0.22)]" style="padding: 46px 36px; border-radius: 22px; background: rgba(255,255,255,0.05); backdrop-filter: blur(14px); border: 1px solid rgba(200,168,75,0.3); box-shadow: 0 20px 60px rgba(0,0,0,0.25);">
-          <div class="flex flex-1 flex-col items-center text-center gap-3.5 px-6 py-2">
-            <div class="flex-shrink-0 rounded-full flex items-center justify-center" style="width:54px;height:54px;background:rgba(232,208,128,0.08);border:1px solid rgba(200,168,75,0.35);">
-              <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><path d="M16 4 C10 4 6 9 6 14 C6 22 16 28 16 28 S26 22 26 14 C26 9 22 4 16 4Z" stroke="#e8d080" stroke-width="1" fill="none"/><path d="M11 14 L15 18 L21 11" stroke="#e8d080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div
+          class="mt-16 flex flex-col gap-8 sm:flex-row sm:gap-0 sm:items-stretch sm:divide-x sm:divide-[rgba(200,168,75,0.22)]"
+          style="
+            padding: 46px 36px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(200, 168, 75, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+          "
+        >
+          <div
+            class="flex flex-1 flex-col items-center text-center gap-3.5 px-6 py-2"
+          >
+            <div
+              class="flex-shrink-0 rounded-full flex items-center justify-center"
+              style="
+                width: 54px;
+                height: 54px;
+                background: rgba(232, 208, 128, 0.08);
+                border: 1px solid rgba(200, 168, 75, 0.35);
+              "
+            >
+              <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
+                <path
+                  d="M16 4 C10 4 6 9 6 14 C6 22 16 28 16 28 S26 22 26 14 C26 9 22 4 16 4Z"
+                  stroke="#e8d080"
+                  stroke-width="1"
+                  fill="none"
+                />
+                <path
+                  d="M11 14 L15 18 L21 11"
+                  stroke="#e8d080"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </div>
             <div>
-              <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] leading-snug" style="color: rgba(244,236,218,0.92)">Handcrafted</p>
-              <p class="text-[0.62rem] font-light mt-1 leading-snug" style="color: rgba(244,236,218,0.55)">With devotion</p>
+              <p
+                class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] leading-snug"
+                style="color: rgba(244, 236, 218, 0.92)"
+              >
+                Handcrafted
+              </p>
+              <p
+                class="text-[0.62rem] font-light mt-1 leading-snug"
+                style="color: rgba(244, 236, 218, 0.55)"
+              >
+                With devotion
+              </p>
             </div>
           </div>
-          <div class="flex flex-1 flex-col items-center text-center gap-3.5 px-6 py-2">
-            <div class="flex-shrink-0 rounded-full flex items-center justify-center" style="width:54px;height:54px;background:rgba(232,208,128,0.08);border:1px solid rgba(200,168,75,0.35);">
-              <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11" stroke="#e8d080" stroke-width="1" fill="none"/><path d="M16 6 C14 10 10 12 10 16 C10 20 12 22 16 22 S22 20 22 16 C22 12 18 10 16 6Z" stroke="#e8d080" stroke-width="0.8" fill="none"/><line x1="16" y1="10" x2="16" y2="22" stroke="#e8d080" stroke-width="0.6"/><line x1="11" y1="16" x2="21" y2="16" stroke="#e8d080" stroke-width="0.6"/></svg>
+          <div
+            class="flex flex-1 flex-col items-center text-center gap-3.5 px-6 py-2"
+          >
+            <div
+              class="flex-shrink-0 rounded-full flex items-center justify-center"
+              style="
+                width: 54px;
+                height: 54px;
+                background: rgba(232, 208, 128, 0.08);
+                border: 1px solid rgba(200, 168, 75, 0.35);
+              "
+            >
+              <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
+                <circle
+                  cx="16"
+                  cy="16"
+                  r="11"
+                  stroke="#e8d080"
+                  stroke-width="1"
+                  fill="none"
+                />
+                <path
+                  d="M16 6 C14 10 10 12 10 16 C10 20 12 22 16 22 S22 20 22 16 C22 12 18 10 16 6Z"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                />
+                <line
+                  x1="16"
+                  y1="10"
+                  x2="16"
+                  y2="22"
+                  stroke="#e8d080"
+                  stroke-width="0.6"
+                />
+                <line
+                  x1="11"
+                  y1="16"
+                  x2="21"
+                  y2="16"
+                  stroke="#e8d080"
+                  stroke-width="0.6"
+                />
+              </svg>
             </div>
             <div>
-              <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] leading-snug" style="color: rgba(244,236,218,0.92)">Made to Order</p>
-              <p class="text-[0.62rem] font-light mt-1 leading-snug" style="color: rgba(244,236,218,0.55)">Just for you</p>
+              <p
+                class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] leading-snug"
+                style="color: rgba(244, 236, 218, 0.92)"
+              >
+                Made to Order
+              </p>
+              <p
+                class="text-[0.62rem] font-light mt-1 leading-snug"
+                style="color: rgba(244, 236, 218, 0.55)"
+              >
+                Just for you
+              </p>
             </div>
           </div>
-          <div class="flex flex-1 flex-col items-center text-center gap-3.5 px-6 py-2">
-            <div class="flex-shrink-0 rounded-full flex items-center justify-center" style="width:54px;height:54px;background:rgba(232,208,128,0.08);border:1px solid rgba(200,168,75,0.35);">
-              <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><path d="M16 3 L18.5 10.5 L26.5 10.5 L20 15.5 L22.5 23 L16 18 L9.5 23 L12 15.5 L5.5 10.5 L13.5 10.5 Z" stroke="#e8d080" stroke-width="0.9" fill="none" stroke-linejoin="round"/></svg>
+          <div
+            class="flex flex-1 flex-col items-center text-center gap-3.5 px-6 py-2"
+          >
+            <div
+              class="flex-shrink-0 rounded-full flex items-center justify-center"
+              style="
+                width: 54px;
+                height: 54px;
+                background: rgba(232, 208, 128, 0.08);
+                border: 1px solid rgba(200, 168, 75, 0.35);
+              "
+            >
+              <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
+                <path
+                  d="M16 3 L18.5 10.5 L26.5 10.5 L20 15.5 L22.5 23 L16 18 L9.5 23 L12 15.5 L5.5 10.5 L13.5 10.5 Z"
+                  stroke="#e8d080"
+                  stroke-width="0.9"
+                  fill="none"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </div>
             <div>
-              <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] leading-snug" style="color: rgba(244,236,218,0.92)">Kutch, Gujarat</p>
-              <p class="text-[0.62rem] font-light mt-1 leading-snug" style="color: rgba(244,236,218,0.55)">Proudly made in India</p>
+              <p
+                class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] leading-snug"
+                style="color: rgba(244, 236, 218, 0.92)"
+              >
+                Kutch, Gujarat
+              </p>
+              <p
+                class="text-[0.62rem] font-light mt-1 leading-snug"
+                style="color: rgba(244, 236, 218, 0.55)"
+              >
+                Proudly made in India
+              </p>
             </div>
           </div>
-          <div class="flex flex-1 flex-col items-center text-center gap-3.5 px-6 py-2">
-            <div class="flex-shrink-0 rounded-full flex items-center justify-center" style="width:54px;height:54px;background:rgba(232,208,128,0.08);border:1px solid rgba(200,168,75,0.35);">
-              <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><rect x="5" y="10" width="22" height="16" rx="2" stroke="#e8d080" stroke-width="0.9" fill="none"/><path d="M10 10 L10 7 C10 4.8 12.7 3 16 3 S22 4.8 22 7 L22 10" stroke="#e8d080" stroke-width="0.9" fill="none" stroke-linecap="round"/><circle cx="16" cy="18" r="2.5" stroke="#e8d080" stroke-width="0.8" fill="none"/></svg>
+          <div
+            class="flex flex-1 flex-col items-center text-center gap-3.5 px-6 py-2"
+          >
+            <div
+              class="flex-shrink-0 rounded-full flex items-center justify-center"
+              style="
+                width: 54px;
+                height: 54px;
+                background: rgba(232, 208, 128, 0.08);
+                border: 1px solid rgba(200, 168, 75, 0.35);
+              "
+            >
+              <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
+                <rect
+                  x="5"
+                  y="10"
+                  width="22"
+                  height="16"
+                  rx="2"
+                  stroke="#e8d080"
+                  stroke-width="0.9"
+                  fill="none"
+                />
+                <path
+                  d="M10 10 L10 7 C10 4.8 12.7 3 16 3 S22 4.8 22 7 L22 10"
+                  stroke="#e8d080"
+                  stroke-width="0.9"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+                <circle
+                  cx="16"
+                  cy="18"
+                  r="2.5"
+                  stroke="#e8d080"
+                  stroke-width="0.8"
+                  fill="none"
+                />
+              </svg>
             </div>
             <div>
-              <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] leading-snug" style="color: rgba(244,236,218,0.92)">Secure Packaging</p>
-              <p class="text-[0.62rem] font-light mt-1 leading-snug" style="color: rgba(244,236,218,0.55)">Safe &amp; insured delivery</p>
+              <p
+                class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] leading-snug"
+                style="color: rgba(244, 236, 218, 0.92)"
+              >
+                Secure Packaging
+              </p>
+              <p
+                class="text-[0.62rem] font-light mt-1 leading-snug"
+                style="color: rgba(244, 236, 218, 0.55)"
+              >
+                Safe &amp; insured delivery
+              </p>
             </div>
           </div>
         </div>
@@ -1619,7 +2755,7 @@
         style="
           background: radial-gradient(
             ellipse at 65% 40%,
-            rgba(200, 164, 80,0.16) 0%,
+            rgba(200, 164, 80, 0.16) 0%,
             transparent 58%
           );
         "
@@ -1635,44 +2771,114 @@
         <p
           class="font-serif text-[clamp(2rem,4vw,4rem)] font-light leading-[1.1] tracking-tight text-ivory"
         >
-          The objects you touch each day should be the ones made <em class="italic text-gold">most carefully.</em>
+          The objects you touch each day should be the ones made
+          <em class="italic text-gold">most carefully.</em>
         </p>
       </div>
     </section>
     <!-- ══ OTHER COLLECTIONS ══ -->
     <section class="mx-auto max-w-content px-6 py-28 md:px-[90px]">
-      <span class="mb-3 block text-[0.72rem] uppercase tracking-wide2" style="color: rgba(232,208,128,0.9)">Continue exploring</span>
-      <h2 class="mb-12 font-serif text-[clamp(2rem,3.5vw,3.2rem)] font-light tracking-tight" style="color: #f4ecda">Other Collections</h2>
+      <span
+        class="mb-3 block text-[0.72rem] uppercase tracking-wide2"
+        style="color: rgba(232, 208, 128, 0.9)"
+        >Continue exploring</span
+      >
+      <h2
+        class="mb-12 font-serif text-[clamp(2rem,3.5vw,3.2rem)] font-light tracking-tight"
+        style="color: #f4ecda"
+      >
+        Other Collections
+      </h2>
       <div class="grid grid-cols-2 gap-4 md:grid-cols-5">
         <a href="pooja-chowki.html" class="group block no-underline">
-          <div class="img-slot zoom shape-arch mb-3 aspect-[3/4]" style="--ph: linear-gradient(145deg, #c2673a, #743014)">
-            <img src="PASTE_IMAGE_URL" alt="Pooja &amp; Chowki" loading="lazy" onerror="this.classList.add('img-missing')" />
+          <div
+            class="img-slot zoom shape-arch mb-3 aspect-[3/4]"
+            style="--ph: linear-gradient(145deg, #c2673a, #743014)"
+          >
+            <img
+              src="PASTE_IMAGE_URL"
+              alt="Pooja &amp; Chowki"
+              loading="lazy"
+              onerror="this.classList.add('img-missing')"
+            />
           </div>
-          <span class="font-serif text-base transition group-hover:text-gold" style="color: rgba(244,236,218,0.85)">Pooja &amp; Chowki</span>
+          <span
+            class="font-serif text-base transition group-hover:text-gold"
+            style="color: rgba(244, 236, 218, 0.85)"
+            >Pooja &amp; Chowki</span
+          >
         </a>
         <a href="mirror-frame.html" class="group block no-underline">
-          <div class="img-slot zoom shape-arch mb-3 aspect-[3/4]" style="--ph: linear-gradient(145deg, #5c6b3a, #3a4525)">
-            <img src="PASTE_IMAGE_URL" alt="Mirror &amp; Frame" loading="lazy" onerror="this.classList.add('img-missing')" />
+          <div
+            class="img-slot zoom shape-arch mb-3 aspect-[3/4]"
+            style="--ph: linear-gradient(145deg, #5c6b3a, #3a4525)"
+          >
+            <img
+              src="PASTE_IMAGE_URL"
+              alt="Mirror &amp; Frame"
+              loading="lazy"
+              onerror="this.classList.add('img-missing')"
+            />
           </div>
-          <span class="font-serif text-base transition group-hover:text-gold" style="color: rgba(244,236,218,0.85)">Mirror &amp; Frame</span>
+          <span
+            class="font-serif text-base transition group-hover:text-gold"
+            style="color: rgba(244, 236, 218, 0.85)"
+            >Mirror &amp; Frame</span
+          >
         </a>
         <a href="terracotta.html" class="group block no-underline">
-          <div class="img-slot zoom shape-arch mb-3 aspect-[3/4]" style="--ph: linear-gradient(145deg, #c2673a, #8b3e1a)">
-            <img src="PASTE_IMAGE_URL" alt="Terracotta" loading="lazy" onerror="this.classList.add('img-missing')" />
+          <div
+            class="img-slot zoom shape-arch mb-3 aspect-[3/4]"
+            style="--ph: linear-gradient(145deg, #c2673a, #8b3e1a)"
+          >
+            <img
+              src="PASTE_IMAGE_URL"
+              alt="Terracotta"
+              loading="lazy"
+              onerror="this.classList.add('img-missing')"
+            />
           </div>
-          <span class="font-serif text-base transition group-hover:text-gold" style="color: rgba(244,236,218,0.85)">Terracotta</span>
+          <span
+            class="font-serif text-base transition group-hover:text-gold"
+            style="color: rgba(244, 236, 218, 0.85)"
+            >Terracotta</span
+          >
         </a>
         <a href="wall-decor.html" class="group block no-underline">
-          <div class="img-slot zoom shape-arch mb-3 aspect-[3/4]" style="--ph: linear-gradient(145deg, #1d3547, #0e1f2b)">
-            <img src="PASTE_IMAGE_URL" alt="Wall Decor" loading="lazy" onerror="this.classList.add('img-missing')" />
+          <div
+            class="img-slot zoom shape-arch mb-3 aspect-[3/4]"
+            style="--ph: linear-gradient(145deg, #1d3547, #0e1f2b)"
+          >
+            <img
+              src="PASTE_IMAGE_URL"
+              alt="Wall Decor"
+              loading="lazy"
+              onerror="this.classList.add('img-missing')"
+            />
           </div>
-          <span class="font-serif text-base transition group-hover:text-gold" style="color: rgba(244,236,218,0.85)">Wall Decor</span>
+          <span
+            class="font-serif text-base transition group-hover:text-gold"
+            style="color: rgba(244, 236, 218, 0.85)"
+            >Wall Decor</span
+          >
         </a>
         <a href="copper-bells.html" class="group block no-underline">
-          <div class="img-slot zoom shape-arch mb-3 aspect-[3/4]" style="--ph: linear-gradient(135deg, #442d1c, #2b1810)">
-            <img src="PASTE_IMAGE_URL" alt="Copper Bells" loading="lazy" onerror="this.classList.add('img-missing')" />
+          <div
+            class="img-slot zoom shape-arch mb-3 aspect-[3/4]"
+            style="--ph: linear-gradient(135deg, #442d1c, #2b1810)"
+          >
+            <img
+              src="PASTE_IMAGE_URL"
+              alt="Copper Bells"
+              loading="lazy"
+              onerror="this.classList.add('img-missing')"
+            />
           </div>
-          <span class="font-serif text-base transition group-hover:text-gold" style="color: rgba(244,236,218,0.85)">Copper Bells</span>
+          <span
+            class="font-serif text-base transition group-hover:text-gold"
+            style="color: rgba(244, 236, 218, 0.85)"
+            >Copper Bells</span
+          >
         </a>
       </div>
     </section>
@@ -1848,7 +3054,7 @@
         var empty = document.getElementById("emptyState");
         var current = "all";
 
-                function activeChip(btn) {
+        function activeChip(btn) {
           chips.forEach(function (c) {
             c.classList.toggle("active", c === btn);
           });
