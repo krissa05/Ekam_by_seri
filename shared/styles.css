@@ -517,25 +517,25 @@ html[data-collection="terracotta"] #sizeGuide {
 /* ══════════════════════════════════════════════════════════════
    5. UTILITY & KEEPSAKE
    Shape: smooth pebble / oval
-   Background: soft lemon-to-gold gradient
+   Background: soft pale lemon gradient
    ══════════════════════════════════════════════════════════════ */
 html[data-collection="utility"] body {
-  background: linear-gradient(155deg, #fffba8 0%, #fff192 45%, #fffba8 100%);
+  background: linear-gradient(155deg, #ffffd6 0%, #fffdc4 45%, #ffffd6 100%);
 }
 html[data-collection="utility"] #mainImage {
   border-radius: 240px !important;
-  box-shadow: 0 36px 80px rgba(74, 57, 0, 0.32) !important;
+  box-shadow: 0 36px 80px rgba(77, 68, 0, 0.32) !important;
 }
 html[data-collection="utility"] .img-slot.shape-arch {
   border-radius: 240px !important;
 }
 /* Story + FAQ sections */
 html[data-collection="utility"] .bg-linen {
-  background: #ffe969 !important;
+  background: #fffbb0 !important;
 }
 /* Dark Size Guide interlude — deepened amber so ivory text stays readable */
 html[data-collection="utility"] #sizeGuide {
-  background: #4a3900 !important;
+  background: #4d4400 !important;
 }
 
 /* ══════════════════════════════════════════════════════════════
