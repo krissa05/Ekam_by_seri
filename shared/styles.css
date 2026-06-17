@@ -380,33 +380,33 @@ html[data-collection="pooja"] #sizeGuide {
 /* ══════════════════════════════════════════════════════════════
    3. MIRROR & FRAME  ← FULL GREEN THEME
    Shape: clean rectangle (mirror frame)
-   Background: rich forest green gradient
+   Background: forest-to-sage gradient (Uxintace palette)
    All accents: green
    ══════════════════════════════════════════════════════════════ */
 html[data-collection="mirror"] body {
-  background: linear-gradient(155deg, #eef5ee 0%, #cce4cc 45%, #eef5ee 100%);
+  background: linear-gradient(155deg, #e3eed4 0%, #aec3b0 45%, #e3eed4 100%);
 }
 html[data-collection="mirror"] .bg-ivory {
   background: linear-gradient(
     155deg,
-    #eef5ee 0%,
-    #d8ecd8 50%,
-    #eef5ee 100%
+    #e3eed4 0%,
+    #aec3b0 60%,
+    #e3eed4 100%
   ) !important;
 }
 html[data-collection="mirror"] .bg-linen {
-  background: #c8dfca !important;
+  background: #6b9071 !important;
 }
 html[data-collection="mirror"] .bg-char {
-  background: #163320 !important;
+  background: #0f2a1d !important;
 }
 
 /* Shape: clean rectangle for mirror/frame aesthetic */
 html[data-collection="mirror"] #mainImage {
   border-radius: 22px !important;
   box-shadow:
-    0 36px 80px rgba(22, 51, 32, 0.35),
-    0 0 0 2px rgba(80, 160, 90, 0.25) !important;
+    0 36px 80px rgba(15, 42, 29, 0.35),
+    0 0 0 2px rgba(107, 144, 113, 0.3) !important;
 }
 /* Product cards on listing — rectangle */
 html[data-collection="mirror"] .img-slot.shape-arch {
@@ -415,79 +415,79 @@ html[data-collection="mirror"] .img-slot.shape-arch {
 
 /* ── Green accent overrides ── */
 html[data-collection="mirror"] .text-terra {
-  color: #267a36 !important;
+  color: #375534 !important;
 }
 html[data-collection="mirror"] .bg-terra {
-  background: #267a36 !important;
+  background: #375534 !important;
 }
 html[data-collection="mirror"] .hover\:bg-terra:hover {
-  background: #1e5e2a !important;
+  background: #0f2a1d !important;
 }
 html[data-collection="mirror"] .bg-earth {
-  background: #1e5e2a !important;
+  background: #0f2a1d !important;
 }
 html[data-collection="mirror"] .hover\:bg-earth:hover {
-  background: #267a36 !important;
+  background: #375534 !important;
 }
 html[data-collection="mirror"] .border-terra\/20 {
-  border-color: rgba(38, 122, 54, 0.2) !important;
+  border-color: rgba(55, 85, 52, 0.2) !important;
 }
 html[data-collection="mirror"] .text-terra\/75 {
-  color: rgba(38, 122, 54, 0.75) !important;
+  color: rgba(55, 85, 52, 0.75) !important;
 }
 html[data-collection="mirror"] .logo-byseri {
-  color: #267a36 !important;
+  color: #375534 !important;
 }
 html[data-collection="mirror"] .link-underline::after {
-  background: #267a36 !important;
+  background: #375534 !important;
 }
 html[data-collection="mirror"] #navbar {
-  border-color: rgba(38, 122, 54, 0.22) !important;
-  background: rgba(238, 245, 238, 0.92) !important;
+  border-color: rgba(55, 85, 52, 0.22) !important;
+  background: rgba(227, 238, 212, 0.92) !important;
 }
 /* Buy button green */
 html[data-collection="mirror"] #buyBtn {
-  background: #1e5e2a !important;
+  background: #0f2a1d !important;
 }
 html[data-collection="mirror"] #buyBtn:hover {
-  background: #267a36 !important;
+  background: #375534 !important;
 }
 /* Size chip active: green */
 html[data-collection="mirror"] .size-chip.active {
-  background: #163320 !important;
-  border-color: #163320 !important;
+  background: #0f2a1d !important;
+  border-color: #0f2a1d !important;
 }
 /* Thumb active outline: green */
 html[data-collection="mirror"] .thumb.active {
-  outline-color: #267a36 !important;
+  outline-color: #375534 !important;
 }
 /* Text accents */
 html[data-collection="mirror"] .text-gold {
-  color: #2a8a40 !important;
+  color: #aec3b0 !important;
 }
 /* Dark section background */
 html[data-collection="mirror"] #sizeGuide {
-  background: #163320 !important;
+  background: #0f2a1d !important;
 }
 /* Story section linen bg */
 html[data-collection="mirror"] section.bg-linen {
-  background: #c8dfca !important;
+  background: #6b9071 !important;
 }
 /* Breadcrumb active */
 html[data-collection="mirror"] nav[aria-label="Breadcrumb"] span.text-terra {
-  color: #267a36 !important;
+  color: #375534 !important;
 }
 /* FAQ plus sign */
 html[data-collection="mirror"] .faq-plus {
-  color: #267a36 !important;
+  color: #375534 !important;
 }
 /* link-arrow color */
 html[data-collection="mirror"] a.link-arrow {
-  color: #267a36 !important;
+  color: #375534 !important;
 }
 /* "View all" text */
 html[data-collection="mirror"] a.text-terra {
-  color: #267a36 !important;
+  color: #375534 !important;
 }
 
 /* ══════════════════════════════════════════════════════════════
