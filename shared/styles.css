@@ -343,16 +343,24 @@ a.group:hover .img-slot {
    Background: warm amber gradient (close to default, enriched)
    ══════════════════════════════════════════════════════════════ */
 html[data-collection="copper-bells"] body {
-  background: linear-gradient(155deg, #f5e8d4 0%, #eedcc0 45%, #f5e8d4 100%);
+  background: linear-gradient(155deg, #ede6d9 0%, #e0d2bd 45%, #ede6d9 100%);
 }
 /* Main product image — tall arch */
 html[data-collection="copper-bells"] #mainImage {
   border-radius: 999px 999px 28px 28px !important;
-  box-shadow: 0 36px 80px rgba(90, 24, 8, 0.32) !important;
+  box-shadow: 0 36px 80px rgba(52, 37, 25, 0.32) !important;
 }
 /* Product cards on listing page — arch shape, keep their own colors */
 html[data-collection="copper-bells"] .img-slot.shape-arch {
   border-radius: 999px 999px 24px 24px !important;
+}
+/* Story + FAQ sections */
+html[data-collection="copper-bells"] .bg-linen {
+  background: #b39977 !important;
+}
+/* Dark Size Guide interlude — Bistre */
+html[data-collection="copper-bells"] #sizeGuide {
+  background: #342519 !important;
 }
 
 /* ══════════════════════════════════════════════════════════════
